@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Noise</title>
+   
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Auckland Clock</title>
+  <style>
+    body {
+      background-color: #f0f4f8;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+ 
+
+    .time {
+      font-size: 48px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .label {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<div class="clock-container">
+  <div id="clock" class="time">Loading...</div>
+  <div class="label">Current Time in Auckland, NZ</div>
+</div>
+
+<script>
+  function updateClock() {
+    const now = new Date();
+
+    // Convert to Auckland time (uses IANA time zone "Pacific/Auckland")
+    const options = {
+      timeZone: 'Pacific/Auckland',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false
+    };
+
+    const timeString = new Intl.DateTimeFormat('en-NZ', options).format(now);
+    document.getElementById('clock').textContent = timeString;
+  }
+
+  // Update clock every second
+  setInterval(updateClock, 1000);
+  updateClock(); // Initial call
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

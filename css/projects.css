@@ -1,0 +1,178 @@
+.project-overview-section {
+    display: grid;
+    padding-bottom: 10vw;
+    padding-top: 5.5rem;
+}
+
+
+.bordering-line {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    grid-template-rows: .5fr 1fr;
+    gap: 3vw;
+    border-bottom: 1px solid black;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 2rem;
+}
+.banner-text {
+    font-size: 4rem;
+    grid-row: 1 /span 1;
+    grid-column: 1 /span 2;
+}
+
+.banner-hanging-number {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+#img-1-optics {
+    content: url('../images/optics-images/hero-2.jpg');
+    object-fit:contain; /* push image in bounds of grid  */
+    width: 100%;
+    height: 100%;
+}
+
+#img-1-myl{
+    content: url('../images/myl-images/desktop-view.png');
+    object-fit:contain; /* push image in bounds of grid  */
+    width: 100%;
+    height: 100%;
+}
+
+.project-date-top {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.big-banner-image {
+    padding-left: 9vw;
+    padding-right: 7.4vw;
+    grid-column: 1 /span 2;
+    grid-row-start: 1;
+    padding-bottom: 1rem;
+    content:url('../images/optics-images/hero-1.jpg');
+    object-fit: cover; /* push image in bounds of grid  */
+    width: 100%;
+    height: 100%;
+}
+
+.big-banner-image-myl {
+    content:url('../images/myl-images/made-you-look-1.jpg');
+}
+
+.cat-div {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 5rem;
+}
+
+.catagory {
+    padding-bottom: .5rem
+}
+
+.collection-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding-left: 9vw;
+    padding-right: 9vw;
+
+}
+
+.final-image-grid {
+    width: 100%;
+    height: 100%;
+}
+
+
+.stage-divider {
+    display: grid;
+    gap: 1rem;
+    padding-bottom: 4rem;
+}
+
+.stage-divider-text-aligning {
+    display: grid;
+    grid-template-rows: .5fr .1fr .1fr;
+    gap: 1rem;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.project-image {
+    padding-left: 9vw;
+    padding-right: 9vw;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    object-fit: cover; /* push image in bounds of grid  */
+    opacity: 1; 
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth sliding effect */
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .bordering-line {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .4fr .4fr 1fr;
+
+    }
+.stage-divider {
+    grid-template-rows: 20rem 1fr;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.stage-divider-text-aligning {
+    grid-template-rows: .1fr .1fr .2fr;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.project-date-top {
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+.banner-hanging-number {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.banner-text {
+    font-size: 10vw;
+    grid-row: 1;
+    grid-column: 1 /span 2;
+}
+
+.project-image {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: rgb(42, 42, 42);
+}
+
+.big-banner-image {
+    padding-left: 0vw;
+    padding-right: 0vw;
+}
+
+.collection-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: .5rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+}
+
+
+
