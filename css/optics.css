@@ -44,7 +44,7 @@
 }
 #optics-2{
 
-    background-color: black;
+ content: url('../images/optics-images/competitors.jpg');
 }
 #optics-3{
     content: url('../images/optics-images/spacing-1.jpg');
@@ -62,10 +62,10 @@
     content: url('../images/optics-images/7.\ groups.jpg');
 }
 #optics-6{
-    background-color: black;
+ content: url('../images/optics-images/profile.jpg');
 }
 #optics-7{
-    background-color: black;
+ content: url('../images/optics-images/refine.jpg');
 }
 
 

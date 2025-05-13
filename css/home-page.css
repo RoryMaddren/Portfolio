@@ -2,7 +2,7 @@
 /* Intro page info CSS */
 
 #intro-section {
-    padding-top: 7vw;
+
     border-bottom: 1px solid rgba(0, 0, 0, 0.757); 
     -webkit-background-clip: padding-box; /* Enables for Safari */
     background-clip: padding-box; /* Enables for Firefox, Opera, Chrome */
@@ -50,7 +50,7 @@
     padding-left: 10.5vw;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr .5fr 1.8fr 1.5fr .1fr;
+    grid-template-rows: 1rem 8rem 9rem;
     overflow: hidden;
 } /* All of the text and the image in the section - setting up grid*/
 
@@ -64,7 +64,7 @@
 #rory-id {
     grid-row: 3;
     grid-column: 1;
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     gap:1vw
 } /* "Rory Maddren Text" */
 
@@ -90,6 +90,7 @@
     grid-row: 4;
     grid-column: 1;
     display: inline;
+    max-width: 40rem;
 } /* Contains the quick bio summery - "An interacrive designer..." - keeps all fo the text together */
 
 #greetings-section {
@@ -477,7 +478,7 @@
 
 #prof-image-2 {
     grid-row: 2;
-    grid-column: 3;
+    grid-column: 4;
     margin-top: 0;
     padding-top: 0;
     grid-column: 3 /span 3;
@@ -537,6 +538,7 @@
 
     .summery-italic, .summery, .personal-summery-contents {
         font-size: 4.5vw;
+            max-width: 35rem;
     }
 
     #selected-works-id {
@@ -581,6 +583,7 @@
     }
 
     .personal-summery-contents {
+                  max-width: 35rem;
         margin-right: .4vw;
         line-height: 6vw;
     }

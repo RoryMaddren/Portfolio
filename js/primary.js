@@ -8,7 +8,7 @@ const dividers = document.querySelectorAll('.hamburger-divide-line');
 let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
-
+/*
 function toggleMenu() {
     if (!showMenu) {
         menuBtn.classList.add('close');
@@ -41,7 +41,7 @@ function toggleMenu() {
 
         showMenu = false;
     }
-}
+} */
 
 function toggleMenu() {
     if (window.innerWidth > 600) return; // Don't run toggle on desktop
@@ -118,6 +118,18 @@ function toggleMenu() {
 
      });
       }
+
+      document.querySelector('#work-link-id-click').addEventListener("click",() =>{
+        toggleMenu();
+      }) //work button clicking scrolls to works space
+
+
+      
+
+
+
+
+
 
 
 
