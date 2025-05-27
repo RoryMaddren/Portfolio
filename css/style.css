@@ -8,13 +8,13 @@
     font-family: 'PP editorial new'; 
     src: url("../fonts/PPEditorialNew-Regular-BF644b214ff145f.otf");
     font-weight: 100;
-} /* Fix !!!!!!!! */
+} 
 
 @font-face {
     font-family: 'pp-editorial-new-italic'; 
     src: url("../fonts/pp-editorial-new-ultralight-italic.ttf");
     font-weight: 100;
-} /* Fix !!!!!!!! */
+} 
 
 @font-face {
     font-family: 'montreal'; 

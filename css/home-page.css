@@ -671,7 +671,7 @@
         padding-top: 4rem;
         display: grid;
         grid-template-columns: 2fr 1fr;
-        grid-template-rows: .05fr .1fr .5fr;
+        grid-template-rows: .05fr .1fr .7fr;
         gap: 1rem;
     }
 
@@ -689,7 +689,7 @@
 
 
     .work-div:hover {
-        grid-template-rows: .05fr .1fr .5fr;
+        grid-template-rows: .05fr .1fr .7fr;
         
     } /* Turning off hover */
 
