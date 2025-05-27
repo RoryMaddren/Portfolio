@@ -7,7 +7,7 @@
 
 
 .big-banner-image-optics {
-        content: url('../images/optics-images/4.\ optics_load-in.png');
+        content: url('../images/optics-images/op-hero.jpg');
 }
 
 .project-image {
@@ -17,8 +17,6 @@
     padding-right: 9vw;
     width: 100%;
     height: 100%;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
     object-fit: cover; /* push image in bounds of grid  */
     opacity: 1; 
     transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth sliding effect */
@@ -31,8 +29,6 @@
     padding-right: 9vw;
     width: 100%;
     height: 100%;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
     object-fit: cover; /* push image in bounds of grid  */
     opacity: 1; 
     transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth sliding effect */
@@ -56,7 +52,7 @@
 
 
 #optics-4{
-    content: url('../images/optics-images/user-jounrey.jpg');
+    content: url('../images/optics-images/user-journey.jpg');
 }
 #optics-5{
     content: url('../images/optics-images/7.\ groups.jpg');
@@ -66,6 +62,10 @@
 }
 #optics-7{
  content: url('../images/optics-images/refine.jpg');
+}
+
+#optics-8{
+ content: url('../images/optics-images/testing.jpg');
 }
 
 

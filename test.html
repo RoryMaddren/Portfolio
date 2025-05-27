@@ -1,73 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Noise</title>
-   
 
 
-    <!DOCTYPE html>
-<html lang="en">
-<head>
+
+  <div id="cursor"></div>
+<div id="cursor-border"></div>
+
+<style>
+
+* {
+    cursor: none;
+}
+
+#cursor {
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+#cursor-border {
+  --size: 50px;
+  position: fixed;
+  top: calc(var(--size) / -2);
+  left: calc(var(--size) / -2);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgb(0, 0, 0);
+  pointer-events: none;
+  transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out, height 0.15s ease-out, background-color 0.15s ease-out;
+  z-index: 999;
+}
+
+
+
+
+
+
+</style>
+<script>
+const cursor = document.querySelector("#cursor");
+const cursorBorder = document.querySelector("#cursor-border");
+const cursorPos = { x: 0, y: 0 };
+const cursorBorderPos = { x: 0, y: 0 };
+
+document.addEventListener("mousemove", (e) => {
+  cursorPos.x = e.clientX;
+  cursorPos.y = e.clientY;
+
+  cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+});
+
+requestAnimationFrame(function loop() {
+  const easting = 8;
+  cursorBorderPos.x += (cursorPos.x - cursorBorderPos.x) / easting;
+  cursorBorderPos.y += (cursorPos.y - cursorBorderPos.y) / easting;
+
+  cursorBorder.style.transform = `translate(${cursorBorderPos.x}px, ${cursorBorderPos.y}px)`;
+  requestAnimationFrame(loop);
+});
+
+document.querySelectorAll("[data-cursor]").forEach((item) => {
+  item.addEventListener("mouseover", (e) => {
+    if (item.dataset.cursor === "pointer") {
+      cursorBorder.style.backgroundColor = "rgba(255, 255, 255, .6)";
+      cursorBorder.style.setProperty("--size", "30px");
+    }
+    if (item.dataset.cursor === "pointer2") {
+      cursorBorder.style.backgroundColor = "white";
+      cursorBorder.style.mixBlendMode = "difference";
+      cursorBorder.style.setProperty("--size", "80px");
+    }
+  });
+  item.addEventListener("mouseout", (e) => {
+    cursorBorder.style.backgroundColor = "unset";
+    cursorBorder.style.mixBlendMode = "unset";
+    cursorBorder.style.setProperty("--size", "50px");
+  });
+});
+</script>
   <meta charset="UTF-8">
-  <title>Auckland Clock</title>
+  <title>Noise Fade Overlay</title>
   <style>
     body {
-      background-color: #f0f4f8;
-      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      background: #f0f0f0;
     }
 
- 
-
-    .time {
-      font-size: 48px;
-      font-weight: bold;
-      color: #333;
+    .container {
+      width: 400px;
+      height: 550px;
+      background-color: #ddd;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #333;
     }
 
-    .label {
-      margin-top: 10px;
-      font-size: 20px;
-      color: #555;
+    .hover-image,
+    .noise-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .hover-image {
+      z-index: 1;
+      opacity: 1;
+      transition: opacity 0.4s ease;
+    }
+
+    .noise-image {
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 0.4s ease;
     }
   </style>
 </head>
 <body>
+  <div class="container" id="hoverContainer">
+    <img src="" alt="Image" class="hover-image" id="hoverImage">
+    <img src="./images/noise.gif" alt="Noise" class="noise-image" id="noiseImage">
+  </div>
 
-<div class="clock-container">
-  <div id="clock" class="time">Loading...</div>
-  <div class="label">Current Time in Auckland, NZ</div>
-</div>
+  <script>
+    const container = document.getElementById('hoverContainer');
+    const hoverImage = document.getElementById('hoverImage');
+    const noiseImage = document.getElementById('noiseImage');
 
-<script>
-  function updateClock() {
-    const now = new Date();
+    const images = [
+      'images/profile-image.png',
+    ];
 
-    // Convert to Auckland time (uses IANA time zone "Pacific/Auckland")
-    const options = {
-      timeZone: 'Pacific/Auckland',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: false
-    };
+    let index = 0;
+    let intervalId = null;
 
-    const timeString = new Intl.DateTimeFormat('en-NZ', options).format(now);
-    document.getElementById('clock').textContent = timeString;
-  }
+    container.addEventListener('mouseenter', () => {
+      index = 0;
 
-  // Update clock every second
-  setInterval(updateClock, 1000);
-  updateClock(); // Initial call
-</script>
+      // Set the first image instantly (no fade)
+      hoverImage.style.transition = 'none';
+      hoverImage.src = images[index];
+      hoverImage.style.opacity = 1;
 
-</body>
-</html>
+      // Fade in noise over the image
+      noiseImage.style.opacity = 1;
 
+      // After noise fade in, fade it out revealing image underneath
+      setTimeout(() => {
+        noiseImage.style.opacity = 0;
+
+        // Re-enable transition for future fades
+        setTimeout(() => {
+          hoverImage.style.transition = 'opacity 0.4s ease';
+        }, 10);
+      }, 600);
+
+      // Start cycling with fade
+      intervalId = setInterval(() => {
+        index = (index + 1) % images.length;
+        hoverImage.style.opacity = 0;
+
+        setTimeout(() => {
+          hoverImage.src = images[index];
+          hoverImage.style.opacity = 1;
+        }, 300);
+      }, 3000);
+    });
+
+    container.addEventListener('mouseleave', () => {
+      clearInterval(intervalId);
+      hoverImage.style.opacity = 0;
+      noiseImage.style.opacity = 0;
+    });
+  </script>
 </body>
 </html>

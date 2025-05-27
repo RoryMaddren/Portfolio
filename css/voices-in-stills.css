@@ -43,3 +43,14 @@
 #img-9-vis{
     content: url('../images/voices-in-stills-images/voices-in-stills-1.jpeg');
 }
+
+
+#research-question {
+    padding-left: 9.5vw;
+    padding-right: 9.5vw;
+    font-size: 1.5rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    max-width: 70rem;
+    font-weight: 300;
+}

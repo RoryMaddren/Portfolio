@@ -12,6 +12,11 @@
     font-weight: 100;
 } /* Fix !!!!!!!! */
 
+@font-face {
+    font-family: 'montreal'; 
+    src: url("../fonts/montreal-regular.otf");
+} /* Fix !!!!!!!! */
+
 html {
     scroll-behavior: smooth;
   }
@@ -24,20 +29,6 @@ html {
     to {
         opacity: 1;
     }
-  }
-
-
-  .snap-container {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-    scroll-behavior: smooth;
-  }
-  
-  .snap-section {
-    scroll-snap-align: start;
-    height: 100vh;
-    overflow: hidden;
   }
 
 
@@ -60,7 +51,7 @@ html {
     padding-bottom: 3rem;
     padding-left: 10.5vw;
     padding-right: 10.5vw;
-    font-size: 1rem;
+    font-size: 1.2rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.757); 
     -webkit-background-clip: padding-box; /* enables for Safari */
     background-clip: padding-box; /* enables for Firefox, Opera, Chrome */
@@ -161,8 +152,12 @@ body {
 .nav-link, .work-link{
     color: rgb(0, 0, 0);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
+
+.work-link {
+    font-style: normal;
+} /* work link is not italics */
 
 
 /* Hamburger button lines */
@@ -242,7 +237,7 @@ h1, h2, h3 {
 }
 
 .top-cred-section-h4-plain {
-    font-family: 'Neue Haas Grotesk Display Pro';
+    font-family: 'montreal';
     font-size: 1rem;
     font-weight: 400;
     font-style: normal;
@@ -259,8 +254,9 @@ h4 {
 
 
 p {
-    font-family: 'Neue Haas Grotesk Display Pro';
+    font-family: 'montreal';
     font-size: 1rem;
+    line-height: 1.4rem;
 } /* Setting font styles */
 
 
@@ -268,32 +264,62 @@ p {
 
 footer {
     padding-top: 0;
-    border-top: solid 1px rgb(0, 0, 0);
-    padding-top: 10.5vw;
+    border-top: solid 1px rgb(255, 255, 255);
     padding-bottom: 10rem;
 }
 
 .footer-p, .footer-p a{
-    padding-left: 10.5vw;
     color: black;
+    font-family: "montreal";
 }
+
+.footer-p-two {
+    font-family: "montreal";
+    font-size: 0.8;
+    width: 30rem;
+    padding-bottom: 2rem;
+}
+
 
 
 
 
 .footer-text {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    gap: 1rem;
     padding-right: 10.5vw;
+    padding-left: 10.5vw;
+}
+
+
+
+
+.contact-button {
+    border-radius: 100rem;
+    border: solid #000 1px;
+    width: 25rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+}
+
+.contact-button:hover {
+    background-color: rgb(131, 131, 131);
+    border-color: rgb(131, 131, 131);
+    color: #fff;
+    transition: background-color 0.9s ease, color 0.9s ease, border-color 0.9s ease;
 }
 
 .h4-contact-bottom-page {
     font-family: "PP editorial new";
-    font-style: italic;
-    font-size: 1rem;
-    padding-left: 10.5vw;
-    text-decoration: underline;
+    font-style: normal;
+    font-size: 2rem;
+    text-decoration: none;
 }
+
+        
+
 
 
 
@@ -309,7 +335,6 @@ footer {
 .hamburger-divide-line.show {
     opacity: 1;
 }
-/* this just slow loads in the lines */
 
 
 
@@ -323,9 +348,31 @@ footer {
         font-size: 3.5vw;
         margin-left: 1.5vw;
         margin-right: 1.5vw;
-
     }
+
+
+footer {
+padding-top: 5.5vw;
+}
+
+.footer-p-two {
+    width: 100%;
+}
     
+.contact-button {
+    width: 100%;
+}
+
+.h4-contact-bottom-page {
+    font-size: 1.5rem;
+}
+
+
+
+    
+
+
+
     .hanging-count {
         opacity: 0;
     }
@@ -437,7 +484,10 @@ footer {
             }
 
             
-
+     .social-divs {
+                visibility: visible;
+                opacity: 1;
+            }  /* Fixes bug for nav disspearing */
          
         
             .social-links {
@@ -469,12 +519,25 @@ footer {
             body.no-scroll {
                 overflow: hidden; /* Prevent scrolling */
             }
+
+
+
+
         }
 
 
-        
 
-        
+
+
+
+
+
+
+
+
+
+
+
 
         .noise::before{
             position: fixed;

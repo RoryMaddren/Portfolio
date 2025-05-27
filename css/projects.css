@@ -1,42 +1,47 @@
 .project-overview-section {
     display: grid;
     padding-bottom: 10vw;
-    padding-top: 5.5rem;
+    padding-top: 5rem;
+    grid-template-rows: 30rem 1fr;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+footer {
+    padding-top: 3rem;
+    border-top: 1px solid #d9d9d9;
 }
 
 
 .bordering-line {
     display: grid;
-    grid-template-columns: .5fr 1fr;
-    grid-template-rows: .5fr 1fr;
-    gap: 3vw;
-    border-bottom: 1px solid black;
+    grid-template-rows: .1fr 2fr .5fr .5fr;
     padding-left: 10vw;
     padding-right: 10vw;
-    padding-bottom: 2rem;
+    grid-column: 1 /span 2;
 }
 .banner-text {
     font-size: 4rem;
-    grid-row: 1 /span 1;
+    grid-row: 1;
     grid-column: 1 /span 2;
 }
 
 .banner-hanging-number {
-    grid-column-start: 1;
+    padding-top: 2rem;
+    grid-column: 1;
     grid-row-start: 2;
+    padding-right: 2rem;
 }
 
 .project-image {
     grid-row-start: 1;
     grid-row-end: 1;
     padding-left: 9vw;
-    padding-right: 9vw;
-    width: 10%;
-    height: 10%;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    padding-right: 9rem;
+    border-top: 1px solid #e5e5e5;
     object-fit: cover; /* push image in bounds of grid  */
-    opacity: 8; 
     transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth sliding effect */
 }
 
@@ -45,18 +50,15 @@
     grid-row-end: 2;
     padding-left: 9vw;
     padding-right: 9vw;
-    width: 100%;
-    height: 100%;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid #e5e5e5;
     object-fit: cover; /* push image in bounds of grid  */
-    opacity: 1; 
     transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth sliding effect */
 }
 
 
 .project-date-top {
-    grid-column-start: 2;
+        padding-top: 2rem;
+    grid-column-start: 3;
     grid-row-start: 2;
 }
 
@@ -73,17 +75,24 @@
 }
 
 .big-banner-image-myl {
-    content:url('../images/myl-images/made-you-look-1.jpg');
+    content:url('../images/myl-images/myl-hero.jpg');
 }
 
 .cat-div {
     padding-left: 10vw;
     padding-right: 10vw;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
 }
 
 .catagory {
+    grid-column-start: 1;
+    grid-template-rows: 3;
     padding-bottom: .5rem
+}
+
+.year {
+    grid-column-start: 1;
+    grid-template-rows: 4;
 }
 /* 
 .collection-div {
@@ -106,6 +115,7 @@
 
 .stage-divider {
     display: grid;
+    grid-template-rows: .8fr;
     gap: 1rem;
     padding-bottom: 4rem;
 }
@@ -113,41 +123,55 @@
 
 .stage-divider-2 {
     display: grid;
-    gap: 1rem;
     padding-bottom: 4rem;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: .5fr .5fr .5fr;
 }
 
 .stage-divider-text-aligning {
     display: grid;
-    grid-template-rows: .5fr .1fr .1fr;
-    gap: 1rem;
+    grid-template-rows: .5fr;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.stage-divider-text-aligning-2 {
+    display: grid;
+    grid-template-rows: .8fr;
+    grid-template-columns: 1fr 1fr;
     padding-left: 10vw;
     padding-right: 10vw;
 }
 
 
-
+#video-section {
+    padding-left: 9vw;
+    padding-right: 9vw;
+}
 
 @media only screen and (max-width: 600px) {
 
-    .bordering-line {
+    #video-section {
+    padding: 0;
+}
+
+.bordering-line {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: .4fr .4fr 1fr;
+        grid-template-rows: .1fr 1fr 1fr .4fr;
 
     }
 .stage-divider {
-    grid-template-rows: 20rem 1fr;
+    grid-template-rows: 1fr 1fr;
     padding-left: 0;
     padding-right: 0;
 }
 
-.stage-divider-text-aligning {
-    grid-template-rows: .1fr .1fr .2fr;
-    padding-left: 2rem;
-    padding-right: 2rem;
+.stage-divider-text-aligning, .stage-divider-text-aligning-2 {
+    grid-template-rows: .12fr .5fr;
+    grid-template-columns: 1fr;
+    padding-top: 1rem;
 }
 
 .project-date-top {
@@ -164,11 +188,10 @@
     grid-row: 1;
     grid-column: 1 /span 2;
 }
-
 .project-image {
     padding-left: 0;
     padding-right: 0;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(218, 218, 218);
 }
 
 .big-banner-image {
