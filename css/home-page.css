@@ -375,7 +375,7 @@
     height: 100%;
     object-fit: cover;
     grid-column: 4;
-    grid-row-start: 2;
+    grid-row-start: 1;
     grid-row-end: 3;
     padding-left: 3rem;
     visibility: visible;
@@ -842,6 +842,11 @@ footer p {
 
 
 
+
+
+#bulk-words-text-one, #bulk-words-text-three  {
+    font-style: normal;
+}
 
 
 

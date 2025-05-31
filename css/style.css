@@ -4,6 +4,8 @@
     margin: 0;
 } /* Apply defualt spacing*/
 
+
+
 @font-face {
     font-family: 'PP editorial new'; 
     src: url("../fonts/PPEditorialNew-Regular-BF644b214ff145f.otf");
@@ -279,7 +281,6 @@ footer {
 
 .footer-p-two {
     font-family: "montreal";
-    font-size: 0.8;
     width: 30rem;
     padding-bottom: 2rem;
 }
@@ -327,6 +328,14 @@ footer {
 
 
 
+.research-question {
+    padding-left: 10.5vw;
+    padding-right: 10.5vw;
+    padding-bottom: 5rem;
+    font-size: 2rem;
+    font-family: 'montreal';
+}
+
 
 
 
@@ -353,6 +362,11 @@ footer {
         margin-left: 1.5vw;
         margin-right: 1.5vw;
     }
+
+    .research-question {
+    font-size: 1.8rem;
+    }
+
 
 
 footer {
@@ -478,6 +492,9 @@ padding-top: 5.5vw;
             .menu-btn {
                 display: none;
             }
+
+
+
         
             /* Display the social links as a horizontal list on large screens */
             .social-divs, .work-link {
@@ -526,10 +543,7 @@ padding-top: 5.5vw;
 
 
 
-
         }
-
-
 
 
 
@@ -551,7 +565,7 @@ padding-top: 5.5vw;
             height: 100vh;
             content: "";
             /* you can control opacity of noise  */
-            opacity: .06;  
+            opacity: .04;  
             z-index: 1000;
             pointer-events: none;
             background: url("../images/noise.gif");
