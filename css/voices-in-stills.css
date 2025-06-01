@@ -1,5 +1,5 @@
 #img-1-vis, #img-2-vis, #img-3-vis, #img-4-vis, #img-5-vis, #img-6-vis, #img-7-vis, #img-8-vis, #img-9-vis{
-    object-fit:contain; /* push image in bounds of grid  */
+    object-fit: cover; /* push image in bounds of grid  */
     width: 100%;
     height: 100%;
 }

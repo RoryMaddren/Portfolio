@@ -39,7 +39,7 @@ footer {
     grid-row-start: 1;
     grid-row-end: 1;
     padding-left: 9vw;
-    padding-right: 9rem;
+    padding-right: 9vw;
     border-top: 1px solid #e5e5e5;
     object-fit: cover; /* push image in bounds of grid  */
     transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth sliding effect */
@@ -212,6 +212,3 @@ footer {
 
 
 }
-
-
-

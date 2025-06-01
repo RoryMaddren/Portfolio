@@ -1,13 +1,18 @@
-#img-1-myl, #img-2-myl, #img-3-myl, #img-4-myl, #img-5-myl, #img-6-myl, #img-7-myl, #img-8-myl, #img-9-myl{
+#img-2-myl, #img-4-myl, #img-5-myl, #img-7-myl, #img-8-myl, #img-9-myl{
     content: url('../images/myl-images/desktop-view.png');
-    object-fit:contain; /* push image in bounds of grid  */
+    object-fit: contain; /* push image in bounds of grid  */
     width: 100%;
     height: 100%;
 }
 
 
 
-
+#img-1-myl, #img-3-myl, #img-5-myl, #img-6-myl{
+    content: url('../images/myl-images/desktop-view.png');
+    object-fit: cover; /* push image in bounds of grid  */
+    width: 100%;
+    height: 100%;
+}
 
 
 #img-1-myl{
@@ -15,7 +20,7 @@
 }
 
 #img-2-myl{
-    content: url('../images/myl-images/7.\ research.jpg');
+    content: url('../images/myl-images/competittors.jpg');
 }
 
 #img-3-myl{
