@@ -23,6 +23,11 @@
     src: url("../fonts/montreal-regular.otf");
 } 
 
+@font-face {
+    font-family: 'montreal-med'; 
+    src: url("../fonts/montreal/neuemontreal-medium.otf");
+} 
+
 html {
     scroll-behavior: smooth;
   }

@@ -5,6 +5,17 @@
     grid-template-rows: 30rem 1fr;
 }
 
+.cat-title, .year-title, .roles-title, .summery-title {
+    font-family: "montreal";
+    font-size: 1.2rem;
+}
+
+
+
+.roles {
+    grid-row-start: 4;
+}
+
 h2 {
     font-size: 1.5rem;
 }
@@ -17,7 +28,7 @@ footer {
 
 .bordering-line {
     display: grid;
-    grid-template-rows: .1fr 2fr .5fr .5fr;
+    grid-template-rows: .1fr 2fr .8fr .8fr .8fr;
     padding-left: 10vw;
     padding-right: 10vw;
     grid-column: 1 /span 2;
@@ -57,7 +68,7 @@ footer {
 
 
 .project-date-top {
-        padding-top: 2rem;
+    padding-top: 3.28rem;
     grid-column-start: 3;
     grid-row-start: 2;
 }
@@ -156,12 +167,6 @@ footer {
     padding: 0;
 }
 
-.bordering-line {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: .1fr 1fr 1fr .4fr;
-
-    }
 .stage-divider {
     grid-template-rows: 1fr 1fr;
     padding-left: 0;

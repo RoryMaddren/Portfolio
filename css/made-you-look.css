@@ -50,3 +50,13 @@
 #img-9-myl{
     content: url('../images/myl-images/6.\ about-page.jpg');
 }
+
+
+@media only screen and (max-width: 600px) {
+.bordering-line {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .1fr 1fr 1.4fr 4rem 4rem 4rem;
+        padding-bottom: 5rem;
+    }
+}
