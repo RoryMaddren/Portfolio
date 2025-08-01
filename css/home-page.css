@@ -65,7 +65,8 @@
     grid-row: 3;
     grid-column: 1;
     font-size: 3.5rem;
-    gap: 1vw
+    gap: 1vw;
+    font-style: italic;
 } /* "Rory Maddren Text" */
 
 .bottom-2-section {
@@ -385,8 +386,6 @@
     visibility:hidden;
     width:1px;
     }
-
-
 
 
 
@@ -902,3 +901,10 @@ footer p {
 .lines span {
     border-left: 1px solid #e5e5e5;
 }
+
+/*
+#description-text {
+    padding-bottom: 15px;
+    border-bottom: #bcbcbc solid 1px;
+}
+*/

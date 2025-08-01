@@ -235,12 +235,12 @@ h1, h2, h3 {
     font-weight: normal;
 } /* Setting font styles */
 
-
+/* 
 .italic-h4 {
     font-family: 'PP editorial new';
     font-style: italic;
 }
-
+ */
   
 .italic-h4-grey {
     font-family: 'PP editorial new';
@@ -253,6 +253,7 @@ h1, h2, h3 {
     font-weight: 400;
     font-style: normal;
     color: #000000;
+    line-height: 17.3px;
 }
 
 
