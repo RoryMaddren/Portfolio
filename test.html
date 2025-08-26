@@ -1,193 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
-
-  <div id="cursor"></div>
-<div id="cursor-border"></div>
-
-<style>
-
-* {
-    cursor: none;
-}
-
-#cursor {
-  position: fixed;
-  top: -5px;
-  left: -5px;
-  width: 10px;
-  height: 10px;
-  background-color: rgb(0, 0, 0);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 999;
-}
-
-#cursor-border {
-  --size: 50px;
-  position: fixed;
-  top: calc(var(--size) / -2);
-  left: calc(var(--size) / -2);
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  box-shadow: 0 0 0 1px rgb(0, 0, 0);
-  pointer-events: none;
-  transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out, height 0.15s ease-out, background-color 0.15s ease-out;
-  z-index: 999;
-}
-
-
-
-
-
-
-</style>
-<script>
-const cursor = document.querySelector("#cursor");
-const cursorBorder = document.querySelector("#cursor-border");
-const cursorPos = { x: 0, y: 0 };
-const cursorBorderPos = { x: 0, y: 0 };
-
-document.addEventListener("mousemove", (e) => {
-  cursorPos.x = e.clientX;
-  cursorPos.y = e.clientY;
-
-  cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-});
-
-requestAnimationFrame(function loop() {
-  const easting = 8;
-  cursorBorderPos.x += (cursorPos.x - cursorBorderPos.x) / easting;
-  cursorBorderPos.y += (cursorPos.y - cursorBorderPos.y) / easting;
-
-  cursorBorder.style.transform = `translate(${cursorBorderPos.x}px, ${cursorBorderPos.y}px)`;
-  requestAnimationFrame(loop);
-});
-
-document.querySelectorAll("[data-cursor]").forEach((item) => {
-  item.addEventListener("mouseover", (e) => {
-    if (item.dataset.cursor === "pointer") {
-      cursorBorder.style.backgroundColor = "rgba(255, 255, 255, .6)";
-      cursorBorder.style.setProperty("--size", "30px");
-    }
-    if (item.dataset.cursor === "pointer2") {
-      cursorBorder.style.backgroundColor = "white";
-      cursorBorder.style.mixBlendMode = "difference";
-      cursorBorder.style.setProperty("--size", "80px");
-    }
-  });
-  item.addEventListener("mouseout", (e) => {
-    cursorBorder.style.backgroundColor = "unset";
-    cursorBorder.style.mixBlendMode = "unset";
-    cursorBorder.style.setProperty("--size", "50px");
-  });
-});
-</script>
-  <meta charset="UTF-8">
-  <title>Noise Fade Overlay</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smooth Scrolling Demo — ScrollSmoother‑style</title>
   <style>
+    :root {
+      --bg: #0c0c0e;
+      --fg: #f3f3f5;
+      --muted: #b4b4bb;
+      --accent: #ff2a3d;
+    }
+    html, body { height: 100%; }
     body {
       margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #f0f0f0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--fg);
+      overflow-x: hidden;
     }
+    a { color: var(--fg); text-decoration: none; }
+    header {
+      position: fixed; inset: 0 0 auto 0; height: 64px; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 24px; backdrop-filter: blur(8px);
+      background: color-mix(in oklab, var(--bg) 70%, transparent);
+      border-bottom: 1px solid color-mix(in oklab, var(--fg) 10%, transparent);
+    }
+    header nav a { margin-left: 16px; opacity: .8; }
+    header nav a:hover { opacity: 1; }
+    .section {
+      min-height: 100svh; padding: 120px 24px 48px; display: grid; place-items: center; text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(40px, 8vw, 108px);
+      line-height: .95; letter-spacing: -.02em; margin: 0 0 12px;
+    }
+    .hero p { max-width: 70ch; margin: 0 auto; color: var(--muted); font-size: clamp(16px, 2.4vw, 20px); }
 
-    .container {
-      width: 400px;
-      height: 550px;
-      background-color: #ddd;
-      position: relative;
-      overflow: hidden;
-      border: 2px solid #333;
+    .band {
+      display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      width: min(1200px, 92%);
     }
+    .card {
+      padding: 24px; border-radius: 18px; background: #121217; border: 1px solid #1f1f26;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .card h3 { margin: 0 0 8px; font-size: 22px; }
+    .card p { margin: 0; color: var(--muted); }
 
-    .hover-image,
-    .noise-image {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-    }
+    .accent { color: var(--accent); }
 
-    .hover-image {
-      z-index: 1;
-      opacity: 1;
-      transition: opacity 0.4s ease;
+    .marquee {
+      width: 100%; overflow: hidden; white-space: nowrap; border-block: 1px solid #1f1f26;
+      background: linear-gradient(0deg, #111116, #0e0e12);
     }
+    .marquee .row { padding: 14px 0; font-weight: 700; letter-spacing: .03em; opacity: .9; }
 
-    .noise-image {
-      z-index: 2;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
+    footer { padding: 64px 24px; text-align: center; color: var(--muted); }
+
+    /* reveal animation start state */
+    .reveal { opacity: 0; transform: translateY(24px); }
   </style>
 </head>
 <body>
-  <div class="container" id="hoverContainer">
-    <img src="" alt="Image" class="hover-image" id="hoverImage">
-    <img src="./images/noise.gif" alt="Noise" class="noise-image" id="noiseImage">
+  <header>
+    <strong>SMOOTH DEMO</strong>
+    <nav>
+      <a href="#about">ABOUT</a>
+      <a href="#features">FEATURES</a>
+      <a href="#end">END</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="section hero" id="top">
+    <div>
+      <h1 class="reveal">SMOOTH LIKE <span class="accent">SCROLLSMOOTHER</span>,<br/>NO CLUB PLUGIN NEEDED.</h1>
+      <p class="reveal">This page uses <strong>Lenis</strong> for buttery smooth scrolling and <strong>GSAP ScrollTrigger</strong> for reveal animations — a practical stand‑in for ScrollSmoother that works on public CDNs.</p>
+    </div>
+  </section>
+
+  <!-- MARQUEE (animated with GSAP) -->
+  <div class="marquee">
+    <div class="row" id="marqueeRow">— MADE FOR MOBILE — TEXT‑LED — BRUTALIST‑ISH — HIGH CONTRAST — INTERACTIVE — STORY‑FIRST —&nbsp;</div>
   </div>
 
+  <!-- CONTENT GRID -->
+  <section class="section" id="about">
+    <div class="band">
+      <article class="card reveal">
+        <h3>PUBLIC CDNS ONLY</h3>
+        <p>ScrollSmoother is a Club GreenSock plugin (not on public CDNs). This demo swaps it for Lenis + ScrollTrigger.</p>
+      </article>
+      <article class="card reveal">
+        <h3>MOBILE‑FIRST</h3>
+        <p>Typography‑forward layout with generous spacing and subtle motion cues keeps things crisp on phones.</p>
+      </article>
+      <article class="card reveal">
+        <h3>TYPE AS UI</h3>
+        <p>Minimal imagery, bold text, and contrasty color carry the visual weight — similar to campaign microsites.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div>
+      <h2 class="reveal" style="font-size:clamp(28px,6vw,56px);margin:0 0 12px">SCROLL‑TRIGGERED REVEALS</h2>
+      <p class="reveal" style="max-width:68ch;margin:0 auto;color:var(--muted)">Elements fade and rise into place as they enter the viewport. The effect respects the Lenis scroll position so everything feels synced and smooth.</p>
+    </div>
+  </section>
+
+  <section class="section" id="end">
+    <div>
+      <h2 class="reveal" style="font-size:clamp(28px,6vw,56px);margin:0 0 12px">READY TO COPY‑PASTE</h2>
+      <p class="reveal" style="max-width:68ch;margin:0 auto;color:var(--muted)">Use this as a starter. If you have a Club GSAP license, you can replace Lenis with <code>ScrollSmoother</code> in just a few lines.</p>
+    </div>
+  </section>
+
+  <footer>© 2025 Smooth Demo. Built with Lenis + GSAP ScrollTrigger.</footer>
+
+  <!-- GSAP + ScrollTrigger (public CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-uQp3mQqjCydJZ9n5lRUSxAiHml/vKxJfq1Jxxo3d54s5/1mA9I7oOV2UoFecZqB7TZ8C/AkK47q8orQw7v1p5A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-7m7Va1Qk5t4F7f4hJm2nW3b2XJv6S7UoJvR3pE9h2r1eS8d3Q9Sufn9Uo1+U6QwWm1VwM2wV5w7D8q7M6h9m9g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Lenis (smooth scrolling) -->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.44/bundled/lenis.min.js"></script>
+
   <script>
-    const container = document.getElementById('hoverContainer');
-    const hoverImage = document.getElementById('hoverImage');
-    const noiseImage = document.getElementById('noiseImage');
-
-    const images = [
-      'images/profile-image.png',
-    ];
-
-    let index = 0;
-    let intervalId = null;
-
-    container.addEventListener('mouseenter', () => {
-      index = 0;
-
-      // Set the first image instantly (no fade)
-      hoverImage.style.transition = 'none';
-      hoverImage.src = images[index];
-      hoverImage.style.opacity = 1;
-
-      // Fade in noise over the image
-      noiseImage.style.opacity = 1;
-
-      // After noise fade in, fade it out revealing image underneath
-      setTimeout(() => {
-        noiseImage.style.opacity = 0;
-
-        // Re-enable transition for future fades
-        setTimeout(() => {
-          hoverImage.style.transition = 'opacity 0.4s ease';
-        }, 10);
-      }, 600);
-
-      // Start cycling with fade
-      intervalId = setInterval(() => {
-        index = (index + 1) % images.length;
-        hoverImage.style.opacity = 0;
-
-        setTimeout(() => {
-          hoverImage.src = images[index];
-          hoverImage.style.opacity = 1;
-        }, 300);
-      }, 3000);
+    // 1) Lenis: smooth scrolling setup
+    const lenis = new Lenis({
+      duration: 1.2, // higher = smoother (but slower)
+      easing: (t) => 1 - Math.pow(1 - t, 3), // easeOutCubic
+      smoothWheel: true,
+      smoothTouch: false
     });
 
-    container.addEventListener('mouseleave', () => {
-      clearInterval(intervalId);
-      hoverImage.style.opacity = 0;
-      noiseImage.style.opacity = 0;
+    // hook Lenis into requestAnimationFrame
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // keep ScrollTrigger in sync with Lenis
+    lenis.on('scroll', () => ScrollTrigger.update());
+
+    // 2) GSAP: simple marquee loop
+    const marquee = document.getElementById('marqueeRow');
+    const base = marquee.innerHTML + marquee.innerHTML + marquee.innerHTML; // extend content
+    marquee.innerHTML = base;
+    gsap.to('#marqueeRow', { xPercent: -50, repeat: -1, ease: 'none', duration: 20 });
+
+    // 3) GSAP: reveal on enter
+    gsap.utils.toArray('.reveal').forEach((el, i) => {
+      gsap.from(el, {
+        opacity: 0,
+        y: 24,
+        duration: 0.8,
+        ease: 'power2.out',
+        delay: i * 0.03,
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse'
+        }
+      });
     });
+
+    // OPTIONAL: if you later switch to ScrollSmoother, replace Lenis block with:
+    // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    // const smoother = ScrollSmoother.create({ smooth: 1.2, effects: true });
   </script>
 </body>
 </html>

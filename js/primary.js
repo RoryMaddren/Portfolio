@@ -130,7 +130,22 @@ function toggleMenu() {
 
 
 
+/* gsap.registerPlugin(ScrollTrigger,ScrollSmoother);
+//importing gsap
 
+animations.forEach(({ textFade }) => {
+  gsap.to(textFade, {
 
+    duration: 1,
+    ease: "power1.in",
+    scrollTrigger: {
+      trigger: ".textFade",
+      start: "center",
+      end: "bottom center",
+      scrub: true,
+      markers: true,
+    }
+  });
+});
+*/
 
-  
