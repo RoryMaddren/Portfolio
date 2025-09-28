@@ -597,3 +597,14 @@ padding-top: 5.5vw;
             color: yellow;
         }
 */
+
+
+
+.badge-1 {
+    width: 5rem;
+    grid-column-start: 3;
+    grid-row-start: 1;
+  display: flex;           /* use flex inside the 3rd column */
+  justify-content: flex-end; 
+}
+
