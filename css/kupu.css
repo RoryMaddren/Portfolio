@@ -10,29 +10,7 @@
         content: url('../images/kupurangi/k-1.jpg');
 }
 
-.project-image {
-    grid-row-start: 1;
-    grid-row-end: 1;
-    padding-left: 9vw;
-    padding-right: 9vw;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* push image in bounds of grid  */
-    opacity: 1; 
-    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth sliding effect */
-}
 
-.project-image-2 {
-    grid-row-start: 2;
-    grid-row-end: 2;
-    padding-left: 9vw;
-    padding-right: 9vw;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* push image in bounds of grid  */
-    opacity: 1; 
-    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth sliding effect */
-}
 
 
 #kupu-1{
@@ -40,17 +18,17 @@
 }
 #kupu-2{
 
- content: url('../images/kupurangi/k2.jpg');
+ content: url('../images/kupurangi/new/3.jpg');
 }
 #kupu-3{
-    content: url('../images/kupurangi/Problem\ 1.avif');
+    content: url('../images/kupurangi/new/5.jpg');
 }
 
 
 
 
 #kupu-4{
-    content: url('../images/kupurangi/k11.jpg');
+    content: url('../images/kupurangi/new/4.jpg');
 }
 #kupu-5{
     content: url('../images/kupurangi/k5.jpg');
@@ -67,14 +45,24 @@
 }
 
 #kupu-9{
- content: url('../images/kupurangi/k11.jpg');
+ content: url('../images/kupurangi/new/p2.jpg');
+}
+
+#kupu-10 {
+ content: url('../images/kupurangi/new/12.jpg');
+}
+
+#kupu-11 {
+ content: url('../images/kupurangi/new/9.jpg');
 }
 
 
 .stage-divider-type-2 {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr .5fr 1fr;
+    grid-template-rows: .8fr .8fr .1fr;
+    gap: 2rem;
+    padding-bottom: 5rem;
 }
 
 
