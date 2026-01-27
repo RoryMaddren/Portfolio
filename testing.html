@@ -1,0 +1,159 @@
+
+
+    <section id="works-section">
+
+     <article id="works-left-side-desktop">
+            <h3 id="title-selected-works">Selected Works</h3>
+            <div id="empty-division-line-works"></div>
+          <div id="selected-works-container-desktop">
+  <a href="./kupu-rangi.html" 
+     class="selected-works-title"
+     data-project="kupu-rangi">
+     Kupu Rangi
+  </a>
+
+  <a href="./unheard.html" 
+     class="selected-works-title"
+     data-project="unheard">
+     Unheard
+  </a>
+
+  <a href="./optics.html" 
+     class="selected-works-title"
+     data-project="optics">
+     Optics
+  </a>
+
+  <a href="./voices-in-stills.html" 
+     class="selected-works-title"
+     data-project="voices">
+     Voices in Stills
+  </a>
+</div>
+        </article>
+
+
+
+
+
+        <div id="project-preview">
+  <!-- This will be replaced on hover -->
+</div>
+
+
+
+<script>
+
+const titles = document.querySelectorAll('.selected-works-title');
+const preview = document.getElementById('project-preview');
+
+titles.forEach(title => {
+  title.addEventListener('mouseenter', () => {
+    const key = title.dataset.project;
+    preview.innerHTML = projectData[key];
+  });
+});
+
+
+
+const projectData = {
+  "kupu-rangi": `
+    <div class="project-describer-section">
+      <a href="./kupu-rangi.html">
+        <p class="project-small-overview">
+          A replacement for the underground arts network, that better showcases the arts and welcomes new members into the ever-shrinking community.
+        </p>
+      </a>
+
+      <a href="./kupu-rangi.html">
+        <div class="works-div-cat-flex">
+          <p>Website, 2024 Project, Group Project</p>
+          <p>UX/UI Designer / Graphic Designer</p>
+          <p>8 Week Project — June 2025</p>
+        </div>
+      </a>
+    </div>
+  `,
+
+  "unheard": `
+    <div class="project-describer-section">
+      <a href="./unheard.html">
+        <p class="project-small-overview">
+          A platform exploring unheard voices through sound-driven storytelling.
+        </p>
+      </a>
+
+      <a href="./unheard.html">
+        <div class="works-div-cat-flex">
+          <p>Website, Audio Project</p>
+          <p>Designer / Developer</p>
+          <p>6 Week Project — 2024</p>
+        </div>
+      </a>
+    </div>
+  `,
+
+  "optics": `
+    <div class="project-describer-section">
+      <a href="./optics.html">
+        <p class="project-small-overview">
+          A visual exploration of perception, distortion, and digital identity.
+        </p>
+      </a>
+
+      <a href="./optics.html">
+        <div class="works-div-cat-flex">
+          <p>Branding, Visual Identity</p>
+          <p>Graphic Designer</p>
+          <p>4 Week Project — 2025</p>
+        </div>
+      </a>
+    </div>
+  `,
+
+  "voices": `
+    <div class="project-describer-section">
+      <a href="./voices-in-stills.html">
+        <p class="project-small-overview">
+          Capturing silent narratives through still imagery and motion.
+        </p>
+      </a>
+
+      <a href="./voices-in-stills.html">
+        <div class="works-div-cat-flex">
+          <p>Photography, Motion</p>
+          <p>Visual Designer</p>
+          <p>5 Week Project — 2024</p>
+        </div>
+      </a>
+    </div>
+  `
+};
+
+
+
+
+
+title.addEventListener('mouseenter', () => {
+  const key = title.dataset.project;
+  preview.classList.add('fade-out');
+
+  setTimeout(() => {
+    preview.innerHTML = projectData[key];
+    preview.classList.remove('fade-out');
+  }, 150);
+});
+
+</script>
+
+
+<style>
+  #project-preview {
+  transition: opacity 0.25s ease;
+}
+
+#project-preview.fade-out {
+  opacity: 0;
+}
+</style>
+

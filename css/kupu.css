@@ -1,78 +1,537 @@
-#optics-1, #optics-1-image-2, #optics-3, #optics-4, #optics-5, #optics-6, #optics-7{
-    object-fit:contain; /* push image in bounds of grid  */
-    width: 100%;
-    height: 100%;
+#kupu-image {
+    background-image: url('../images/kupu-rangi-images/kupu-proj/header-img-1.jpg');
 }
 
-
-
-.big-banner-image-optics {
-        content: url('../images/kupurangi/k-1.jpg');
+#kupu-3 {
+        background-image: url('../images/kupu-rangi-images/kupu-proj/kupu-3.png');
 }
 
-
-
-
-#kupu-1{
-    content: url('../images/kupurangi/k-1.jpg');
-}
-#kupu-2{
-
- content: url('../images/kupurangi/new/3.jpg');
-}
-#kupu-3{
-    content: url('../images/kupurangi/new/5.jpg');
+#kupu-4 {
+        background-image: url('../images/kupu-rangi-images/kupu-proj/kupu-4.png');
 }
 
-
-
-
-#kupu-4{
-    content: url('../images/kupurangi/new/4.jpg');
-}
-#kupu-5{
-    content: url('../images/kupurangi/k5.jpg');
-}
-#kupu-6{
- content: url('../images/kupurangi/k6.jpg');
-}
-#kupu-7{
- content: url('../images/kupurangi/k7.jpg');
+#kupu-5 {
+        background-image: url('../images/kupu-rangi-images/kupu-proj/kupu-5.png');
 }
 
-#kupu-8{
- content: url('../images/kupurangi/k8.jpg');
+#kupu-6 {
+        background-image: url('../images/kupu-rangi-images/kupu-proj/kupu-6.png');
 }
 
-#kupu-9{
- content: url('../images/kupurangi/new/p2.jpg');
+#kupu-7 {
+        background-image: url('../images/kupu-rangi-images/kupu-proj/kupu-7.png');
+}
+
+#kupu-8 {
+        background-image: url('../images/kupu-rangi-images/kupu-proj/kupu-8.png');
+}
+
+#kupu-9 {
+        background-image: url('../images/kupu-rangi-images/kupu-proj/kupu-9.png');
 }
 
 #kupu-10 {
- content: url('../images/kupurangi/new/12.jpg');
+        background-image: url('../images/kupu-rangi-images/kupu-proj/kupu-10.png');
 }
 
 #kupu-11 {
- content: url('../images/kupurangi/new/9.jpg');
+        background-image: url('../images/kupu-rangi-images/kupu-proj/kupu-11.png');
 }
 
 
-.stage-divider-type-2 {
+.video-ex-kupu {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+#kupu-title-piece-part-one {
+    padding: 48px 3vw 24px 3vw;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: .8fr .8fr .1fr;
-    gap: 2rem;
-    padding-bottom: 5rem;
+    grid-template-columns: 1.2fr 30px .8fr;
+    grid-template-rows: 1fr 2.75rem 1.5rem 1.5rem 1.8rem .5fr;
+}
+
+.title-flex {
+    display: flex;
+    gap: 24px;
+}
+
+.title-flex h2{
+    font-family: "edit-old-reg";
+    font-weight: 100;
+    font-size: 8rem;
+}
+
+.title-flex h4 {
+    font-family: "hass-roman";
+    font-size: 1.2rem;
+    align-self: end;
+    padding-bottom: 37px;
+    font-weight: 100;
+}
+
+.overview-title {
+    grid-row: 2;
+    font-size: 1.5rem;
+    font-family: "hass-roman";
+    font-weight: 100;
+}
+
+.overview-blurb {
+    grid-row: 3 /span 5;
+    padding-right: 6rem;
+    font-size: 1.1rem;
+}
+
+.awards-title {
+    grid-column: 3;
+    grid-row: 2;
+    font-size: 1.5rem;
+    font-family: "hass-roman";
+    font-weight: 100;
+    justify-self: end;
+    padding-bottom: 6px;
+}
+
+.award-line-flex span {
+    display: flex;
+    gap: 4px;
+}
+
+.award-line-flex {
+    grid-column: 3;
+    display: flex;
+    justify-content: space-between;
+    justify-self: end;
+    font-size: 1.1rem;
+    border-bottom: 1px #555 solid;
+    grid-column: 1 /span 5;
+    padding-bottom: 6px;
+}
+
+.project-awards-container-overall {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 /span 3;
+    gap: 6px;
+    grid-row: 2;
+    margin-left: .3vw;
+}
+
+.award-line-flex img {
+    margin-left: 0;
+}
+
+.award-given-word {
+    font-family: "hass-roman-medium";
+    font-weight: 100;
+}
+
+#first-award-line {
+    grid-row: 3;
+}
+
+#second-award-line {
+    grid-row: 4;
+}
+
+#third-award-line {
+    grid-row: 5
+}
+
+.medal-images-flex {
+    grid-column: 3;
+    grid-row: 6;
+    display: flex;
+    gap: 6px;
+    justify-self: end;
+}
+
+#bronze-award, .finalist-award{
+    width: 4rem;
+    height: 4rem;
+}
+
+
+
+.category-container {
+  display: flex;
+  grid-column: 1 /span 2;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.catagory-and-time-frame-title {
+    font-family: "hass-roman", sans-serif;
+    font-weight: 100;
+    font-size: 1.5rem;
+    padding-bottom: 6px;
+}
+
+#kupu-title-piece-part-two {
+    display: grid;
+    padding: 0vw 3vw 200px 3vw;
+    grid-template-columns: .322fr .3145fr 1fr;
+    grid-template-rows: .9fr 1fr;
+}
+
+.the-team-title {
+    font-size: 3rem;
+    font-family:  "hass-roman", sans-serif;
+    padding-bottom: 6px;
+}
+
+.team-members-container {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.team-members-container h3 {
+    font-family:  "hass-roman", sans-serif;
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+
+.my-roles-container {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    gap: 6px;
+}
+
+.my-roles-container h3 {
+    font-family:  "hass-roman", sans-serif;
+    font-weight: 100;
+    font-size: 1.5rem;
+    padding-bottom: 6px;
+}
+
+.team-members-container a {
+    font-family: 'hass-roman';
+    cursor: pointer;
+    font-weight: 100;
+    padding-bottom: 3px;
+}
+
+.team-members-container a {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #555;
+    gap: 12px;
+}
+
+
+#kupu-bts-photos {
+    background-image: url('../images/kupu-rangi-images/kupu-header.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.project-awards-container-overall:hover > a:not(.project-awards-container-overall a:hover){
+    border-bottom: #9f9f9f 1px solid;
+    color: #9f9f9f;
+}
+
+.team-members-container:hover > a:not(.team-members-container a:hover){
+    border-bottom: #9f9f9f 1px solid;
+    color: #9f9f9f;
 }
 
 
 
 
-@media only screen and (max-width: 600px) {
-.bordering-line {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: .1fr 1fr 1.3fr 6rem 4rem 4rem;
-        padding-bottom: 5rem;
+
+
+/* Ipad Sizing */
+@media screen and (max-width: 810px) { 
+
+    .project-page-lines {
+        opacity: 0;
     }
+
+
+    .extra-bts-project-photos {
+  display: flex;
+flex-direction: column-reverse;
+  gap: 24px;
+}
+
+#kupu-bts-photos {
+    height: 60vw;
+}
+
+.project-awards-container-overall {
+    grid-column: 1 /span 2;
+    grid-row: 7;
+    margin-right: 0;
+}
+
+
+#kupu-title-piece-part-one {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    padding: 24px 3vw 24px 3vw;
+}
+
+#project-runthrough-section {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.title-flex {
+    grid-column: 1 /span 2;
+    padding-bottom: 6px;
+}
+
+.title-flex h2{
+    font-size: 3.5rem;
+}
+
+.title-flex h4 {
+    font-size: 0rem;
+}
+
+.overview-title {
+    grid-column: 1 /span 2;
+    padding-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+.awards-title {
+    grid-column: 1 /span 2;
+    grid-row: 4;
+    justify-self: start;
+}
+
+.overview-blurb {
+    grid-column: 1 /span 2;
+    grid-row: 3;
+    padding-bottom: 24px;
+    font-size: 1.1rem;
+    padding-right: 0;
+}
+
+#first-award-line {
+    grid-column: 1 /span 2;
+    grid-row: 5;
+    padding-bottom: 6px;
+}
+
+#second-award-line {
+    grid-column: 1 /span 2;
+    grid-row: 6;
+    padding-bottom: 6px;
+}
+
+#third-award-line {
+    grid-column: 1 /span 2;
+    grid-row: 7;
+    padding-bottom: 6px;
+}
+
+.medal-images-flex {
+    grid-column: 1 /span 2;
+    grid-row: 8;
+    justify-self: start;
+}
+
+.award-line-flex {
+    font-size: 1rem;
+    justify-self: start;
+}
+
+
+
+
+#kupu-title-piece-part-two {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .52fr 1fr 1fr;
+    gap: 24px;
+    padding: 0vw 3vw 72px 3vw;
+}
+
+.category-container {
+    grid-column: 1 /span 3;
+    grid-row: 1 /span 2;
+}
+
+
+.team-members-container {
+    grid-column: 1 /span 3;
+    grid-row: 3;
+}
+
+.my-roles-container {
+    grid-column: 1 /span 3;
+    grid-row: 2; 
+}
+
+
+.project-image-expaliner {
+    display: grid;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project-image-expaliner-two-images {
+    display: grid;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.title-explainer {
+    font-size: 2.5rem;
+}
+
+.paragraph-text-project {
+    font-size: 1.1rem;
+}
+
+.change-project-buttons {
+    gap: 12px;
+}
+
+.change-project-buttons h4 {
+    font-size: 2.2rem;
+}
+
+.change-project-buttons p {
+    font-size: 1rem;
+}
+
+}
+
+
+
+/* Mobile Sizing */
+@media screen and (max-width: 600px) {
+#kupu-title-piece-part-one {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    padding: 24px 3vw 24px 3vw;
+}
+
+.title-flex {
+    grid-column: 1 /span 2;
+    padding-bottom: 6px;
+}
+
+.title-flex h2{
+    font-size: 3.5rem;
+}
+
+.title-flex h4 {
+    font-size: 0rem;
+}
+
+.overview-title {
+    grid-column: 1 /span 2;
+    padding-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+.awards-title {
+    grid-column: 1 /span 2;
+    grid-row: 4;
+    justify-self: start;
+}
+
+.overview-blurb {
+    grid-column: 1 /span 2;
+    grid-row: 3;
+    padding-bottom: 24px;
+    font-size: 1.1rem;
+    padding-right: 0;
+}
+
+#first-award-line {
+    grid-column: 1 /span 2;
+    grid-row: 5;
+    padding-bottom: 6px;
+}
+
+#second-award-line {
+    grid-column: 1 /span 2;
+    grid-row: 6;
+    padding-bottom: 6px;
+}
+
+#third-award-line {
+    grid-column: 1 /span 2;
+    grid-row: 7;
+    padding-bottom: 6px;
+}
+
+.medal-images-flex {
+    grid-column: 1 /span 2;
+    grid-row: 8;
+    justify-self: start;
+}
+
+.award-line-flex {
+    font-size: 1rem;
+    justify-self: start;
+}
+
+
+
+
+#kupu-title-piece-part-two {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .52fr 1fr 1fr;
+    gap: 24px;
+    padding: 0vw 3vw 72px 3vw;
+}
+
+.category-container {
+    grid-column: 1 /span 3;
+    grid-row: 1 /span 2;
+}
+
+
+.team-members-container {
+    grid-column: 1 /span 3;
+    grid-row: 3;
+}
+
+.my-roles-container {
+    grid-column: 1 /span 3;
+    grid-row: 2; 
+}
+
+
+.project-image-expaliner {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.title-explainer {
+    font-size: 2.3rem;
+}
+
+.paragraph-text-project {
+    font-size: 1.1rem;
+}
+
+.change-project-buttons {
+    gap: 12px;
+}
+
+.change-project-buttons h4 {
+    font-size: 2.2rem;
+}
+
+.change-project-buttons p {
+    font-size: 1rem;
+}
+
+
 }

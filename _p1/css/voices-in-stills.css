@@ -1,0 +1,68 @@
+#img-1-vis, #img-2-vis, #img-3-vis, #img-4-vis, #img-5-vis, #img-6-vis, #img-7-vis, #img-8-vis, #img-9-vis{
+    object-fit: cover; /* push image in bounds of grid  */
+    width: 100%;
+    height: 100%;
+}
+
+.big-banner-vis {
+    content: url('../images/voices-in-stills-images/voices-in-stills-1.jpeg');
+}
+
+#img-1-vis{
+    content: url('../images/voices-in-stills-images/Inspiration.jpg');
+}
+
+#img-2-vis{
+    content: url('../images/voices-in-stills-images/photography.png');
+}
+
+#img-3-vis{
+    content: url('../images/voices-in-stills-images/construction.jpg');
+}
+
+#img-4-vis{
+    content: url('../images/voices-in-stills-images/assembly-2.jpg');
+}
+
+#img-5-vis{
+    content: url('../images/voices-in-stills-images/Sound-design-2.jpeg');
+}
+
+#img-6-vis{
+    content: url('../images/voices-in-stills-images/sound-test-3.jpg');
+}
+
+#img-7-vis{
+    content: url('../images/voices-in-stills-images/touch-designer.jpeg');
+}
+
+#img-8-vis{
+    content: url('../images/voices-in-stills-images/assembly.png');
+}
+
+#img-9-vis{
+    content: url('../images/voices-in-stills-images/final-1.jpg');
+}
+
+
+#research-question {
+    padding-left: 9.5vw;
+    padding-right: 9.5vw;
+    font-size: 1.5rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    max-width: 70rem;
+    font-weight: 300;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+.bordering-line {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .1fr 1fr .95fr 8rem 4rem 4rem;
+        padding-bottom: 5rem;
+    }
+}

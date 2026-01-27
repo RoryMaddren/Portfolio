@@ -1,0 +1,78 @@
+#optics-1, #optics-1-image-2, #optics-3, #optics-4, #optics-5, #optics-6, #optics-7{
+    object-fit:contain; /* push image in bounds of grid  */
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.big-banner-image-optics {
+        content: url('../images/kupurangi/k-1.jpg');
+}
+
+
+
+
+#kupu-1{
+    content: url('../images/kupurangi/k-1.jpg');
+}
+#kupu-2{
+
+ content: url('../images/kupurangi/new/3.jpg');
+}
+#kupu-3{
+    content: url('../images/kupurangi/new/5.jpg');
+}
+
+
+
+
+#kupu-4{
+    content: url('../images/kupurangi/new/4.jpg');
+}
+#kupu-5{
+    content: url('../images/kupurangi/k5.jpg');
+}
+#kupu-6{
+ content: url('../images/kupurangi/k6.jpg');
+}
+#kupu-7{
+ content: url('../images/kupurangi/k7.jpg');
+}
+
+#kupu-8{
+ content: url('../images/kupurangi/k8.jpg');
+}
+
+#kupu-9{
+ content: url('../images/kupurangi/new/p2.jpg');
+}
+
+#kupu-10 {
+ content: url('../images/kupurangi/new/12.jpg');
+}
+
+#kupu-11 {
+ content: url('../images/kupurangi/new/9.jpg');
+}
+
+
+.stage-divider-type-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .8fr .8fr .1fr;
+    gap: 2rem;
+    padding-bottom: 5rem;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+.bordering-line {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .1fr 1fr 1.3fr 6rem 4rem 4rem;
+        padding-bottom: 5rem;
+    }
+}

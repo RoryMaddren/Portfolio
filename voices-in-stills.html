@@ -1,298 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voices In Stills</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="css/home-page.css">
-    <link rel="stylesheet" href="css/voices-in-stills.css">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-   <!--  <script src="js/noise.js" defer></script> --> 
-     <script src="js/primary.js" defer></script>
-
-
+    <title>Rory Maddren — vis</title>
+    <link rel="stylesheet" href="./css/generic.css">
+    <link rel="stylesheet" href="./css/projects-generic.css">
+    <link rel="stylesheet" href="./css/voices-in-stills.css">
+    <script src="./js/landing.js" defer></script>
 </head>
-<body>
- 
 
-    <!-- <canvas id="staticCanvas"></canvas>Entire Nav-->
-    <div class="noise"></div>
+<body id="vis-page">
+    <div class="grain-overlay"></div>
+    <div class="project-page-lines">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="primary-nav">
+        <a href="./index.html">
+            Home
+        </a>
+        <a href="#" class="more-info-link alt-page-info">
+            More Info
+        </a>
+    </div>
+
+   
+    <section id="vis-overview">
+        <article class="overview-header">
+            <div class="header-image" id="vis-image-header"></div>
+        </article>
+       <article id="vis-title-piece-part-one">
+            <div class="title-flex">
+                <h2>Voices In Stills.</h2>
+                <h4>— Year 2 Project</h4>
+            </div>
+
+            <h4 class="overview-title">Overview</h4>
+            <p class="overview-blurb">Voices in Stills is an exploration of the emotional relationship between sound and static image through the use of a motion, sound, and a 
+photography-based  installation. Voices in Stills uses emotional ambient soundscapes,  personal storytelling, and overlaid black and white photography to guide the user through impactful lived experiences of grief and its wider effects thereafter.</p>
+
+
+            <div class="category-container">
+            <h4 class="catagory-and-time-frame-title">Category & Time Frame</h4>
+            <p>Installation, Storytelling, Sound Design</p>
+            <p>8 Weeks, August 2024</p>
+            </div>
+        </article>
+
+          <article id="vis-title-piece-part-two">
+                <div class="my-roles-container">
+                <h3>My Roles</h3>
+                <p>UX/UI Designer</p>
+                <p>Graphic Designer</p>
+                <p>User Tester</p>
+                <p>Copywriter</p>
+
+            </p>
+            </div>
+
+          </article>
+    </section>
 
+
+
+
+<section id="project-runthrough-section">
+        <!--  <article class="project-image-expaliner">
+            <div class="piece-image"></div>
+            <h4 class="title-explainer">Try it for Yourself</h4>
+            <div class="paragraph-text-project">
+                <p>Voices and stills worked as a position based installation. Based on where you stood in the room it would play one of two stories that documented there experience with grief.</p>
+                    
+                <p>To demonstrate how the sound elements worked move the slider from either side of the diagram. This will crudely showcase the experience of using the installation. For the sake of this diagram you’ll have to imagine you’re the slider walking back and forth in the installation.</p>
+            </div>
+          </article>
+-->
 
-    <div class="nav-contents"> <!-- Entire Nav-->
-        <nav class="home-click-nav"> <!-- "Rory Maddren" Button -->
-            <ul>
-                <li class="rory-text"><a href="./index.html">Rory</a></li> <!-- Italics for "Rory" text-->
-                <li class="rory-text"><a href="./index.html">Maddren</a></li>
-            </ul>
-        </nav>
 
 
-        <!-- Mobile navigation menu -->
-        <!--  <div class="ham-div"> --> <!--   this fix th epadding but still figuring the javascript  -->
-        <div class="menu-btn">
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-            <!--   </div>  -->
-        </div>
+          <article id="research-question-container">
+            <div id="research-question-explaining-flex">
+            <p>Beginning this project, I wanted to explore something that didn’t have a defined end product. I knew the end result would be quite abstract and out there, but I still wanted it to resonate and have the desired emotional effect.</p>
 
-        <nav class="social-divs"> <!-- All the social + "Works" section -->
-            <ul class="social-links">
-                <li class="nav-item"><a class="nav-link current"
-                        href="https://www.instagram.com/rory_maddren_designs/">Instagram</a></li>
-                <div 
-                class="hamburger-divide-line">
-                </div>
-                <li class="nav-item"><a class="nav-link"
-                        href="https://www.linkedin.com/in/rory-maddren-962074326/">LinkedIn</a></li>
-                <div class="hamburger-divide-line"></div>
-                <li class="nav-item"><a class="nav-link"
-                        href="mailto:roryrmaddren@gmail.com?subject=Hello%20Rory&body=I%20wanted%20to%20reach%20out%20to%20you%20about...">Contact-Me</a>
-                </li>
-                <div class="hamburger-divide-line"></div>
+            <p>So I began by outlining what I wanted to research for this project. <br>This became —</p>
+            </div>
 
-                <div id="nav-line"></div> <!-- Craeting line -->
+            <div id="display-rq-flex">
+            <h4>Research Question:</h4>
+            <h5>How might we explore the emotional relationship of old-sounding voice recordings  through motion tracking and glasswork photography?</h5>
+            </div>
+          </article>
 
 
+                    <article class="project-image-expaliner">
+            <div class="piece-image" id="vis-1"></div>
+            <h4 class="title-explainer">Research & Inspiration</h4>
+            <div class="paragraph-text-project">
+                <p>Beginning this project I was inspired by the overlaying techniques of Robert Rauschenberg and the  interactive digital art of Emmanuel Van der Auwera. I was interested in creating a multifaceted experience, utilising the full effects of sound, photography, and motion tracking.</p>
 
+                <p>I began by researching these two artist as well as Japanese photographer Ken Kitano and planning the initial photography trials for the mock lineup of how this might work. The concept at this stage would primiliar utilise the photography installation and sound to create a sort of art gallery-like experience, where a tour guide would speak with the visual accompaniment of the art. However, blending this together for a more immersive experience, using ambient music and human interaction to decide how you want to experience the audio.</p>
+            </div>
+          </article>
 
 
+            <article class="project-image-expaliner">
+            <div class="piece-image" id="vis-2"></div>
+            <h4 class="title-explainer">Photography and Editing</h4>
+            <div class="paragraph-text-project">
+                <p>Six separate shoots were executed, varying in style, colour, grain  variation, background, pose, and distance. I did this to determine  the strongest possible final composition in the following steps of overlaying the portraits.</p>
 
+                <p>I repeated this process a few times, with different compositions, and this proved more difficult than originally conceived. I found that the eyes of each model became a  distraction and gave an uneasy feeling when overlayed with one another haphazardly, so special attention to how each photograph was taken and how they were overlayed were equally as important. From this I also understood that colour only muddied the final composition, distance of shot would play a major role is creating visually pleasing final outcome.</p>
+            </div>
+          </article>
 
 
+            <article class="project-image-expaliner">
+            <div class="piece-image" id="vis-3"></div>
+            <h4 class="title-explainer">Assembling Composition</h4>
+            <div class="paragraph-text-project">
+            <p>I then moved into assembling the photography piece. I printed the photographs onto translucent clear film and placed them between repurposed A4-sized glass panels. I again at this stage trailed different arrangements to test the composition of the full piece. After the glass created a distance, this altered the piece yet again. After comparing 20 experimental arrangements, I identified the best layout for what the piece needed to be. </p>
 
-                <nav class="work-link"> <!-- "Work" link -->
-                    <ul>
-                        <li>
-                            <a id="work-link-id-click" href="./index.html#selected-works-id">Work</a>
-                        </li>
-                    </ul>
-                </nav>
+            <p>
+The glass enhanced the piece by creating a  subtle, unexpected lenticular effect when viewed from different angles. Building on this by pressing the final two photographs within the same  pane of glass, this added more variety and allowed the two images to blend more than the two other photographs, separated individually by a glass panel, creating additional depth and a more abstracted focus on the deeper layers of the piece.</p>
+            </div>
+          </article>
 
+            
+          
+          
+    
 
 
+                    <article class="project-image-expaliner">
+            <div class="piece-image" id="vis-4"></div>
+            <h4 class="title-explainer">Frame Construction <br>& Assembly</h4>
+            <div class="paragraph-text-project">
+            <p>I then constructed a functional two-sided frame to hold the glass  panels together. As this isn’t typical of regular one-sided frames, the structure was initially weaker, and suffered from wearing glue that would over time separate with the weight of the  glass panels.</p>
 
+            <p>To alleviate this issue and keep the piece balanced, a wooden stand was assembled to support the frame and also provide stronger focus for the piece.
+            </p>
+            </div>
+          </article>
 
-          </ul>
-      </nav>
-      </nav> <!-- closing this nav to create the space between social and "works"--> 
 
 
-</div> <!-- Closing "social-links" div --> 
-</div> <!-- Closing "nav-contents" div --> 
+                    <article class="project-image-expaliner">
+            <div class="piece-image" id="vis-5"></div>
+            <h4 class="title-explainer">Sound Design</h4>
+            <div class="paragraph-text-project">
+            <p>I composed a simple guitar-based soundscape to emphasise the  melancholic tone of the project. Inspired by soft acoustic guitar instrumentals and ambient soundscapes, the audio helped shape the overall experience and added emotional depth to the personal accounts of grief.</p>
 
+            <p>The audio was then mixed and processed to mimic the feeling of an old tape recorder, enhancing the immersion and making it sound like a old, vintage answering phone message. This made each personal accounts feel more authentic, and as if you were listening in on an emotional message left by someone meant for a loved one after a missed call.</p>
+            </div>
+          </article>
 
 
-<div class="lines">
-    <span></span>
-    <span></span>
-</div>
 
 
 
+            <article class="project-image-expaliner">
+            <div class="piece-image" id="vis-6"></div>
+            <h4 class="title-explainer">Music & Voices</h4>
+                       <div class="paragraph-text-project">
+            <p>The personal accounts were a key focal point of this experience and needed to carry the right emotional weight. The stories told in each recording had to feel both powerful and authentic when listened to. Because of this, several interviews were conducted before this finally came through.</p>
 
+            <p>I soon discovered the audio was most effective when using two participants, recorded  through a simple microphone and then heavily altered in recording software to achieve a similar effect and feeling of the ambient soundscape (an old answering machine message).</p>
 
+            <p>Eventually this blended seamlessly with the music composition. The emotionally charged subject matter, and the unique and human feelings expressed by both speakers, lead to a final audio that conveyed its intended effect in an authentic, and visceral form.</p>
+            </div>
+          </article>
 
 
 
+            <article class="project-image-expaliner">
+            <div class="piece-image" id="vis-7"></div>
+            <h4 class="title-explainer">Motion tracking</h4>
+            <div class="paragraph-text-project">
+            <p>The next stage was to piece everything together with the motion tracking concept.  I achieved through  TouchDesigner, specifically with blob detection, which  was linked directly to the audio.</p>
 
+            <p>The concept was for the user could control which voice  they heard by moving to one of the two sides of the glass piece (over  the tape marking on the floor), creating the illusion of hearing the voice through  the prominent face they could clearly see on that side. To bring more prominence to the voices the soundscape was panned to the left and contrasted against the voice lines that were panned to the right and accompanying sound effects which stayed centre.</p>
 
+            <p>Additional sound effects were included to enhance the sense of control and immersion. These were: A tape recorder rewinding at the end of a voice line as if playing on repeat with physical media, and an answering machine beep to indicate when  the user had switched sides, as if you were pressing play on your answering machine.</p>
+            </div>
+          </article>
 
-<div class="project-overview-section">
 
+                   <article class="project-image-expaliner">
+              <div class="piece-image" id="vis-8"></div>
+            <h4 class="title-explainer">Detailing and Set-up</h4>
+            <div class="paragraph-text-project">
+            <p>Coming to the end of the process, small tests were conducted in the installation space after the final assembly. These helped balance the audio levels for the environment. Minor adjustments were made, such as using noise-cancelling headphones to achieve the immersive feeling, and making amendments to the  motion tracking and lighting setup.</p>
 
+            <p>To add final details, a logo was created using the same materials as the glass installation piece and a simple diagram was created to demonstrate how to use the installation.</p>
+            </div>
+          </article>
 
-<img class="big-banner-image big-banner-vis" src="./images/optics-images/hero-1.jpg" alt="#">
 
 
-<div class="bordering-line">
-  <h1 class="banner-text">Voices in Stills</h1>
-  <div class="banner-hanging-number"><p class="summery-title">Summary:</p><p>
-An exploration of the emotional relationship between sound and static image through the use of a motion, sound, and photography-based installation. *Voices in Stills* uses emotional ambient soundscapes, rich storytelling, and overlaid black and white photography to guide the user through an impactful storytelling experience.</p> 
-  </div>
-  <p class="project-date-top">By stepping into the installation space, the user controls how they experience the stories of loss, told through two voices transmitting via a headset — using TouchDesigner motion tracking and immersive, old-media-styled music and SFX.</p>
-  
-
-<div class="catagory"><p class="cat-title">Category:</p><p>Installation</p></div>
-  <div class="year"><p class="year-title">Year:</p><p>2024</p></div>
-<div class="roles"><p class="roles-title">Roles:<p>Researcher, Graphic Designer, Photographer, UX/UI Designer, Sound Enginer, Composer.</p></div>
-  </div>
-  </div>
-
-
-
-
-
-
-
-  <h4 class="research-question">
-Research question: <br> How might we explore the emotional relationship of old-sounding voice recordings through motion tracking and glasswork photography?
-      </h4>
-
-<div class="stage-divider">
-  <div id="img-1-vis" class="project-image"></div>
-    <div class="stage-divider-text-aligning">
-    <h2>Research and Preparation</h2>
-<p>
-Inspired by the overlaying techniques of Robert Rauschenberg and the interactive art of Emmanuel Van der Auwera, we were interested in creating a multifaceted experience, utilizing the full effects of sound, photography, and motion tracking.
-<br><br>
-We began by researching Japanese photographer Ken Kitano and planning the initial photography trials for the mock lineup.
-</p>
-
-</div>
-</div>
-
-<div class="stage-divider">
-  <div id="img-2-vis" class="project-image"></div>
-    <div class="stage-divider-text-aligning">
-<h2>Photography and Editing</h2>
-<p>
-Six separate shoots were executed, varying in style, color, grain variation, background, pose, and distance. This was done to determine the strongest final composition in the following steps.
-<br><br>
-Through several tests, we found that the eyes of each model became a distraction and gave an uneasy feeling. While this was partially expected, the results appeared more unsettling and distracting than anticipated. Minimizing this element led to a stronger and more thoughtful outcome.
-</p>
-
-</div>
-</div>
-<div class="stage-divider">
-  <div id="img-3-vis" class="project-image"></div>
-    <div class="stage-divider-text-aligning">
-<h2>Assembling Composition</h2>
-<p>
-We then moved into assembling the photographic piece. By sliding the clear film photographs between A4-sized glass panels, we trialed several arrangements to test the composition of the full piece. After comparing 20 experimental arrangements, we identified the most visually captivating layout.
-<br><br>
-Overlaying a variety of distances, poses, and backgrounds in one specific arrangement proved to be the strongest. We separated each photo with a pane of glass, which further enhanced the piece by creating a subtle, unexpected lenticular effect when viewed from different angles.
-<br><br>
-We built on this by pressing the final two photographs within the same pane of glass. This added more variety and allowed the two images to blend more than the others, creating additional depth and a more abstracted focus on the deeper layers of the piece.
-</p>
 
-</div>
-</div>
+        
 
-<div class="stage-divider">
-  <div id="img-4-vis" class="project-image"></div>
-    <div class="stage-divider-text-aligning">
-<h2>Frame Construction and Assembly</h2>
-<p>
-We then constructed a functional two-sided frame to hold the glass panels together. As a deviation from the traditional one-sided frame, the structure was initially weaker — especially under the weight of the glass.
-<br><br>
-To alleviate this issue and keep the piece balanced, a wooden stand was assembled to support the frame.
-</p>
-</div>
-</div>
 
+            <article class="project-image-expaliner">
+            <div class="piece-image" id="vis-9"></div>
+            <h4 class="title-explainer">Final Outcome</h4>
+            <div class="paragraph-text-project">
+            <p>The final installation was a successful dive into an emotional experience, with two voices tracked based on the user’s position.</p>
+            <p>The strong soundscape created an immersive and emotional backdrop,  allowing you to fully engage with the stories shared through the experiences of grief. All of this was brought together by the central glass photography piece placed at the heart of the installation.</p>
+            </div>
+          </article>
 
-<div class="stage-divider">
-  <div id="img-5-vis" class="project-image"></div>
-    <div class="stage-divider-text-aligning">
-    <h2>Sound Design</h2>
-<p>
-We composed a simple guitar-based soundscape to emphasize the melancholic tone of the project. Inspired by soft acoustic guitar instrumentals and ambient soundscapes, the audio helped shape the overall experience and added emotional depth to the spoken voice sections.
-<br><br>
-The audio was then mixed and processed to mimic the sound of an old tape recorder, enhancing immersion and making it feel like a vintage phone receiver message. This effect was thoroughly tested to ensure it felt authentic and achieved the intended emotional impact.
-</p>
-</div>
-</div>
+<!--
+          <article class="extra-bts-project-photos">
+            <div class="photo-container-bts"></div>
+            <div class="bts-explained-text-portion">
+            <p class="first-line-bts">Some fun behind the scenes production photography, Just to get an idea on some of my workings during this time.</p>
+            <div>
+            <p class="instagram-bts-link-line-one">You can find more of my process on my design instagram —</p>
+            <p class="instagram-bts-link-line-two">https://www.instagram.com/rory_maddren_designs</p>
+            </div>
+            </div>
+          </article>
+-->
 
 
-<div class="stage-divider">
-  <div id="img-6-vis" class="project-image"></div>
-    <div class="stage-divider-text-aligning">
-    <h2>Music and Voices</h2>
-<p>
-The voices were a primary aspect of this experience and needed to carry significant emotional weight. The stories told in each recording had to feel both powerful and authentic. Numerous iterations were conducted to achieve the final result.
-<br><br>
-The audio proved most effective when using two participants, recorded through an iPhone speaker and then heavily altered to mimic the sound of an old answering machine.
-<br><br>
-This blended seamlessly with the music composition. By drawing on the emotionally charged subject of losing a loved one, and the feelings expressed by both speakers, the final audio conveyed its message in a raw, emotionally authentic, and visceral form.
-</p>
 
-</div>
-</div>
 
 
+          <article class="change-project-buttons">
+            <a href="./optics.html">
+            <div class="previous-button-flex">
+            <h4>Previous Project</h4>
+            <p>(Take me to Optics.)</p>
+            </div>
+            </a>
 
-
-<div class="stage-divider">
-  <div id="img-7-vis" class="project-image"></div>
-    <div class="stage-divider-text-aligning">
-    <h2>Motion Tracking</h2>
-<p>
-The next stage was to piece everything together using motion tracking. This was fully realized through TouchDesigner’s blob detection, which was linked directly to the audio. The user could control which voice they heard by moving to one of the two sides of the glass piece (over the tape marking), creating the illusion of hearing the voice through the prominent face they could clearly see.
-<br><br>
-The music was panned and contrasted against the voice lines and accompanying sound effects. Additional sound effects were included to enhance user control and immersion — such as a tape recorder rewind at the end of a voice line and an answering machine beep to indicate when the user had switched sides.
-</p>
-</div>
-</div>
-
-
-
-
-<div class="stage-divider">
-  <div id="img-8-vis" class="project-image"></div>
-    <div class="stage-divider-text-aligning">
-    <h2>Set-up</h2>
-<p>
-Several small tests were conducted in the installation space after the final assembly. These helped balance the audio levels for the environment. Minor adjustments were made, such as using noise-cancelling headphones to achieve the full effect, and making amendments to the motion tracking and lighting setup.
-<br><br>
-To add final details, a logo was created using the same materials as the glass piece. Additionally, a simple diagram was produced to demonstrate how to use the installation, displayed on the wall and on a computer screen behind the setup.
-</p>
-
-</div>
-</div>
-
-
-
-
-
-
-<div class="stage-divider">
-  <div id="img-9-vis" class="project-image"></div>
-    <div class="stage-divider-text-aligning">
-    <h2>Detailing</h2>
-<p>
-The final piece was a successful dive into an emotional experience, with two voices tracked based on the user’s position.
-<br><br>
-The strong soundscape created an immersive and emotional backdrop, allowing the user to fully engage with the stories shared through the audio. All of this was brought together by the central glass photography piece placed at the heart of the installation.
-</p>
-
-</div>
-</div>
-
-
-
-
-
+            <a href="./kupu-rangi.html">
+            <div class="next-button-flex">
+            <h4>Next Project</h4>
+            <p>(Take me to Kupu Rangi.)</p>
+            </div>
+            </a>
+          </article>
 
 
 
     <footer>
-        <div class="footer-text">
-                       <p class="footer-p-two">Designed and built by Rory Maddren as part of my work at Media Design School.</p>
+    <article class="footer-margin-set">
 
 
-                      <a href="mailto:roryrmaddren@gmail.com?subject=Hello%20Rory&body=I%20wanted%20to%20reach%20out%20to%20you%20about...">
-
-
-<div class="contact-button">
-
-                <h4 class="h4-contact-bottom-page">Get in contact with me</h4>
-            </div>         
-        </a>
+    <p id="pre-get-in-touch">You’ve reached the bottom! <br> Now that you’ve seen a bit about me please consider —</p>
 
 
 
+            <a href="mailto:roryrmaddren@gmail.com" class="footer-contact">
+                <span>
+                    Getting in Touch — [Let’s Connect]
+                </span>
+                                  <svg class="arrow-icon"
+    width="13"
+     height="13"
+     viewBox="-2 -2 20 20"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg"
+     aria-hidden="true">
+  <path d="M0 16L16 0" stroke="currentColor" stroke-width="2"/>
+  <path d="M5 0H16V11" stroke="currentColor" stroke-width="2"/>
+</svg>
+</a>
 
 
+            <a class="footer-scroll-line" href="#vis-page">
+                <p class="footer-scroll-text">
+                    Take me back to the top
+                </p>
+                  <svg class="arrow-icon rotate-up-reverse"
+    width="13"
+     height="13"
+     viewBox="-2 -2 20 20"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg"
+     aria-hidden="true">
+  <path d="M0 16L16 0" stroke="currentColor" stroke-width="2"/>
+  <path d="M5 0H16V11" stroke="currentColor" stroke-width="2"/>
+</svg>
+</a>
+    </article>
 
-            <a href="#" onclick="scrollToTop">
-                <p class="footer-p back-to-the-top-btn">Back to the top</p>
-            </a>
 
 </footer>
-    
-</body>
-</html>
+    </section>

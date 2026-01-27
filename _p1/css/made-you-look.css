@@ -1,0 +1,62 @@
+#img-2-myl, #img-4-myl, #img-5-myl, #img-7-myl, #img-8-myl, #img-9-myl{
+    content: url('../images/myl-images/desktop-view.png');
+    object-fit: contain; /* push image in bounds of grid  */
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#img-1-myl, #img-3-myl, #img-5-myl, #img-6-myl{
+    content: url('../images/myl-images/desktop-view.png');
+    object-fit: cover; /* push image in bounds of grid  */
+    width: 100%;
+    height: 100%;
+}
+
+
+#img-1-myl{
+    content: url('../images/myl-images/overview.jpg');
+}
+
+#img-2-myl{
+    content: url('../images/myl-images/competittors.jpg');
+}
+
+#img-3-myl{
+    content: url('../images/myl-images/2.\ userflow2.jpg');
+}
+
+#img-4-myl{
+    content: url('../images/myl-images/');
+}
+
+#img-5-myl{
+    content: url('../images/optics-images');
+}
+
+#img-6-myl{
+    content: url('../images/myl-images/3.\ temp-pages.jpg');
+}
+
+#img-7-myl{
+    content: url('../images/myl-images/2.\ userflow-specific.jpg');
+}
+
+#img-8-myl{
+    content: url('../images/myl-images/5.\ mailing-list.jpg');
+}
+
+#img-9-myl{
+    content: url('../images/myl-images/6.\ about-page.jpg');
+}
+
+
+@media only screen and (max-width: 600px) {
+.bordering-line {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .1fr 1fr 1.4fr 4rem 4rem 4rem;
+        padding-bottom: 5rem;
+    }
+}

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rory Maddren</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home-page.css">
+      <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <script src="js/primary.js" defer></script>
+      <script defer src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+    <div class="lines">
+        <span></span>
+        <span></span>
+    </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollSmoother.min.js"></script>
+</head>
+
+
+<body>
+
+
+    <!-- <canvas id="staticCanvas"></canvas>Entire Nav-->
+    <div class="noise"></div>
+
+
+    <div class="nav-contents"> <!-- Entire Nav-->
+        <nav class="home-click-nav"> <!-- "Rory Maddren" Button -->
+            <ul>
+                <li class="rory-text"><a href="./index.html">Rory</a></li> <!-- Italics for "Rory" text-->
+                <li class="rory-text"><a href="./index.html">Maddren</a></li>
+            </ul>
+        </nav>
+
+
+        <!-- Mobile navigation menu -->
+        <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <!--   </div>  -->
+        </div>
+
+        <nav class="social-divs"> <!-- All the social + "Works" section -->
+            <ul class="social-links">
+                <li class="nav-item"><a class="nav-link current"
+                        href="https://www.instagram.com/rory_maddren_designs/">Instagram</a></li>
+                <div 
+                class="hamburger-divide-line">
+                </div>
+                <li class="nav-item"><a class="nav-link"
+                        href="https://www.linkedin.com/in/rory-maddren-962074326/">LinkedIn</a></li>
+                <div class="hamburger-divide-line"></div>
+                <li class="nav-item"><a class="nav-link"
+                        href="mailto:roryrmaddren@gmail.com?subject=Hello%20Rory&body=I%20wanted%20to%20reach%20out%20to%20you%20about...">Contact-Me</a>
+                </li>
+                <div class="hamburger-divide-line"></div>
+
+                <div id="nav-line"></div> <!-- Craeting line -->
+
+
+
+
+
+
+
+
+
+                <nav class="work-link"> <!-- "Work" link -->
+                    <ul>
+                        <li>
+                            <a id="work-link-id-click" href="#selected-works-id">Work</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+
+
+            </ul>
+        </nav>
+        </nav> <!-- closing this nav to create the space between social and "works"-->
+
+
+    </div> <!-- Closing "social-links" div -->
+    </div> <!-- Closing "nav-contents" div -->
+
+
+
+
+
+
+
+
+
+
+    <div id="top-cred-section">
+
+        <a>
+            <div class="page-topping-lines page-topping-lines-one">
+                <h4>EXPERTISE:</h4>
+                <h4 class="top-cred-section-h4-plain">UX/UI Designer</h4>
+            </div>
+        </a>
+        <a>
+            <div a class="page-topping-lines">
+                <h4>LOCATION:</h4>
+                <h4 class="top-cred-section-h4-plain"> Tāmaki Makaurau, Aotearoa</h4>
+            </div>
+        </a>
+        <a href="#info-about-me-section">
+            <div  class="page-topping-lines page-topper-hover">
+                <h4 id="more-info-btn-click">MORE INFO</h4>
+        </a>
+    </div>
+    </a>
+    <a href="#skills-text">
+        <div class="page-topping-lines page-topper-hover">
+            <h4>SKILLS</h4>
+    </a>
+    </div>
+    </a>
+    </div>
+
+
+    <div id="greetings-section">
+        <div id="intro-section"> <!-- Intro page entire section - separating this from the other sections -->
+            <span id="text-and-image"> <!-- All text on page and image in section -->
+
+                <span id="rory-id">
+                    <h1>Rory Maddren</h1>
+                </span>
+
+
+
+
+                <span class="personal-summery-contents">
+                    <h3 class="summery">I’m a UX/UI designer focused on delivering clean, modern design solutions and smooth, intuitive user experiences. Seeking to create visually defined designs that balance functionality and style.
+                    </h3>
+                </span> <!-- All of the font style changes clamped into this span keeps them together -->
+
+
+                <!-- 
+<div id="prof-image">
+<img id="prof-image" src="/images/profile-image.png" alt="profile-photo"></img> 
+</div>  -->
+
+        </div> <!-- putting a line underneath -->
+
+
+
+        <span class="bottom-2-section">
+            <h4 class="time" id="clock">Loading...</h4>
+            <h4>(NZST) AUCKLAND, NZ</h4>
+        </span>
+
+
+
+
+        <p id="selected-works-id" class="section-titles">Selected Works</p> <!-- "Selected Works title"-->
+        </span> <!-- Closing "text-and-image" span -->
+    </div><!-- Closing "intro section" div -->
+
+
+
+    
+
+    <!-- Selected Works Section -->
+   
+   <div id="selected-works-div">
+
+        <a href="./kupu.html">
+            <div class="work-div"> <!-- Selected Works Section -->
+       
+                <h2 class="project-h2">Kupu Rangi</h2>
+      
+            <p class="hanging-count">(01)</p>
+
+
+            <div class="project-description-text"> <!-- Holding all of the text descriptions -->
+
+                 <p id="description-text">A reimagining and rebrading of Sparks Kupu app. Complete with a Polaroid centred campaign, expaliner video, and promotional video.</p>
+
+            </div> <!-- Close text descriptions -->
+
+<!-- 
+            <div class="extra-details-section">
+                <p id="extra-details">Website * 2024 Project * Solo Project</p>
+                <p id="extra-details-italic">UX/UI Designer/Graphic Designer</p>
+            </div> -->
+
+
+            <div class="image-container">
+                <!-- The new image that will slide in -->
+                <img src="./images/kupurangi/k-1.jpg" alt="project-image" class="image-block">
+
+                <!-- The original image -->
+                <img src="./images/kupurangi/k-1.jpg" alt="project-image" class="image">
+            </div>
+        </div>
+</a>
+
+
+
+    <div id="selected-works-div">
+
+        <a href="./optics.html">
+            <div class="work-div"> <!-- Selected Works Section -->
+       
+                <h2 class="project-h2">Optics</h2>
+      
+            <p class="hanging-count">(02)</p>
+
+
+            <div class="project-description-text"> <!-- Holding all of the text descriptions -->
+
+                 <p id="description-text">A space for a more focused and intentional way to share film opinions, cutting through the noise of an oversaturated social media age.</p>
+
+            </div> <!-- Close text descriptions -->
+
+<!-- 
+            <div class="extra-details-section">
+                <p id="extra-details">Website * 2024 Project * Solo Project</p>
+                <p id="extra-details-italic">UX/UI Designer/Graphic Designer</p>
+            </div> -->
+
+
+            <div class="image-container">
+                <!-- The new image that will slide in -->
+                <img src="./images/optics-images/hero-2.png" alt="project-image" class="image-block">
+
+                <!-- The original image -->
+                <img src="./images/optics-images/hero-2.png" alt="project-image" class="image">
+            </div>
+        </div>
+</a>
+
+        <a href="./projects-made-you-look.html">
+        <div class="work-div"> <!-- Selected Works Section -->
+                <h2 class="project-h2 textFade" >Made You Look</h2>
+       
+            <p class="hanging-count">(03)</p>
+
+
+            <div class="project-description-text"> <!-- Holding all of the text descriptions -->
+
+                <p id="description-text">A bold branding and site creation for a rising pop duo, fusing dynamic modern motion with raw, grunge-inspired static aesthetics.</p>
+            </div> <!-- Close text descriptions -->
+
+<!--
+            <div class="extra-details-section">
+                <p id="extra-details">Website/Branding, 2024 Project, Group Project</p>
+                <p id="extra-details-italic">UX/UI Designer/Graphic Designer</p>
+            </div>  Closing extra-detail-section -->
+
+
+            <div class="image-container">
+                <!-- The new image that will slide in -->
+                <img src="images/myl-images/myl-hero.jpg" alt="project-image" class="image-block">
+
+                <!-- The original image -->
+                <img src="images/myl-images/myl-hero.jpg" alt="project-image" class="image">
+            </div>
+        </div>
+</a>
+       
+        <a href="./voices-in-stills.html">
+        <div class="work-div"> <!-- Selected Works Section -->
+                <h2 class="project-h2" >Voices in Stills</h2>
+       
+            <p class="hanging-count">(04)</p>
+
+
+            <div class="project-description-text"> <!-- Holding all of the text descriptions -->
+
+                <p id="description-text">A sound-based audio experience that brings storytelling and motion to a static photographic piece through motion tracking and immersive sound design.</p>
+            </div> <!-- Close text descriptions -->
+
+<!--
+            <div class="extra-details-section">
+                <p id="extra-details">Website/Branding, 2024 Project, Group Project</p>
+                <p id="extra-details-italic">UX/UI Designer/Graphic Designer</p>
+            </div>  Closing extra-detail-section -->
+
+
+            <div class="image-container">
+                <!-- The new image that will slide in -->
+                <img src="images/voices-in-stills-images/voices-in-stills-1.jpeg" alt="project-image" class="image-block">
+
+                <!-- The original image -->
+                <img src="images/voices-in-stills-images/voices-in-stills-1.jpeg" alt="project-image" class="image">
+            </div>
+        </div>
+</a>
+    </div>
+
+
+
+    </div> <!-- Closing selected works div -->
+
+
+
+
+
+
+
+
+
+    <!-- Info/About Section -->
+
+    <div id="info-about-me-section">
+        <div class="info-about-contents">
+
+            <div id="info-line"> <!-- For the line under info -->
+                <p id="info-title">More About Me</p>
+            </div>
+
+
+
+
+            <div id="bulk-words">
+                <p id="bulk-words-text-one">UX Designer/Graphic Designer, and
+                    Photographer</p>
+
+
+                <p id="bulk-words-text-three">3rd Year Student at Media Design School</p>
+
+                <p id="description-bulk">
+       I am a 25-year-old UI Designer, currently studying at Media Design School. I have a strong focus on creating immersive and emotionally engaging experiences.
+
+<br><br>
+
+I am passionate about blending technology and creativity to deliver meaningful, innovative designs. Versatile in narrative-driven design, I love to incorporate photography and sound elements to enhance the immersive experience of my work. I am consistently expanding my skillset and feel confident experimenting with new technologies and design styles.
+
+<br><br>
+
+I have expertise in web/app design, programming/coding, and physical media design, with a primary focus on UX/UI digital-based experiences.
+                </p>
+
+     <img id="prof-image-2" src="images/profile-image.png" alt="profile-image"></img>
+
+
+
+                <h4 id="skills-text">Skills</h4>
+
+<div id="skills-explained">
+        Photoshop, Illustrator, Indesign, Figma, VS Code and Lightroom 
+</div>
+
+
+            </div> <!-- Closing "bulk-words" -->
+        </div> <!-- Closing "info-about-contents" -->
+    </div> <!-- Closing "info-about-me-section" -->
+
+
+     <img id="prof-image-3" src="images/profile-image.png" alt="profile-image"></img>
+
+  
+
+    <footer>
+        <div class="footer-text">
+            <p class="footer-p-two">Designed and built by Rory Maddren as part of my work at Media Design School.</p>
+
+
+                      <a href="mailto:roryrmaddren@gmail.com?subject=Hello%20Rory&body=I%20wanted%20to%20reach%20out%20to%20you%20about...">
+
+
+<div class="contact-button">
+
+                <h4 class="h4-contact-bottom-page">Get in contact with me</h4>
+            </div>         
+        </a>
+
+
+
+
+
+
+            <a href="#" onclick="scrollToTop">
+                <p class="footer-p back-to-the-top-btn">Back to the top</p>
+            </a>
+
+
+
+        </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>

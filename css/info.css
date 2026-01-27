@@ -1,0 +1,123 @@
+#head-info-section {
+    padding: 4rem 3vw 60px 3vw;
+    display: grid;
+    grid-template-columns: 36.5vw 1fr
+    
+
+}
+
+#info-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+#overview-who-am-i {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#info-flex h2 {
+    font-family: 'edit-old-reg';
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+#photograph-of-me-piece {
+    height: 25.5rem;
+    width: 28.13vw;
+    border: 1px solid #999;
+    background-image: url('../images/landing-page/photo-of-me.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+
+#socials-block:hover > a:not(#socials-block a:hover){
+    border-bottom: #9f9f9f 1px solid;
+    color: #9f9f9f;
+}
+
+
+#photo-piece {
+    display: flex;
+    justify-self: end;
+}
+
+
+#photo-piece h3 {
+    opacity: 0;
+    width: 0px;
+    font-size: 5.5rem;
+    font-family: 'edit-old-italic';
+    writing-mode: sideways-lr;  
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #999;
+    color: rgba(255, 255, 255, 0);
+    line-height: 3.2rem;
+    align-self: start;
+}
+
+#socials-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#socials-block h2 {
+    padding-bottom: 12px;
+}
+
+
+#socials-block a {
+    font-family: 'hass-light';
+    font-size: 1rem;
+}
+
+.contacts-line {
+    border-bottom: 1px #000 solid;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+
+
+
+
+@media screen and (max-width: 810px) {
+#head-info-section {
+    padding: 4rem 3vw 60px 3vw;
+    display: flex;
+    gap: 24px;
+}
+
+#photograph-of-me-piece {
+    width: 38.13vw;
+}
+
+}
+
+
+
+@media screen and (max-width: 550px) {
+#head-info-section {
+    padding: 4rem 3vw 60px 3vw;
+    display: flex;
+    gap: 60px;
+    flex-direction: column;
+    height: 100%;
+}
+
+#photograph-of-me-piece {
+    width: 100%;
+    height: 85vw;
+}
+
+
+
+}

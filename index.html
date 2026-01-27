@@ -5,392 +5,585 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rory Maddren</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home-page.css">
-      <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-    <script src="js/primary.js" defer></script>
-      <script defer src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
-    <div class="lines">
-        <span></span>
-        <span></span>
-    </div>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollSmoother.min.js"></script>
+    <link rel="stylesheet" href="./css/generic.css">
+    <link rel="stylesheet" href="./css/landing.css">
+    <script src="./js/landing.js" defer></script>
 </head>
 
-
 <body>
+    <div class="grain-overlay"></div>
 
-
-    <!-- <canvas id="staticCanvas"></canvas>Entire Nav-->
-    <div class="noise"></div>
-
-
-    <div class="nav-contents"> <!-- Entire Nav-->
-        <nav class="home-click-nav"> <!-- "Rory Maddren" Button -->
-            <ul>
-                <li class="rory-text"><a href="./index.html">Rory</a></li> <!-- Italics for "Rory" text-->
-                <li class="rory-text"><a href="./index.html">Maddren</a></li>
-            </ul>
-        </nav>
-
-
-        <!-- Mobile navigation menu -->
-        <div class="menu-btn">
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-            <!--   </div>  -->
-        </div>
-
-        <nav class="social-divs"> <!-- All the social + "Works" section -->
-            <ul class="social-links">
-                <li class="nav-item"><a class="nav-link current"
-                        href="https://www.instagram.com/rory_maddren_designs/">Instagram</a></li>
-                <div 
-                class="hamburger-divide-line">
-                </div>
-                <li class="nav-item"><a class="nav-link"
-                        href="https://www.linkedin.com/in/rory-maddren-962074326/">LinkedIn</a></li>
-                <div class="hamburger-divide-line"></div>
-                <li class="nav-item"><a class="nav-link"
-                        href="mailto:roryrmaddren@gmail.com?subject=Hello%20Rory&body=I%20wanted%20to%20reach%20out%20to%20you%20about...">Contact-Me</a>
-                </li>
-                <div class="hamburger-divide-line"></div>
-
-                <div id="nav-line"></div> <!-- Craeting line -->
-
-
-
-
-
-
-
-
-
-                <nav class="work-link"> <!-- "Work" link -->
-                    <ul>
-                        <li>
-                            <a id="work-link-id-click" href="#selected-works-id">Work</a>
-                        </li>
-                    </ul>
-                </nav>
-
-
-
-
-            </ul>
-        </nav>
-        </nav> <!-- closing this nav to create the space between social and "works"-->
-
-
-    </div> <!-- Closing "social-links" div -->
-    </div> <!-- Closing "nav-contents" div -->
-
-
-
-
-
-
-
-
-
-
-    <div id="top-cred-section">
-
-        <a>
-            <div class="page-topping-lines page-topping-lines-one">
-                <h4>EXPERTISE:</h4>
-                <h4 class="top-cred-section-h4-plain">UX/UI Designer</h4>
-            </div>
-        </a>
-        <a>
-            <div a class="page-topping-lines">
-                <h4>LOCATION:</h4>
-                <h4 class="top-cred-section-h4-plain"> Tāmaki Makaurau, Aotearoa</h4>
-            </div>
-        </a>
-        <a href="#info-about-me-section">
-            <div  class="page-topping-lines page-topper-hover">
-                <h4 id="more-info-btn-click">MORE INFO</h4>
-        </a>
+    <div class="landing-page-lines">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
-    </a>
-    <a href="#skills-text">
-        <div class="page-topping-lines page-topper-hover">
-            <h4>SKILLS</h4>
-    </a>
-    </div>
-    </a>
-    </div>
-
-
-    <div id="greetings-section">
-        <div id="intro-section"> <!-- Intro page entire section - separating this from the other sections -->
-            <span id="text-and-image"> <!-- All text on page and image in section -->
-
-                <span id="rory-id">
-                    <h1>Rory Maddren</h1>
-                </span>
-
-
-
-
-                <span class="personal-summery-contents">
-                    <h3 class="summery">I’m a UX/UI designer focused on delivering clean, modern design solutions and smooth, intuitive user experiences. Seeking to create visually defined designs that balance functionality and style.
-                    </h3>
-                </span> <!-- All of the font style changes clamped into this span keeps them together -->
-
-
-                <!-- 
-<div id="prof-image">
-<img id="prof-image" src="/images/profile-image.png" alt="profile-photo"></img> 
-</div>  -->
-
-        </div> <!-- putting a line underneath -->
-
-
-
-        <span class="bottom-2-section">
-            <h4 class="time" id="clock">Loading...</h4>
-            <h4>(NZST) AUCKLAND, NZ</h4>
-        </span>
-
-
-
-
-        <p id="selected-works-id" class="section-titles">Selected Works</p> <!-- "Selected Works title"-->
-        </span> <!-- Closing "text-and-image" span -->
-    </div><!-- Closing "intro section" div -->
-
-
-
-    
-
-    <!-- Selected Works Section -->
-   
-   <div id="selected-works-div">
-
-        <a href="./kupu.html">
-            <div class="work-div"> <!-- Selected Works Section -->
-       
-                <h2 class="project-h2">Kupu Rangi</h2>
-      
-            <p class="hanging-count">(01)</p>
-
-
-            <div class="project-description-text"> <!-- Holding all of the text descriptions -->
-
-                 <p id="description-text">A reimagining and rebrading of Sparks Kupu app. Complete with a Polaroid centred campaign, expaliner video, and promotional video.</p>
-
-            </div> <!-- Close text descriptions -->
-
-<!-- 
-            <div class="extra-details-section">
-                <p id="extra-details">Website * 2024 Project * Solo Project</p>
-                <p id="extra-details-italic">UX/UI Designer/Graphic Designer</p>
-            </div> -->
-
-
-            <div class="image-container">
-                <!-- The new image that will slide in -->
-                <img src="./images/kupurangi/k-1.jpg" alt="project-image" class="image-block">
-
-                <!-- The original image -->
-                <img src="./images/kupurangi/k-1.jpg" alt="project-image" class="image">
-            </div>
-        </div>
-</a>
-
-
-
-    <div id="selected-works-div">
-
-        <a href="./optics.html">
-            <div class="work-div"> <!-- Selected Works Section -->
-       
-                <h2 class="project-h2">Optics</h2>
-      
-            <p class="hanging-count">(02)</p>
-
-
-            <div class="project-description-text"> <!-- Holding all of the text descriptions -->
-
-                 <p id="description-text">A space for a more focused and intentional way to share film opinions, cutting through the noise of an oversaturated social media age.</p>
-
-            </div> <!-- Close text descriptions -->
-
-<!-- 
-            <div class="extra-details-section">
-                <p id="extra-details">Website * 2024 Project * Solo Project</p>
-                <p id="extra-details-italic">UX/UI Designer/Graphic Designer</p>
-            </div> -->
-
-
-            <div class="image-container">
-                <!-- The new image that will slide in -->
-                <img src="./images/optics-images/hero-2.png" alt="project-image" class="image-block">
-
-                <!-- The original image -->
-                <img src="./images/optics-images/hero-2.png" alt="project-image" class="image">
-            </div>
-        </div>
-</a>
-
-        <a href="./projects-made-you-look.html">
-        <div class="work-div"> <!-- Selected Works Section -->
-                <h2 class="project-h2 textFade" >Made You Look</h2>
-       
-            <p class="hanging-count">(03)</p>
-
-
-            <div class="project-description-text"> <!-- Holding all of the text descriptions -->
-
-                <p id="description-text">A bold branding and site creation for a rising pop duo, fusing dynamic modern motion with raw, grunge-inspired static aesthetics.</p>
-            </div> <!-- Close text descriptions -->
-
-<!--
-            <div class="extra-details-section">
-                <p id="extra-details">Website/Branding, 2024 Project, Group Project</p>
-                <p id="extra-details-italic">UX/UI Designer/Graphic Designer</p>
-            </div>  Closing extra-detail-section -->
-
-
-            <div class="image-container">
-                <!-- The new image that will slide in -->
-                <img src="images/myl-images/myl-hero.jpg" alt="project-image" class="image-block">
-
-                <!-- The original image -->
-                <img src="images/myl-images/myl-hero.jpg" alt="project-image" class="image">
-            </div>
-        </div>
-</a>
-       
-        <a href="./voices-in-stills.html">
-        <div class="work-div"> <!-- Selected Works Section -->
-                <h2 class="project-h2" >Voices in Stills</h2>
-       
-            <p class="hanging-count">(04)</p>
-
-
-            <div class="project-description-text"> <!-- Holding all of the text descriptions -->
-
-                <p id="description-text">A sound-based audio experience that brings storytelling and motion to a static photographic piece through motion tracking and immersive sound design.</p>
-            </div> <!-- Close text descriptions -->
-
-<!--
-            <div class="extra-details-section">
-                <p id="extra-details">Website/Branding, 2024 Project, Group Project</p>
-                <p id="extra-details-italic">UX/UI Designer/Graphic Designer</p>
-            </div>  Closing extra-detail-section -->
-
-
-            <div class="image-container">
-                <!-- The new image that will slide in -->
-                <img src="images/voices-in-stills-images/voices-in-stills-1.jpeg" alt="project-image" class="image-block">
-
-                <!-- The original image -->
-                <img src="images/voices-in-stills-images/voices-in-stills-1.jpeg" alt="project-image" class="image">
-            </div>
-        </div>
-</a>
-    </div>
-
-
-
-    </div> <!-- Closing selected works div -->
-
-
-
-
-
-
-
-
-
-    <!-- Info/About Section -->
-
-    <div id="info-about-me-section">
-        <div class="info-about-contents">
-
-            <div id="info-line"> <!-- For the line under info -->
-                <p id="info-title">More About Me</p>
-            </div>
-
-
-
-
-            <div id="bulk-words">
-                <p id="bulk-words-text-one">UX Designer/Graphic Designer, and
-                    Photographer</p>
-
-
-                <p id="bulk-words-text-three">3rd Year Student at Media Design School</p>
-
-                <p id="description-bulk">
-       I am a 25-year-old UI Designer, currently studying at Media Design School. I have a strong focus on creating immersive and emotionally engaging experiences.
-
-<br><br>
-
-I am passionate about blending technology and creativity to deliver meaningful, innovative designs. Versatile in narrative-driven design, I love to incorporate photography and sound elements to enhance the immersive experience of my work. I am consistently expanding my skillset and feel confident experimenting with new technologies and design styles.
-
-<br><br>
-
-I have expertise in web/app design, programming/coding, and physical media design, with a primary focus on UX/UI digital-based experiences.
-                </p>
-
-     <img id="prof-image-2" src="images/profile-image.png" alt="profile-image"></img>
-
-
-
-                <h4 id="skills-text">Skills</h4>
-
-<div id="skills-explained">
-        Photoshop, Illustrator, Indesign, Figma, VS Code and Lightroom 
-</div>
-
-
-            </div> <!-- Closing "bulk-words" -->
-        </div> <!-- Closing "info-about-contents" -->
-    </div> <!-- Closing "info-about-me-section" -->
-
-
-     <img id="prof-image-3" src="images/profile-image.png" alt="profile-image"></img>
 
   
 
-    <footer>
-        <div class="footer-text">
-            <p class="footer-p-two">Designed and built by Rory Maddren as part of my work at Media Design School.</p>
+    <main>
 
-
-                      <a href="mailto:roryrmaddren@gmail.com?subject=Hello%20Rory&body=I%20wanted%20to%20reach%20out%20to%20you%20about...">
-
-
-<div class="contact-button">
-
-                <h4 class="h4-contact-bottom-page">Get in contact with me</h4>
-            </div>         
+    <section>
+    <div class="primary-nav">
+        <a href="./index.html">
+            Home
         </a>
+        <a href="./more-info.html" class="more-info-link">
+            More Info
+        </a>
+    </div>
+
+<div id="introduction-section">
+        <article id="heading-intro-first-block">
+            <h1 id="kia-ora-intro-block-text">
+
+                <span id="top-piece-block-one">
+                    <span id="kia-ora-block">Kia Ora, </span>
+                    <span id="im-block">I'm </span>
+                </span>
+
+
+                <span id="top-piece-block-two">
+                    <span id="rory-block">Rory Maddren</span>
+<!--                    <span id="maddren-block">Maddren.</span>  -->
+                </span>
+            </h1>
+            <img id="header-star" src="./images/landing-page/header-star-two.jpg" alt="star-header-image">
+
+            <h3 id="personal-overview">
+                <span>An</span>
+                <span class="h3-italic-text">interactive designer, </span>
+                <span>dedicated to crafting </span>
+                <span class="h3-italic-text">innovative </span>
+                <span>experiences </span>
+                <span>and </span>
+                <span class="h3-italic-text">visually captivating </span>
+                <span>designs.</span>
+            </h3>
+        </article>
 
 
 
 
+        <article id="bottom-credits-what-i-do-piece">
+            <p id="specialty-text">
+                Interactive Design/UX/UI Design, Graphic Design
+            </p>
+            <span id="location-text">
 
 
-            <a href="#" onclick="scrollToTop">
-                <p class="footer-p back-to-the-top-btn">Back to the top</p>
+
+
+                <!--
+    <span class="empty-division-span-bottom-credits">
+    </span>
+-->
+                <span>
+                    <p>
+                Tāmaki Makaurau, Aoteraroa —
+                    </p>
+
+                </span>
+ <div id="clock"></div>
+                                <span id="time-piece">
+                    <div class="inner-circle"></div>
+
+                   
+
+                </span>
+            </span>
+            <!--
+
+<p id="linkedin-text">
+    <span>
+    LinkedIn
+</span>
+<span class="empty-division-span-bottom-credits">
+</span>
+<span>
+    Rory Maddren
+        <img class="arrow-button" src="./images/generic/arrow-up.png" alt="arrow-go-to">
+    </span>
+</p>
+
+
+<p id="instagram-text">
+    <span>
+    Instagram
+    </span>
+<span class="empty-division-span-bottom-credits">
+</span>
+    <span>
+    Rory.Maddren.Design
+        <img class="arrow-button" src="./images/generic/arrow-up.png" alt="arrow-go-to">
+    </span>
+</p>
+
+
+<p id="instagram-text-photography">
+    <span>
+    Photography Instagram
+    </span>
+<span class="empty-division-span-bottom-credits">
+</span>
+    <span>
+    Rory.Maddren
+        <img class="arrow-button" src="./images/generic/arrow-up.png" alt="arrow-go-to">
+    </span>
+</p>
+-->
+
+            <span id="bottom-credit-line">
+                <span></span>
+            </span>
+
+
+            <!--
+<div id="photo-of-me"></div>
+        -->
+
+
+           <a href="mailto:roryrmaddren@gmail.com" class="summon-me-line">  
+
+                <span>
+                    Summon Me — [Let’s Connect]
+                </span>
+             
+             
+           
+  <svg class="arrow-icon"
+  width="13"
+     height="13"
+     viewBox="-2 -2 20 20"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg"
+     aria-hidden="true">
+  <path d="M0 16L16 0" stroke="currentColor" stroke-width="2"/>
+  <path d="M5 0H16V11" stroke="currentColor" stroke-width="2"/>
+</svg>
+
+      </a>
+
+
+            <!--
+    <span id="view-photo-line">
+        <p>
+            View Photo
+        </p>
+        <img class="arrow-button-right" src="./images/generic/arrow-right.png" alt="arrow">
+    </span>
+-->
+
+            <a href="#works-section" class="scroll-for-works-line">
+  <svg class="arrow-icon rotate-down"
+    width="13"
+     height="13"
+     viewBox="-2 -2 20 20"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg"
+     aria-hidden="true">
+  <path d="M0 16L16 0" stroke="currentColor" stroke-width="2"/>
+  <path d="M5 0H16V11" stroke="currentColor" stroke-width="2"/>
+</svg>
+
+                <p class="scroll-text">
+                    Scroll for Selected Works
+                </p>
             </a>
 
 
 
-        </div>
+
+
+        </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <article id="right-side-section">
+
+            <div id="awards-container" id="design-awards-section">
+                <h4 class="small-header">Design Awards & Recognitions</h4>
+                <div class="container-hover-effect-applied">
+                    <a href="https://bestawards.co.nz/digital/student-digital/dearna-smith-1/kupu-rangi/" class="awards-splitter-container">
+                        <span>Bronze Winner</span>
+                        <span>Student Digital (Best Awards) — 2025</span>
+                    </a>
+                    <a href="https://bestawards.co.nz/toitanga/student-academic-toitanga/dearna-smith-1/kupu-rangi-1/" class="awards-splitter-container-minus-one">
+                        <span>Finalist Pick</span>
+                        <span>Student Toitanga (Best Awards) — 2025</span>
+                    </a>
+                    <a href="https://bestawards.co.nz/social-good-award/student-social-good/dearna-smith-1/unheard/"  class="awards-splitter-container-minus-one"><span>Finalist Pick</span><span>Student Social Good (Best
+                            Awards) — 2025</span></a>
+                    <a href="https://cgscholar.com/cg_event/events/T26en/proposal/82339"  class="awards-splitter-container-minus-one"><span>Academic Paper</span><span>International Conference — 2026</span></a>
+                </div>
+
+            </div>
+            <!--
+         <div id="awards-container" id="design-rec-section">
+            <h4 class="small-header">Design Recognitions</h4>
+           </div>
+-->
+
+            <div>
+                <h4 class="small-header">Photography Recognitions </h4>
+                <div class="container-hover-effect-applied">
+                    <a href="https://fromthepit.co.nz/2024-images/" class="awards-splitter-container"><span>NZ Music Photography</span><span>From the Pit — 2024</span>
+                    </a>
+
+                    <a href="https://www.photographyfestival.org.nz/programme/detail.cfm?exhibition_id=2822&exhibition_date=2024-06-1" class="awards-splitter-container-minus-one"><span>Emerging Photographer
+                            </span><span>Scenes From the Scene — 2023</span>
+                        </a>
+
+                    <a href="https://www.instagram.com/rukus.offprints/" class="awards-splitter-container-minus-one">
+                        <span>Subterranean Zine Photographer</span><span>Rukkus Offprints — 2023</span>
+                        </a>
+                </div>
+            </div>
+
+
+
+        </article>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="works-section">
+
+     <article id="works-left-side-desktop">
+            <h3 id="title-selected-works">Selected Works</h3>
+            <div id="empty-division-line-works"></div>
+            <div id="selected-works-container-desktop">
+                <a href="./kupu-rangi.html" class="selected-works-title">Kupu Rangi</a>
+
+
+                 <a href="./unheard.html" class="selected-works-title">Unheard</a>
+
+
+                <a href="./optics.html" class="selected-works-title">Optics</a>  
+
+
+                 <a href="./voices-in-stills.html" class="selected-works-title">Voices in Stills</a>  
+
+
+                 <a href="./see-all-the-rest.html" id="see-all-the-rest-option" class="selected-works-title">See All The Rest</a> 
+                 
+
+                  
+            
+            </div>
+        </article>
+
+
+
+
+
+
+        <article id="works-left-side-mobile">
+            <h3 id="title-selected-works">Selected Works</h3>
+            <div id="empty-division-line-works"></div>
+            <div id="selected-works-container-mobile">
+                <a href="./kupu-rangi.html"><div class="project-overview-image" id="kupu-image-overview-piece"></div></a>
+                <a href="./kupu-rangi.html" class="selected-works-title">Kupu Rangi</a>
+                <div class="project-describer-section">
+                             <a href="./kupu-rangi.html"> <p class="project-small-overview">
+                            A replacement for the underground arts network, that better showcases the arts and welcome new members into the ever shrinking community. Then something else to make this longer here and three lines.
+                        </p></a> 
+                   <a href="./kupu-rangi.html">  <div class="works-div-cat-flex">
+                    <p>Website, 2024 Project,  Group Project</p>
+                    <p>UX/UI Designer/Graphic Designer</p>
+                    <p>8 Week Project — June 2025</p>
+                    </div>
+                    </a>
+                </div>
+                 <a href="./unheard.html"> <div id="unheard-image-overview-piece" class="project-overview-image"></div></a>
+                
+                <a href="./unheard.html" class="selected-works-title">Unheard</a>
+                <div class="project-describer-section">
+                         <a href="./unheard.html"> <p class="project-small-overview">
+                            A replacement for the underground arts network, that better showcases the arts and welcome new members into the ever shrinking community. Then something else to make this longer here and three lines.
+                        </p></a> 
+                    <a href="./unheard.html"> <div class="works-div-cat-flex">
+                    <p>Website, 2024 Project,  Group Project</p>
+                    <p>UX/UI Designer/Graphic Designer</p>
+                    <p>8 Week Project — June 2025</p>
+                    </div></a>
+                </div>
+                </a>
+
+
+                               <a href="./optics.html"><div id="optics-image-overview-piece" class="project-overview-image"></div></a>  
+                <a href="./optics.html" class="selected-works-title">Optics</a>  
+                
+                <div class="project-describer-section">
+                                 <a href="./optics.html"><p class="project-small-overview">
+                            A replacement for the underground arts network, that better showcases the arts and welcome new members into the ever shrinking community. Then something else to make this longer here and three lines.
+                        </p></a>
+                     <a href="./optics.html"><div class="works-div-cat-flex">
+                    <p>Website, 2024 Project,  Group Project</p>
+                    <p>UX/UI Designer/Graphic Designer</p>
+                    <p>8 Week Project — June 2025</p>
+                    </div></a> 
+                </div>
+
+
+                                   <a href="./voices-in-stills.html"><div id="vis-image-overview-piece" class="project-overview-image"></div></a>
+                 <a href="./voices-in-stills.html" class="selected-works-title">Voices in Stills</a>  
+
+                     <div class="project-describer-section">
+                        <a href="./voices-in-stills.html"><p class="project-small-overview">
+                            A replacement for the underground arts network, that better showcases the arts and welcome new members into the ever shrinking community. Then something else to make this longer here and three lines.
+                        </p></a>
+                     <a href="./voices-in-stills.html"><div class="works-div-cat-flex">
+                    <p>Website, 2024 Project,  Group Project</p>
+                    <p>UX/UI Designer/Graphic Designer</p>
+                    <p>8 Week Project — June 2025</p>
+                    </div></a> 
+                </div>
+
+
+<!--
+                                <div class="project-overview-image"></div>
+                 <a href="./see-all-the-rest.html" class="selected-works-title">See All The Rest</a> 
+                      <p class="project-small-overview">
+                            A replacement for the underground arts network, that better showcases the arts and welcome new members into the ever shrinking community. Then something else to make this longer here and three lines.
+                        </p>
+
+                  
+                </div>-->
+            </div>
+        </article>
+     <a href="mailto:roryrmaddren@gmail.com" class="summon-me-line">  
+                
+ 
+                <span>
+                    Summon Me — [Let’s Connect]
+                </span>
+           
+  <svg class="arrow-icon"
+  width="13"
+     height="13"
+     viewBox="-2 -2 20 20"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg"
+     aria-hidden="true">
+  <path d="M0 16L16 0" stroke="currentColor" stroke-width="2"/>
+  <path d="M5 0H16V11" stroke="currentColor" stroke-width="2"/>
+</svg>
+</a>
+
+        
+
+        <a a href="#extras-section" class="scroll-for-works-line">
+  <svg class="arrow-icon rotate-down"
+     width="13"
+     height="13"
+     viewBox="-2 -2 20 20"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg"
+     aria-hidden="true">
+  <path d="M0 16L16 0" stroke="currentColor" stroke-width="2"/>
+  <path d="M5 0H16V11" stroke="currentColor" stroke-width="2"/>
+</svg>
+            <p class="scroll-text">
+                Scroll for Skills & Extras
+            </p>
+            
+        </a>
+
+
+        <article id="works-right-piece">
+            <!--
+            <span class="scroll-up-line-works">
+        <img class="arrow-button-down" src="./images/generic/arrow-down.png" alt="arrow">
+        <p class="scroll-text">
+        Scroll for Introduction
+    </p>
+    </span>
+     -->
+            <!--
+        <div id="hover-line">
+        <p>Hover for project overviews</p>
+            </div>
+            -->
+            <!-- 
+        <div id="on-hover-description-project">
+            <p id="project-overview">A replacement for the underground arts network, that better showcases the arts and welcome new members into the ever shrinking community. Then something else to make this longer here and three lines.</p>
+            <p id="category-overview">Website, 2024 Project, Group Project</p>
+            <p id="time-overview">8 Week Project — June 2025</p>
+            <p id="role-overview">UX/UI Designer/Graphic Designer</p>
+
 
         </div>
-    </footer>
+        <div id="project-photo-div"></div>
+          -->  
+        </article>
+
+    </section>
+
+
+
+
+
+    <section id="extras-section">   
+        <div id="main-piece-margin-setter">
+        <h3 id="title-extras">Extras and Education</h3>
+
+        <article id="education-and-skills">
+            <div id="edutcation-full-container">
+                                <h3 class="top-edu-text-title">Education</h3>
+            <div id="education-container-one">
+                <p id='bach-credit' class="bolded-credit-ed">Bachelors of Media Design, Level 7 </p>
+                <p>Major in Interactive Design, <br>Media Design School — (2025)</p>
+            </div>
+
+                <div id="education-container-two">
+                <p class="bolded-credit-ed">Diploma in Animation, Level 5</p>
+                <p>Yoobee, Animation College — (2020)</p>
+            </div>
+
+                <div id="education-container-three">
+                <p class="bolded-credit-ed">Certificate of Photography, Level 4</p>
+                <p>Yoobee — (2021)</p>
+            </div>
+            </div>
+
+
+                <div id="explainer-resume-text">
+                <p id="explainer-resume-p">For more information on my work history and a more formal understanding of my skills —
+                </p>
+                </div>
+
+                <div id="view-resume-container">
+                    <a id="view-resume-line" href="./images/landing-page/resume.pdf" target="_blank">View Resume</a>
+              </div>
+        </article>
+
+        <article id="tools-container">
+            <div>
+                <h3 id="tools-and-programs-text">Tools & Programs</h3>
+                <div id="tools-break-up">
+                    <div class="tools-combined">
+                <h4 class="tools-big-text">Figma, Illustrator, Photoshop, Indesign.</h4>
+                <p class="explainer-tools-line">— What I primarily use.</p>
+</div>
+            <div class="tools-combined">
+                  <h4 class="tools-big-text">HTML, CSS, Javascript, VS Code.</h4>
+                <p class="explainer-tools-line">— Some technical languages and program(s).</p>
+            </div>
+                <div class="tools-combined">
+
+                  <h4 class="tools-big-text">Lightroom, Premiere, Final Cut, Audition, Logic.</h4>
+                <p class="explainer-tools-line">— Some more multidisciplinary programs.</p>
+                </div>
+                </div>
+            </div>
+        </article>
+</div>     
+
+
+
+
+
+
+  
+    <footer>
+    <article class="footer-margin-set">
+
+
+    <p id="pre-get-in-touch">You’ve reached the bottom! <br> Now that you’ve seen a bit about me please consider —</p>
+
+
+
+            <a href="mailto:roryrmaddren@gmail.com" class="footer-contact">
+                <span>
+                    Getting in Touch — [Let’s Connect]
+                </span>
+                                  <svg class="arrow-icon"
+    width="13"
+     height="13"
+     viewBox="-2 -2 20 20"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg"
+     aria-hidden="true">
+  <path d="M0 16L16 0" stroke="currentColor" stroke-width="2"/>
+  <path d="M5 0H16V11" stroke="currentColor" stroke-width="2"/>
+</svg>
+</a>
+
+
+            <a class="footer-scroll-line" href="#introduction-section">
+                <p class="footer-scroll-text">
+                    Take me back to the top
+                </p>
+                  <svg class="arrow-icon rotate-up-reverse"
+    width="13"
+     height="13"
+     viewBox="-2 -2 20 20"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg"
+     aria-hidden="true">
+  <path d="M0 16L16 0" stroke="currentColor" stroke-width="2"/>
+  <path d="M5 0H16V11" stroke="currentColor" stroke-width="2"/>
+</svg>
+</a>
+    </article>
+
+
+</footer>
+
+    </section>
+    </main>
 </body>
 
 </html>

@@ -1,0 +1,1193 @@
+/* general structure - lines and set up 
+======================
+======================
+======================
+*/
+
+/* first section - top of page styling */
+main {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type:  y mandatory;
+
+}
+
+section {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+
+
+#introduction-section {
+  padding: 1.5rem 3% 1.5rem 3%;
+  height: 95vh;
+  display: grid;
+  grid-template-columns: 19.7% 19.2% 19.7% 11.5% 29.9%;
+  grid-template-rows: 2fr 1fr .5fr;
+}
+
+.landing-page-lines {
+  opacity: 1;
+  position: fixed;
+  z-index: -2;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.landing-page-lines span {
+  border-left: 1px solid rgb(233, 233, 233);
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  top: 0;
+}
+
+.landing-page-lines span:nth-of-type(1) {
+  position: absolute;
+  left: 3%;
+}
+
+.landing-page-lines span:nth-of-type(2) {
+  position: absolute;
+  right: 3%;
+}
+
+.landing-page-lines span:nth-of-type(3) {
+  position: absolute;
+  left: 21.5%;
+}
+
+.landing-page-lines span:nth-of-type(4) {
+  position: absolute;
+  left: 39.5%;
+}
+
+.landing-page-lines span:nth-of-type(5) {
+  position: absolute;
+  left: 58%;
+}
+
+.landing-page-lines span:nth-of-type(6) {
+  position: absolute;
+  left: 58.5%;
+}
+
+.landing-page-lines span:nth-of-type(7) {
+  position: absolute;
+  left: 78%;
+}
+
+.landing-page-lines span:nth-of-type(8) {
+  position: absolute;
+  left: 68.87%;
+}
+
+
+
+
+
+
+
+
+/* Top left part of the page - all of the intro pieces 
+======================
+======================
+======================
+*/
+#heading-intro-first-block {
+  display: grid;
+  grid-column: 1 /span 2;
+  grid-row-start: 1;
+  grid-template-columns: 52vw 3vw;
+  grid-template-rows: 9.5rem 8.2rem 1fr;
+
+}
+
+/* Kia ora text */
+#kia-ora-intro-block-text {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 8.2rem 15rem;
+  font-size: 7.8rem;
+}
+
+/* Splitting "Kia Ora I'm" */
+#top-piece-block-one {
+  grid-row-start: 1;
+}
+
+/* Splitting "Rory Maddren" */
+#top-piece-block-two {
+  grid-row-start: 2;
+
+}
+
+#personal-overview {
+  grid-row: 3;
+  grid-column: 1 /span 4;
+  font-size: 1.31rem;
+  width: 36.5vw;
+  color: #333333;
+  padding-top: 0px;
+}
+
+/* section paragraph piece" */
+.italic-reg-text {
+  font-family: "hass-roman-italic";
+}
+
+.h3-italic-text {
+  font-family: "edit-old-light-italic";
+  font-weight: 100;
+}
+
+/* Defining all of the text style changes in "Kia Ora I'm Rory Maddren" */
+#kia-ora-block {
+  font-family: 'edit-old-light';
+  font-weight: 100
+}
+
+#im-block {
+    font-family: 'edit-old-light';
+    font-weight: 100
+}
+
+#rory-block {
+      font-family: 'edit-old-italic';
+      font-weight: 100
+}
+
+#maddren-block {
+      font-family: 'edit-old-italic';
+      font-weight: 100
+}
+
+#blinking-clock {
+  width: 10px;
+}
+
+/* Star at the end of the "Maddren" */
+#header-star {
+  opacity: 1;
+  grid-column-start: 2;
+  align-self: center;
+  padding-bottom: 2.7rem;
+  grid-row: 2;
+  width: 3rem;
+  z-index: -5;
+}
+
+
+
+/* Bottom piece - creditials and photo piece 
+======================
+======================
+======================
+*/
+#bottom-credits-what-i-do-piece {
+  grid-column: 1 /span 5;
+  grid-template-columns: 19.7% 19.2% 19.7% 11.5% 29.9%;
+  grid-row: 2;
+  display: grid;
+  grid-template-rows: 1.5rem 1.5rem 1.5rem 1.5rem 80% 1.5rem 1.5rem;
+  justify-content: space-between;
+}
+
+#bottom-credits-what-i-do-piece p {
+  font-size: .9rem;
+}
+
+
+/* Bottom line */
+.summon-me-line {
+  opacity: 1;
+  align-self: end;
+  display: flex;
+  grid-template-columns: 99px 110px 19.5%;
+  grid-template-rows: 1fr;
+  grid-row: 7;
+  grid-column: 1;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding-bottom: 6px;
+  border-bottom: #333333 solid 1px;
+  font-family: 'hass-roman', sans-serif;
+  justify-content: space-between;
+}
+
+.summon-me-line div {
+  display: flex;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding-bottom: 6px;
+  border-bottom: #333333 solid 1px;
+  font-family: 'hass-roman', sans-serif;
+}
+
+.summon-me-line:hover, .scroll-for-works-line:hover {
+  border-bottom: #999999 solid 1px;
+  color: #999999;
+  cursor: pointer;
+}
+
+
+#view-photo-line {
+  align-self: end;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 1fr;
+  grid-row: 7;
+  grid-column: 4;
+  border-bottom: #000000 1px solid;
+  margin-left: 0.4vw;
+}
+
+.scroll-for-works-line {
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  grid-column: 5;
+  grid-row: 7;
+  align-self: end;
+  justify-items: end; 
+  padding-bottom: 6px;
+  border-bottom: #333333 solid 1px;
+  margin-left: 32.3%;
+}
+
+.scroll-text {
+  grid-column: 2;
+  justify-self: end;
+  font-size: 0.9rem;
+  font-family: 'hass-roman', sans-serif;
+}
+
+
+  #specialty-text, #location-text, #linkedin-text, #linkedin-text, #instagram-text, #instagram-text-photography {
+  display: flex;
+  grid-column: 1 /span 2;
+   }
+
+  #specialty-text {
+  grid-row: 1;
+  font-family: 'hass-light';
+  font-weight: 100;
+  letter-spacing: 0.02rem;
+}
+
+#location-text {
+  grid-row: 2;
+  gap: 4px;
+}
+
+#time-piece {
+  font-family: 'hass-light';
+  display: flex;
+  letter-spacing: 0.02rem;
+}
+
+#linkedin-text {
+  grid-row: 3;
+}
+
+#instagram-text {
+  grid-row: 4;
+}
+
+#instagram-text-photography {
+  grid-row: 5;
+}
+
+/*
+#bottom-credit-line {
+  grid-row: 4;
+  grid-row-end: 6;
+  border-left: 1px solid #999999;
+  height: 100%;
+  width: 1px;
+}
+*/ 
+
+#spacing-line-credits-section {
+  grid-row: 3;
+  grid-column: 1;
+}
+
+#interactive-designer-credit {
+  grid-row: 2;
+  display: inline;
+}
+
+
+
+
+
+/* right awards part
+======================
+======================
+======================
+*/
+#right-side-section {
+  grid-column: 5;
+  display: grid;
+  grid-template-rows: 170px 76px 150px;
+  gap: 1px;
+  font-size: 0.9rem;
+}
+
+.small-header {
+  font-family: 'hass-roman', sans-serif;
+  font-weight: 100;
+  font-size: 0.9rem;
+  padding-bottom: 5px;
+  letter-spacing: 0.02rem;
+}
+
+.awards-splitter-container {
+  padding: 5px 0px 5px 0px;
+  border-top: 1px solid #a4a4a4;
+  border-bottom: 1px solid #a4a4a4;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+
+.container-hover-effect-applied:hover {
+  color: #999999;
+}
+
+.awards-splitter-container span, .awards-splitter-container-minus-one span{
+  font-family: 'hass-light';
+  font-size: 0.9rem;
+}
+
+
+.awards-splitter-container:hover, .awards-splitter-container-minus-one:hover {
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.awards-splitter-container-minus-one {
+  padding: 6px 0px 6px 0px;
+  border-bottom: 1px solid #a4a4a4;
+  display: flex;
+  justify-content: space-between;
+    cursor: pointer;
+}
+
+#design-rec-section {
+  grid-row-start: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 2nd section 
+======================
+======================
+======================
+*/
+#works-section {
+  padding: 1.5rem 3% 1.5rem 3%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 19.7% 19.2% 19.7% 11.5% 29.9%;
+  grid-template-rows: 1rem;
+}
+
+#works-left-side-desktop {
+  height: 100%;
+  opacity: 1;
+  display: grid;
+  grid-column: 1 /span 2;
+  grid-template-rows: 0rem 0rem 1.4rem 23rem 1.5rem;
+}
+
+#works-left-side-mobile {
+  height: 0%;
+  opacity: 0;
+  display: grid;
+  grid-column: 1 /span 2;
+  grid-template-rows: 0rem 0rem 1.4rem 23rem 1.5rem;
+}
+
+.selected-works-title {
+  font-family: 'edit-old-reg';
+  font-size: 2.5rem;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+#selected-works-container-desktop:hover a:not(.selected-works-title:hover) {
+  color: #999999;
+}
+
+
+#take-me-away-text {
+  font-family: 'edit-old-light-italic';
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+#see-all-hover-div:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+#title-selected-works {
+  font-family: 'hass-roman';
+  font-size: .9rem;
+  font-weight: 100;
+  color: #000;
+  grid-row: 3;
+
+  margin-right: 18vw;
+  margin-bottom: 0px;
+}
+
+#selected-works-container-desktop {
+  color: #333333;
+  grid-row: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: end;
+  cursor: pointer;
+}
+
+#selected-works-container-mobile {
+  height: 0;
+  color: #000;
+  grid-row: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: end;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+
+/*
+#empty-division-line-works {
+  grid-row: 3;
+  height: 100%;
+  border-left: #000000 1px solid;
+  align-self: center;
+}
+*/
+
+
+/* 2nd section 
+======================
+======================
+======================
+*/
+
+
+#works-right-piece {
+  grid-column: 3 /span 5;
+  display: grid;
+  grid-template-rows: 1.5rem .3fr 16rem 26rem .3fr;
+  grid-template-columns: 32% 1fr;
+    height: 100%;
+
+}
+
+#project-photo-div {
+  grid-row-start: 4;
+  grid-column-start: 2;
+  border: #999999 1px solid;
+}
+
+#on-hover-description-project {
+  display: grid;
+  grid-row-start: 3;
+  grid-column-start: 2;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr .1fr .8fr;
+  gap: 1rem;
+}
+
+#project-overview {
+  grid-column: 1 /span 2;
+  border-bottom: #999999 1px solid;
+  padding-bottom: 1rem;
+}
+
+#time-overview {
+  justify-self: end;
+}
+
+#hover-line {
+  grid-row: 3;
+  align-self: end;
+  border-bottom: #999999 1px solid;
+  padding-bottom: .2rem;
+}
+
+.scroll-up-line-works {
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 4% 96%;
+  align-self: end;
+  justify-items: end; 
+  border-bottom: #333333 1px solid;
+  margin-left: 51.5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Photo showing and clock 
+======================
+======================
+======================
+*/
+/* photo of me part */
+#photo-of-me {
+  grid-column: 5;
+  grid-row: 1 /span 5;
+  border: 1px solid #999999;
+  background-image: url("./images/photo-of-me.jpg"); /* default photo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover overlay using ::after */
+#photo-of-me::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+background-image: url("/images/landing-page/photo-of-me.jpg"); /* photo shown on hover */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;                     /* start hidden */
+  transition: opacity 1.2s ease-in-out;  /* fade effect */
+}
+
+#photo-of-me:hover::after {
+  opacity: 1;                     /* fade in on hover */
+}
+
+
+
+#clock {
+  font-family: "hass-light", sans-serif;
+  font-size: .9rem;
+  letter-spacing: 0.02rem;
+  color: #000;
+}
+
+.outer-circle {
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px solid #000000;
+}
+
+.inner-circle {
+
+  width: 9px;
+  height: 9px;
+  margin-top: 8.7px;
+  margin-left: 5.5px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #000000;
+  animation: solidBlink 3.2s steps(1, end) infinite;
+}
+
+.inner-circle {
+  margin-right: 1px;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #000000;
+  animation: solidBlink 3.2s ease-in-out infinite;
+}
+
+@keyframes solidBlink {
+  0%   { opacity: 0; }
+  25%  { opacity: 1; }
+  50%  { opacity: 1; }
+  75%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+#kupu-image-overview-piece, #unheard-image-overview-piece, #vis-image-overview-piece, #optics-image-overview-piece {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#kupu-image-overview-piece {
+  background-image: url('../images/kupu-rangi-images/kupu-header.png');
+}
+
+#unheard-image-overview-piece {
+  background-image: url('../images/landing-page/unheard.jpg');
+}
+
+#optics-image-overview-piece {
+  background-image: url('../images/landing-page/optics.png');
+}
+
+#vis-image-overview-piece {
+  background-image: url('../images/landing-page/vis.jpeg');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#education-and-skills {
+  display: grid;
+  grid-template-columns: 19.7% 19.2% 41% 14.5% 5.9%;
+}
+
+#skills-container {
+  grid-column-start: 2;
+}
+
+#extras-section {
+  display: grid;
+  height: 100vh;
+  padding-top: 3rem;
+}
+
+#main-piece-margin-setter {
+  padding: 0vw 3vw 0vw 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#edutcation-full-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 48px;
+}
+
+.bolded-credit-ed {
+  font-family: 'hass-roman';
+  color: #333333;
+}
+
+.top-edu-text-title {
+  font-family: 'hass-roman';
+  font-size: 1rem;
+  color: #333;
+}
+
+#bach-credit {
+  grid-row-start: 2;
+}
+
+#skills-indiv {
+  display: grid;
+  color: #000;
+  grid-template-rows: 1.8rem 1.8rem 1.8rem 1.8rem 1.8rem 1.8rem;
+}
+
+#skills-container {
+    display: grid;
+    grid-template-rows: 2.2rem 1fr;
+}
+
+#explainer-resume-text {
+  display: grid;
+  grid-template-rows: 2.5rem 1fr;
+  grid-column: 4;
+}
+
+#tools-and-programs-text {
+  font-family: 'hass-roman', sans-serif;
+
+  font-size: 1rem;
+  padding-bottom: 6px;
+  color: #333;
+}
+
+.tools-big-text {
+  padding-top: 6px;
+  font-family: 'edit-old-light';
+  font-size: 2.5rem;
+}
+
+#tools-break-up {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #333;
+}
+
+#tools-break-up:hover .tools-big-text:not(.tools-big-text:hover) {
+  color: #999999;
+}
+
+#explainer-resume-p {
+  grid-row: 2;
+}
+
+#view-resume-line {
+  font-family: 'edit-old-italic';
+  font-size: 2.2rem;
+  grid-row-start: 2;
+    justify-self: end;
+    color: #333333;
+    cursor: pointer;
+    writing-mode: sideways-lr;
+  line-height: 2rem;
+  text-decoration: none;
+  align-self: start;
+}
+
+#view-resume-line:hover {
+  color: #999999;
+}
+
+
+#view-resume-container {
+  grid-column-start: 5;
+  display: grid;
+  grid-template-rows: 2.5rem 1fr;
+  padding-bottom: 0px;
+}
+
+#tools-container {
+  padding-bottom: 1rem;
+}
+
+
+
+#second-prompt-line {
+  opacity: 1;
+}
+
+#title-extras {
+  opacity: 0;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  height: 0;
+  font-size: 0;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1435px) {
+ #kia-ora-intro-block-text {
+  font-size: 7vw;
+  display: flex;
+  flex-direction: column;
+ }
+
+ #heading-intro-first-block {
+  grid-template-columns: 45vw 3vw;
+  grid-template-rows: 8vw 8vw 1fr;
+  gap: 12px;
+ }
+
+ #right-side-section {
+  grid-column: 4 /span 5;
+}
+
+ #header-star {
+  width: 4vw;
+  padding-bottom: 1.3vw;
+ }
+}
+
+
+
+
+@media screen and (max-width: 815px) {
+
+ .summon-me-line {
+  grid-column: 1 /span 2;
+ }
+
+ .scroll-for-works-line {
+  grid-column: 4 /span 5;
+ }
+ 
+
+.landing-page-lines {
+  opacity: 0;
+}
+
+#location-text, #specialty-text {
+  grid-column: 1 /span 3;
+}
+
+#right-side-section {
+  grid-column: 3 /span 5;
+}
+}
+
+
+
+
+
+/* Mobile Sizing */
+/* intro section */
+@media screen and (max-width: 815px) {
+
+main {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: none;
+}
+
+
+section {
+  scroll-snap-align: none;
+  height: 100vh;
+}
+
+#bottom-credits-what-i-do-piece {
+  gap: 3px;
+}
+
+ .scroll-for-works-line {
+  grid-column: 3;
+ }
+
+
+#introduction-section {
+  padding: 1.5rem 3% 1.5rem 3%;
+  height: min-content;
+  grid-template-columns: 1fr;
+  grid-template-rows: 253px 281px 58px;
+}
+
+#kia-ora-intro-block-text {
+  grid-column: 1;
+  grid-template-rows:  3rem 3rem;
+}
+
+#heading-intro-first-block {
+  grid-column: 1 /span 2;
+  grid-template-columns: 62.5vw 3vw;
+  grid-template-rows: .1fr 1fr;
+}
+
+#header-star {
+  opacity: 0;
+  width: 2rem;
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  padding-bottom: 1.25rem;
+}
+
+
+.landing-page-lines {
+  opacity: 0;
+}
+
+#kia-ora-intro-block-text {
+  gap: 12px;
+  font-size: 3.2rem;
+}
+
+#right-side-section {
+  grid-template-rows: 170px 111px;
+  grid-column: 1 /span 2;
+  opacity: 1;
+}
+
+#personal-overview {
+  grid-row: 2;
+  grid-column: 1 /span 3;
+  font-size: 1.3rem;
+  width: 100%;
+  padding-top: 0;
+}
+
+
+#bottom-credits-what-i-do-piece {
+  grid-column: 1 /span 3;
+  grid-template-columns: 1fr;
+  grid-row: 4;
+  grid-template-rows: 1.5rem 1.5rem 1.5rem;
+  justify-content: space-between;
+}
+
+#bottom-credits-what-i-do-piece p {
+  font-size: .9rem;
+}
+
+  #specialty-text, #location-text, #linkedin-text, #linkedin-text, #instagram-text, #instagram-text-photography {
+  display: flex;
+  grid-column: 1 /span 5;
+   }
+
+  .scroll-for-works-line {
+  opacity: 0;
+}
+
+
+.summon-me-line {
+  grid-row: 3;
+  grid-column: 1 /span 5;
+  font-size: 0.9rem;
+}
+
+#second-prompt-line {
+  opacity: 0;
+}
+
+/* works section */
+
+
+#works-section {
+  height: min-content;
+  grid-template-columns: 1fr 1fr;
+}
+
+#works-left-side-desktop {
+  opacity: 0;
+  height: 0;
+}
+
+#works-left-side-mobile {
+  opacity: 1;
+  grid-column: 1 /span 5;
+  grid-template-rows: 0rem 0rem auto auto auto;
+  gap: 12px;
+}
+
+
+#title-selected-works {
+  grid-column: 1;
+  border-bottom: 1px #000 solid;
+  margin-right: 0;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+}
+
+/*
+#selected-works-container {
+  gap: 12px;
+}
+  */
+
+#selected-works-container-mobile {
+  height: min-content;
+  opacity: 1;
+  gap: 12px;
+  pointer-events: all;
+}
+
+#selected-works-container-desktop {
+  height: 0px;
+  display: block;
+  pointer-events: none;
+}
+
+.project-describer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px
+}
+
+.works-div-cat-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 96px;
+}
+
+.project-overview-image {
+  height: 60vw;
+  border: 1px #000 solid;
+}
+
+.project-describer-section, .project-overview-image {
+  opacity: 1;
+}
+
+#works-right-piece {
+  display: flex;
+  height: 0px;
+}
+
+
+#extras-section {
+  padding-top: 0rem;
+}
+
+#personal-overview {
+  grid-column: 1;
+}
+
+
+
+
+
+/* Extras Section*/
+
+#title-extras {
+  opacity: 0;
+  font-family: 'hass-roman';
+  font-size: .9rem;
+  font-weight: 100;
+  color: #000;
+  grid-row: 3;
+  border-bottom: 1px #000 solid;
+  margin-right: 0vw;
+  margin-bottom: 0px;
+  height: min-content;
+  padding-bottom: 12px;
+  letter-spacing: 0.02rem;
+}
+
+  #extras-section {
+  display: flex;
+  flex-direction: column;
+  height: min-content;
+  gap: 48px;
+  margin-bottom: 0px;
+}
+
+#education-and-skills {
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr;
+}
+
+#edutcation-full-container {
+  grid-column: 1fr 1fr;
+  grid-row: 1fr;
+}
+
+#explainer-resume-text {
+  grid-template-rows: 1fr;
+    grid-column: 1 /span 2;
+    grid-row: 2;
+}
+
+#explainer-resume-p {
+  margin: 0;
+  padding-top: 0;
+}
+
+ #view-resume-container {
+  grid-template-rows: 1rem;
+  grid-column: 1 /span 2;
+  grid-row: 3;
+  justify-self: start;
+  padding-bottom: 48px;
+ }
+
+ #view-resume-line {
+    writing-mode: horizontal-tb;
+    font-size: 2.2rem;
+    font-family: 'edit-old-light';
+    color: #000;
+ }
+
+ #tools-break-up {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+ }
+
+ .tools-big-text {
+  font-size: 2.2rem;
+ }
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+  #heading-intro-first-block {
+    grid-column: 1 /span 2;
+    grid-template-columns: 62.5vw auto;
+
+  }
+
+  #header-star {
+    width: .1px;
+  }
+
+  #personal-overview {
+  grid-column: 1 /span 2;
+}
+}
+
+
+
+
+
+
+/*
+
+#project-preview {
+  grid-column: 4 /span 5;
+  grid-row: 2;
+}
+
+#kupu-image-overview-piece { background-image: url('../images/kupu-rangi-images/kupu-header.png'); }
+#unheard-image-overview-piece { background-image: url('../images/kupu-rangi-images/kupu-header.png'); }
+#optics-image-overview-piece { background-image: url('../images/kupu-rangi-images/kupu-header.png'); }
+#vis-image-overview-piece { background-image: url('../images/kupu-rangi-images/kupu-header.png'); }
+
+#project-photo-div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+*/
