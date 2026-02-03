@@ -215,7 +215,7 @@
 }
 
 .change-project-buttons {
-  padding: 144px 3vw 144px 3vw;
+  padding: 120px 3vw 120px 3vw;
   display: flex;
   gap: 24px;
   justify-content: space-between;
@@ -279,6 +279,10 @@
 @media screen and (max-width: 600px) {
 .project-page-lines {
   opacity: 0;
+}
+
+.change-project-buttons {
+  padding: 0px 3vw 0px 3vw;
 }
 
 .project-image-expaliner {
