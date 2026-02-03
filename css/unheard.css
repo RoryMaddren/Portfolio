@@ -17,6 +17,7 @@
 
 #unheard-4 {
     background-image: url('../images/unheard-images/unheard-4.png');
+    overflow: auto;
 }
 
 #unheard-5 {
