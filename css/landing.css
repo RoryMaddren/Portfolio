@@ -933,8 +933,8 @@ section {
 }
 
 #kia-ora-intro-block-text {
-  gap: 12px;
-  font-size: 3.2rem;
+  gap: 0px;
+  font-size: 2.5rem;
 }
 
 #right-side-section {
