@@ -1055,7 +1055,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  padding-bottom: 0px;
+  padding-bottom: 96px;
 }
 
 .project-overview-image {
