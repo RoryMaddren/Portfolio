@@ -1048,14 +1048,15 @@ section {
 .project-describer-section {
   display: flex;
   flex-direction: column;
-  gap: 12px
+  gap: 12px;
+  padding-bottom: 96px;
 }
 
 .works-div-cat-flex {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  padding-bottom: 96px;
+  padding-bottom: 0px;
 }
 
 .project-overview-image {
