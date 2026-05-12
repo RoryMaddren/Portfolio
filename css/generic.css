@@ -135,7 +135,6 @@ a {
   list-style: none;
   letter-spacing: 0.02rem;
   cursor: pointer;
-  color: #111;
 }
 
 .primary-nav p:hover {
@@ -150,6 +149,12 @@ a {
 .mono-link {
     grid-column: 4;
 
+}
+
+.alt-page-info {
+  color: #999999;
+  pointer-events: none;
+  cursor: pointer;
 }
 
 
@@ -225,11 +230,7 @@ footer {
 
 
 
-.alt-page-info {
-  color: #999999;
-  pointer-events: none;
-  cursor: pointer;
-}
+
 
 
 
