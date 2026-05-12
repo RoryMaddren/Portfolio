@@ -342,7 +342,7 @@ section {
 }
 
 .small-header {
-  font-family: 'hass-roman', sans-serif;
+  font-family: 'hass-roman-medium', sans-serif;
   font-weight: 100;
   font-size: 0.9rem;
   padding-bottom: 5px;
@@ -449,7 +449,7 @@ section {
 }
 
 #title-selected-works {
-  font-family: 'hass-roman';
+  font-family: 'hass-roman-medium';
   font-size: .9rem;
   font-weight: 100;
   color: #000;
