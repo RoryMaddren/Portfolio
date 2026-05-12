@@ -137,7 +137,7 @@ section {
   font-size: 1.31rem;
   width: 36.5vw;
   color: #333333;
-  padding-top: 64px;
+  padding-top: 32px;
 }
 
 /* section paragraph piece" */
@@ -151,24 +151,11 @@ section {
 }
 
 /* Defining all of the text style changes in "Kia Ora I'm Rory Maddren" */
-#kia-ora-block {
-  font-family: 'edit-old-light';
-  font-weight: 100
-}
 
-#im-block {
-    font-family: 'edit-old-light';
-    font-weight: 100
-}
-
-#rory-block {
+#kia-ora-block, #rory-block, #maddren-block, #im-block {
       font-family: 'edit-old-italic';
-      font-weight: 100
-}
-
-#maddren-block {
-      font-family: 'edit-old-italic';
-      font-weight: 100
+      font-weight: 100;
+      color: #111111;
 }
 
 #blinking-clock {
@@ -203,7 +190,7 @@ section {
 }
 
 #bottom-credits-what-i-do-piece p {
-  font-size: .9rem;
+  font-size: 1rem;
 }
 
 
@@ -279,9 +266,10 @@ section {
 
   #specialty-text {
   grid-row: 1;
-  font-family: 'hass-light';
+  font-family: 'hass-roman-medium';
   font-weight: 100;
   letter-spacing: 0.02rem;
+  color: #333;
 }
 
 #location-text {
@@ -350,12 +338,13 @@ section {
   font-size: 0.9rem;
   padding-bottom: 5px;
   letter-spacing: 0.02rem;
+  color: #333333;
 }
 
 .awards-splitter-container {
   padding: 5px 0px 5px 0px;
-  border-top: 1px solid #a4a4a4;
-  border-bottom: 1px solid #a4a4a4;
+  border-top: 1px solid #888;;
+  border-bottom: 1px solid #888;;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
@@ -379,7 +368,7 @@ section {
 
 .awards-splitter-container-minus-one {
   padding: 6px 0px 6px 0px;
-  border-bottom: 1px solid #a4a4a4;
+  border-bottom: 1px solid #888;
   display: flex;
   justify-content: space-between;
     cursor: pointer;
@@ -433,6 +422,7 @@ section {
   font-size: 2.5rem;
   font-weight: 100;
   cursor: pointer;
+  color: #111111;
 }
 
 #selected-works-container-desktop:hover a:not(.selected-works-title:hover) {
@@ -455,7 +445,7 @@ section {
   font-family: 'hass-roman-medium';
   font-size: .9rem;
   font-weight: 100;
-  color: #000;
+  color: #333;
   grid-row: 3;
 
   margin-right: 18vw;
@@ -832,6 +822,7 @@ background-image: url("/images/landing-page/photo-of-me.jpg"); /* photo shown on
 
 @media screen and (max-width: 1435px) {
  #kia-ora-intro-block-text {
+    line-height: 120%;
   font-size: 7vw;
   display: flex;
   flex-direction: column;
@@ -962,7 +953,7 @@ section {
 #personal-overview {
   grid-row: 2;
   grid-column: 1 /span 3;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   width: 100%;
   padding-top: 0;
 }
@@ -977,7 +968,7 @@ section {
 }
 
 #bottom-credits-what-i-do-piece p {
-  font-size: .9rem;
+  font-size: 1rem;
 }
 
   #specialty-text, #location-text, #linkedin-text, #linkedin-text, #instagram-text, #instagram-text-photography {
