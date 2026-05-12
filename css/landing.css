@@ -117,6 +117,7 @@ section {
   grid-template-columns: 1fr;
   grid-template-rows: 8.2rem 15rem;
   font-size: 7.8rem;
+  line-height: 100%;
 }
 
 /* Splitting "Kia Ora I'm" */
@@ -136,7 +137,7 @@ section {
   font-size: 1.31rem;
   width: 36.5vw;
   color: #333333;
-  padding-top: 0px;
+  padding-top: 64px;
 }
 
 /* section paragraph piece" */
@@ -834,6 +835,7 @@ background-image: url("/images/landing-page/photo-of-me.jpg"); /* photo shown on
   font-size: 7vw;
   display: flex;
   flex-direction: column;
+    line-height: auto;
  }
 
  #heading-intro-first-block {
