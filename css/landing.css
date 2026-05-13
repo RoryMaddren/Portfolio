@@ -159,6 +159,12 @@ section {
       color: #111111;
 }
 
+#kia-ora-block, #im-block {
+      font-family: 'edit-old-light';
+      font-weight: 100;
+      color: #111111;
+}
+
 #blinking-clock {
   width: 10px;
 }
@@ -267,10 +273,10 @@ section {
 
   #specialty-text {
   grid-row: 1;
-  font-family: 'hass-roman-medium';
+  font-family: 'hass-roman';
   font-weight: 100;
   letter-spacing: 0.02rem;
-  color: #333;
+  color: #111111;
 }
 
 #location-text {
