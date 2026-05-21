@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    transition: all .3s ease-in-out;
+    transition: all .7s cubic-bezier(.65,.05,.36,1);
 
 }
 
@@ -120,12 +120,35 @@ a {
 
 .primary-nav {
   padding: 17px 3vw 25px 3vw;
-  display: flex;
-  height: 33px;
-  justify-content: space-between;
-  border-bottom: 1px solid #555;
+  display: grid;
+  grid-template-columns: 16.7% 16.7% 16.66% 16.7% 16.66%;
+  height: 44px;
+  border-bottom: 1px solid #cecece;
   grid-row: 1;
   grid-column: 1 /span 5;
+}
+
+
+
+.primary-nav-ham {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  border-bottom: 1px solid #111;
+  height: 68px;
+  padding: 0% 3% 0% 3%;
+}
+
+#menu-change {
+  font-family: "hass-roman";
+  font-size: 1rem;
+  color: #999;
+}
+
+.primary-nav:hover {
+  border-bottom: 1px solid #111;
 }
 
 .primary-nav a {
@@ -135,27 +158,90 @@ a {
   list-style: none;
   letter-spacing: 0.02rem;
   cursor: pointer;
+  color: #333;
+  align-self: end;
 }
 
-.primary-nav p:hover {
-  color: #999999;
+.primary-nav a:hover {
+  color: #111;
+}
+
+.primary-nav:hover .primary-nav a {
+  color: #999;
+}
+
+.work-link {
+  grid-column: 4; 
+}
+
+.play-link {
+  grid-column: 5; 
 }
 
 .more-info-link {
-  grid-column: 5;
-  justify-self: end;
+  grid-column: 6; 
+    justify-self: end;
 }
 
-.mono-link {
-    grid-column: 4;
 
-}
 
 .alt-page-info {
   color: #999999;
   pointer-events: none;
   cursor: pointer;
 }
+
+
+.nav-grouping {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  transition: all .4s ease-in-out;
+}
+
+
+.nav-arrow {
+  width: 0px;
+  opacity: 0;
+}
+
+.nav-grouping:hover .nav-arrow {
+  opacity: 1;
+  width: 16px;
+
+}
+
+.nav-grouping:hover {
+  gap: 8px;
+
+}
+
+
+.work-link, .play-link, .more-info-link{
+  opacity: 1;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  display: none;
+  z-index: 999;
+}
+
+.hamburger-menu div{
+  border-radius: 40px;
+  width: 64px;
+  height: 4px;
+  border: #333 1px solid;
+}
+
+.ham-menu {
+  position: absolute;
+  opacity: 0;
+}
+
+
 
 
 
@@ -234,13 +320,6 @@ footer {
 
 
 
-.arrow-icon {
-  transition: transform 0.2s ease;
-  margin-top: 3.5px;
-  opacity: 1;
-  
-}
-
 .award-line-flex:hover .arrow-icon, .team-members-container a:hover .arrow-icon  {
   opacity: 1;
   transition: all .3s ease-in-out;
@@ -288,6 +367,144 @@ footer {
 /* Footer mobile */
 @media screen and (max-width: 810px) { 
 
+
+
+
+.primary-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: last baseline;
+  height: 68px;
+  border-bottom: #111 1px solid;
+  
+}
+
+.work-link, .play-link, .more-info-link{
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+}
+
+
+.hamburger-menu {
+  opacity: 1;
+  grid-column: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px; /* spacing between bars */
+}
+
+
+.hamburger-menu div {
+  transition: transform 0.7s cubic-bezier(.65,.05,.36,1);;
+  transform-origin: center;
+}
+
+
+.hamburger-menu.active > :nth-child(1) {
+  transform: translateY(5px) rotate(25deg);
+}
+
+
+.hamburger-menu.active > :nth-child(2) {
+  transform: translateY(-5px) rotate(-25deg);
+}
+
+
+.ham-menu {
+  opacity: 0;
+  position: absolute;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  padding: 30% 0% 0% 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  top: 0%;
+  transition: all 0.7s cubic-bezier(.65,.05,.36,1);
+  pointer-events: none;
+
+}
+
+.ham-menu.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#inner-links {
+  padding-left: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+
+
+
+
+.small-header-menu {
+  font-family: 'hass-roman-medium', sans-serif;
+  font-weight: 500; 
+  font-size: 0.9rem;
+  letter-spacing: 0.02rem;
+  color: #333333;
+  line-height: 100%;
+  padding-bottom: 32px;
+}
+
+.menu-item-lock-up {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-item-lock-up h5, .menu-item-lock-up p{
+  font-family: "hass-roman";
+    color: #333333;
+}
+
+#italic-menu-item h5 {
+    font-family: "edit-old-italic";
+    font-weight: 100;
+    line-height: 110%;
+}
+
+.menu-item-lock-up h5 {
+  font-size: 3.5rem;
+  font-weight: 100;
+  line-height: 100%;
+}
+
+.menu-item-lock-up p {
+  font-size: 0.9rem;
+  line-height: 100%;
+  font-weight: 100;
+}
+
+
+
+
+
+
+
+  .grouping-images-and-title {
+    gap: 8px;
+  }
+
+  .reveal-image-link, .selection-arrow {
+  opacity: 1;
+}
+
+  .selection-arrow {
+  width: 15px;
+}
+
+
+
+  
   footer {
   height: 100%;
   grid-template-columns: 1fr;

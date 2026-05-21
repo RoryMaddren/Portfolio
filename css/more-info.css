@@ -1,0 +1,424 @@
+#head-info-section {
+  padding: 1.5rem 3% 1.5rem 3%;
+    display: grid;
+  grid-template-columns: 16.7% 16.7% 16.66% 16.7% 16.66%;
+  grid-template-rows: 1fr;
+    
+
+}
+
+#blurb-one {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#blub-one-small {
+    font-size: 1rem;
+}
+
+#lets-connect-text {
+  display: inline;
+  font-size: 0.9rem;
+}
+
+#text-under-photo {
+    display: flex;
+    flex-direction: column;
+}
+
+#info-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    grid-column: 1 /span 3;
+}
+
+#overview-who-am-i {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#info-flex h2 {
+    font-family: 'hass-roman-medium', Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+#start-large {
+    display: inline;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.reg-text-font-heading {
+        font-family: "hass-roman";
+    font-weight: 100;
+    line-height: 115%;
+}
+
+#rory-text-small-line {
+font-family: "edit-old-italic";
+    font-weight: 400;
+    line-height: 115%;
+}
+
+#second-section-splitter {
+    display: grid;
+    grid-template-columns: 26.7% 40% 1fr;
+}
+
+#splitter-section-one {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    grid-column: 1 /span 2;
+}
+
+#small-header-italic {
+    font-family: "edit-old-italic";
+    font-size: .9rem;
+    color: #333;
+}
+
+#splitter-section-two {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    line-height: 100%;
+}
+
+#qual-piece {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#qual-piece p {
+    font-size: 0.9rem;
+}
+
+
+
+
+#photograph-of-me-piece {
+    height: 100%;
+    width: 31.25vw;
+    border: 2px solid #333;
+    background-image: url('../images/generic/pret-image-self.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+#i-can-code-text {
+    font-family: "hass-roman-medium";
+    color: #333;
+    line-height: 100%;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+
+
+#socials-block:hover > a:not(#socials-block a:hover){
+    border-bottom: #9f9f9f 1px solid;
+    color: #9f9f9f;
+}
+
+
+#photo-piece {
+    grid-column: 4 /span 5;
+    grid-row: 1;
+    display: flex;
+    justify-self: end;
+    gap: 8px;
+    flex-direction:column;
+    width: 31.2vw;
+}
+
+
+#photo-piece h3 {
+    opacity: 0;
+    width: 0px;
+    font-size: 5.5rem;
+    font-family: 'edit-old-italic';
+    writing-mode: sideways-lr;  
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #999;
+    color: rgba(255, 255, 255, 0);
+    line-height: 3.2rem;
+    align-self: start;
+}
+
+#about-me-sticking-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    grid-column: 4 /span 5;
+               width: 100%;
+               height: 38rem;
+    
+}
+
+
+#about-me-text {
+    font-size: 4rem;
+    font-family: "edit-old-italic";
+    color: #fff;
+     -webkit-text-stroke: #cccccc 1px;
+       writing-mode: vertical-rl;
+           transform: rotate(180deg);
+           align-self: baseline;
+           line-height: 89%;
+           opacity: 1;
+
+     
+ 
+}
+
+#first-line-under-photo {
+    display: flex;
+    justify-content: space-between;
+}
+
+#first-line-under-photo h4 {
+    font-family: 'hass-roman';
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 100;
+}
+
+#cam-settings {
+    font-size: 0.9rem;
+    color: #111;
+}
+
+
+
+
+
+
+
+
+
+
+.small-header {
+  font-family: 'hass-roman-medium', sans-serif;
+  font-weight: 500; 
+  font-size: 0.8rem;
+  letter-spacing: 0.02rem;
+  color: #333333;
+  line-height: 100%;
+}
+
+.awards-splitter-container, #share-splitter-container {
+  padding: 8px 0px 8px 0px;
+  border-top: 1px solid #c9c9c9;;
+  border-bottom: 1px solid #c9c9c9;;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  line-height: 100%;
+}
+
+ #share-splitter-container-two {
+    border-top: 0px solid #888;;
+    
+}
+
+
+.container-hover-effect-applied:hover {
+  color: #999999;
+}
+
+.awards-splitter-container span, .awards-splitter-container-minus-one span, #share-splitter-container span, #share-splitter-container-two span{
+  font-family: 'hass-light', sans-serif;
+  line-height: 100%;
+  font-weight: 100;
+  font-size: 0.8rem;
+
+}
+
+.manage-wdith {
+  width: 50%;
+}
+
+.awards-splitter-container-minus-one {
+  padding: 8px 0px 8px 0px;
+  border-bottom: 1px solid #c9c9c9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    cursor: pointer;
+    line-height: 100%;
+}
+
+.awards-splitter-container:hover, .awards-splitter-container-minus-one:hover, #share-splitter-container:hover, #share-splitter-container-two:hover  {
+  color: #111;
+  transition: all 0.3s ease-in-out;
+  border-bottom-color: #111;
+}
+
+.awards-splitter-container:hover .reveal-image-link, .awards-splitter-container:hover .selection-arrow, .awards-splitter-container-minus-one:hover .reveal-image-link, .awards-splitter-container-minus-one:hover .selection-arrow {
+  opacity: 1;
+}
+
+.awards-splitter-container:hover .selection-arrow, .awards-splitter-container-minus-one:hover .selection-arrow  {
+  width: 15px;
+}
+
+.awards-splitter-container:hover .grouping-images-and-title, .awards-splitter-container-minus-one:hover .grouping-images-and-title {
+  gap: 8px;
+}
+
+#photo section {
+  margin-top: 10px;
+  grid-row: 6;
+}
+
+.selection-arrow {
+  opacity: 0;
+  width: 0px;
+}
+
+.reveal-image-link {
+  height: 16px;
+  opacity: 0;
+}
+
+.grouping-images-and-title {
+  display: flex;
+  gap: 0px;
+  align-items: center;
+}
+
+
+
+@media screen and (max-width: 1151px) {
+#second-section-splitter {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+    
+}
+
+.manage-wdith {
+    width: 100%;
+}
+
+#photograph-of-me-piece {
+    width: 100%;
+    height: 100%;
+}
+
+#about-me-sticking-side {
+    height: 29rem;
+    justify-content: end;
+}
+
+
+}
+
+
+
+
+@media screen and (max-width: 810px) {
+
+    #photo-piece {
+    width: 100%;
+}
+#second-section-splitter {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.manage-wdith {
+    width: 100%;
+}
+
+
+#about-me-text {
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+    width: 100%;
+}
+
+#about-me-sticking-side {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    justify-content: revert-layer;
+}
+
+
+#head-info-section {
+    padding: 4rem 3vw 60px 3vw;
+    display: flex;
+    gap: 32px;
+}
+
+#photograph-of-me-piece {
+    width: 32.13vw;
+    height: 44vw;
+}
+
+#info-flex {
+    gap: 32px;
+}
+
+
+.awards-splitter-container-minus-one {
+  padding: 8px 0px 8px 0px;
+  border-bottom: 1px solid #c9c9c9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    cursor: pointer;
+    line-height: 100%;
+}
+
+  .grouping-images-and-title {
+    gap: 8px;
+  }
+
+  .reveal-image-link, .selection-arrow {
+  opacity: 1;
+}
+
+  .selection-arrow {
+  width: 15px;
+}
+
+.awards-splitter-container-minus-one, .awards-splitter-container {
+      border-bottom: 1px solid #333;
+}
+
+}
+
+
+
+@media screen and (max-width: 550px) {
+#head-info-section {
+  gap: 32px;
+  padding: 1.5rem 3% 1.5rem 3%;
+  display: flex;
+  flex-direction: column;
+   height: 100%;
+}
+
+#photograph-of-me-piece {
+    width: 100%;
+    height: 25rem;
+}
+
+
+
+}
