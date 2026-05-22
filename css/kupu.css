@@ -53,12 +53,13 @@
     flex-direction: column;
   grid-template-columns: 16.7% 16.7% 16.66% 16.7% 16.66%;
     grid-template-rows: auto;
-    gap: 32px;
+    gap: 36px;
 }
 
 .title-flex {
     display: flex;
     gap: 24px;
+    justify-content: space-between;
 }
 
 .title-flex h2{
@@ -230,13 +231,26 @@
 }
 
 
+@media screen and (max-width: 1150px) { 
+
+    .bottom-flex {
+        grid-template-columns: 16.3% 16.3% 16.1% 16.2% 16.2% 16.2%;
+    }
 
 
+#awards-container {
+    grid-column: 1 /span 3;
+}
+
+
+#teams-container {
+        grid-column: 5 /span 2;
+}
+}
 
 
 /* Ipad Sizing */
-@media screen and (max-width: 810px) { 
-
+@media screen and (max-width: 900px) { 
     .project-page-lines {
         opacity: 0;
     }
@@ -260,9 +274,8 @@ flex-direction: column-reverse;
 
 
 #kupu-title-piece-part-one {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    padding: 24px 3vw 24px 3vw;
+    display: flex;
+    padding: 24px 3vw 128px 3vw;
 }
 
 #project-runthrough-section {
@@ -395,7 +408,7 @@ flex-direction: column-reverse;
 #kupu-title-piece-part-one {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    padding: 24px 3vw 24px 3vw;
+    padding: 24px 3vw 128px 3vw;
 }
 
 .title-flex {

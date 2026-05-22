@@ -1002,17 +1002,7 @@ background-image: url("/images/landing-page/photo-of-me.jpg"); /* photo shown on
 /* intro section */
 @media screen and (max-width: 815px) {
 
-main {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: none;
-}
 
-
-section {
-  scroll-snap-align: none;
-  height: 100vh;
-}
 
 #bottom-credits-what-i-do-piece {
   gap: 3px;
