@@ -1,159 +1,98 @@
-
-
-    <section id="works-section">
-
-     <article id="works-left-side-desktop">
-            <h3 id="title-selected-works">Selected Works</h3>
-            <div id="empty-division-line-works"></div>
-          <div id="selected-works-container-desktop">
-  <a href="./kupu-rangi.html" 
-     class="selected-works-title"
-     data-project="kupu-rangi">
-     Kupu Rangi
-  </a>
-
-  <a href="./unheard.html" 
-     class="selected-works-title"
-     data-project="unheard">
-     Unheard
-  </a>
-
-  <a href="./optics.html" 
-     class="selected-works-title"
-     data-project="optics">
-     Optics
-  </a>
-
-  <a href="./voices-in-stills.html" 
-     class="selected-works-title"
-     data-project="voices">
-     Voices in Stills
-  </a>
-</div>
-        </article>
-
-
-
-
-
-        <div id="project-preview">
-  <!-- This will be replaced on hover -->
-</div>
-
-
-
-<script>
-
-const titles = document.querySelectorAll('.selected-works-title');
-const preview = document.getElementById('project-preview');
-
-titles.forEach(title => {
-  title.addEventListener('mouseenter', () => {
-    const key = title.dataset.project;
-    preview.innerHTML = projectData[key];
-  });
-});
-
-
-
-const projectData = {
-  "kupu-rangi": `
-    <div class="project-describer-section">
-      <a href="./kupu-rangi.html">
-        <p class="project-small-overview">
-          A replacement for the underground arts network, that better showcases the arts and welcomes new members into the ever-shrinking community.
-        </p>
-      </a>
-
-      <a href="./kupu-rangi.html">
-        <div class="works-div-cat-flex">
-          <p>Website, 2024 Project, Group Project</p>
-          <p>UX/UI Designer / Graphic Designer</p>
-          <p>8 Week Project — June 2025</p>
-        </div>
-      </a>
-    </div>
-  `,
-
-  "unheard": `
-    <div class="project-describer-section">
-      <a href="./unheard.html">
-        <p class="project-small-overview">
-          A platform exploring unheard voices through sound-driven storytelling.
-        </p>
-      </a>
-
-      <a href="./unheard.html">
-        <div class="works-div-cat-flex">
-          <p>Website, Audio Project</p>
-          <p>Designer / Developer</p>
-          <p>6 Week Project — 2024</p>
-        </div>
-      </a>
-    </div>
-  `,
-
-  "optics": `
-    <div class="project-describer-section">
-      <a href="./optics.html">
-        <p class="project-small-overview">
-          A visual exploration of perception, distortion, and digital identity.
-        </p>
-      </a>
-
-      <a href="./optics.html">
-        <div class="works-div-cat-flex">
-          <p>Branding, Visual Identity</p>
-          <p>Graphic Designer</p>
-          <p>4 Week Project — 2025</p>
-        </div>
-      </a>
-    </div>
-  `,
-
-  "voices": `
-    <div class="project-describer-section">
-      <a href="./voices-in-stills.html">
-        <p class="project-small-overview">
-          Capturing silent narratives through still imagery and motion.
-        </p>
-      </a>
-
-      <a href="./voices-in-stills.html">
-        <div class="works-div-cat-flex">
-          <p>Photography, Motion</p>
-          <p>Visual Designer</p>
-          <p>5 Week Project — 2024</p>
-        </div>
-      </a>
-    </div>
-  `
-};
-
-
-
-
-
-title.addEventListener('mouseenter', () => {
-  const key = title.dataset.project;
-  preview.classList.add('fade-out');
-
-  setTimeout(() => {
-    preview.innerHTML = projectData[key];
-    preview.classList.remove('fade-out');
-  }, 150);
-});
-
-</script>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
 
 <style>
-  #project-preview {
-  transition: opacity 0.25s ease;
-}
+  .work-switch {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
 
-#project-preview.fade-out {
-  opacity: 0;
-}
+  .switch-btn {
+    padding: 12px 20px;
+    border: 1px solid #333;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .switch-btn.active {
+    background: #333;
+    color: white;
+  }
+
+  .content-wrapper {
+    position: relative;
+  }
+
+  .content-panel {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .content-panel.active {
+    display: block;
+    opacity: 1;
+  }
 </style>
+</head>
 
+<body>
+
+<div class="work-switch">
+  <button class="switch-btn active" id="uni-btn">
+    Uni Work
+  </button>
+
+  <button class="switch-btn" id="industry-btn">
+    Ind Work
+  </button>
+</div>
+
+<section class="content-wrapper">
+
+  <div class="content-panel active" id="uni-works">
+    <h1>Uni Work</h1>
+    <p>This is the university section.</p>
+  </div>
+
+  <div class="content-panel" id="work-section-industry">
+    <h1>Industry Work</h1>
+    <p>This is the industry section.</p>
+  </div>
+
+</section>
+
+<script>
+  const uniBtn = document.querySelector('#uni-btn');
+  const industryBtn = document.querySelector('#industry-btn');
+
+  const uniWorks = document.querySelector('#uni-works');
+  const industryWorks = document.querySelector('#work-section-industry');
+
+  // Show Uni Work
+  uniBtn.addEventListener('click', () => {
+    uniWorks.classList.add('active');
+    industryWorks.classList.remove('active');
+
+    uniBtn.classList.add('active');
+    industryBtn.classList.remove('active');
+  });
+
+  // Show Industry Work
+  industryBtn.addEventListener('click', () => {
+    industryWorks.classList.add('active');
+    uniWorks.classList.remove('active');
+
+    industryBtn.classList.add('active');
+    uniBtn.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>

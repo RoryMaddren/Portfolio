@@ -1,3 +1,5 @@
+/* General Page Structure */
+
 .primary-nav {
     grid-template-columns: 16.7% 16.7% 17% 16.25% 16.66%;
 }
@@ -6,7 +8,7 @@
   gap: 0px;
   padding: 1.5rem 3% 1.5rem 3%;
   display: grid;
-  grid-template-columns: 16.7% 16.7% 16.66% 16.7% 16.66% auto;
+  grid-template-columns: 16.7% 16.7% 16.66% 16.7% 16.66% 16.66%;
   grid-template-rows: auto auto auto auto;
   row-gap: 32px;
 }
@@ -35,17 +37,22 @@
 .work-page-lines span:nth-of-type(1) { left: 3%; }
 .work-page-lines span:nth-of-type(2) { left: 18.67%; }
 .work-page-lines span:nth-of-type(3) { left: 34.33%; }
-.work-page-lines span:nth-of-type(4) { left: 50.35%; }
+.work-page-lines span:nth-of-type(4) { left: 50.3%; }
 .work-page-lines span:nth-of-type(5) { left: 65.67%; }
 .work-page-lines span:nth-of-type(6) { left: 81.33%; }
 .work-page-lines span:nth-of-type(7) { left: 97%; }
-.work-page-lines span:nth-of-type(8) { left: 49.55%; }
+.work-page-lines span:nth-of-type(8) { left: 49.75%; }
 
 
 
-#work-section {
-  grid-column: 1 /span 3;
+
+
+
+
+#switch-between-content-container {
+  grid-column: 1 /span 5;
 }
+
 
 #display-works-piece-one {
   flex: 1; /* This makes all direct children equal width */
@@ -79,6 +86,7 @@
 
 #works-container {
   grid-column: 1 /span 4;
+  grid-row: 2;
 }
 
 #works-container-unheard {
@@ -128,6 +136,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  grid-column: 1 /span 5;
 }
 
 #top-swtich-container h3{
@@ -142,16 +151,85 @@
   align-items: center;
 }
 
-#work-switch h4{
+.switch-btn {
   font-family: 'hass-roman-medium', sans-serif;
-  color: #999;
+  color: #555;
   font-size: 1.4rem;
-  font-weight: 500
+  font-weight: 500;
+  background: none;
 }
 
-#work-switch #active {
+.switch-btn:hover, .switch-btn.active:hover {
+  color: #d8d8d8;
+}
+
+#work-switch.active {
   color: #111;
 }
+
+  .switch-btn {
+    cursor: pointer;
+    border: none;
+    background-color: none;
+    transition: 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .switch-btn.active {
+    color: #111;
+  }
+
+  .content-panel {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    height: 0;
+  }
+
+  .content-panel.active {
+    display: block;
+    opacity: 1;
+        pointer-events: all;
+  }
+
+  .content-panel {
+  display: none;
+}
+
+.content-panel.active {
+  display: block;
+}
+
+#work-section-industry {
+  display: flex;
+  flex-direction: column;
+}
+
+#work-section-industry h1{
+  font-family: "hass-roman-medium";
+  font-size: 1.5rem;
+}
+        
+
+
+
+
+
+
+
+
+
+#uni-works {
+  grid-column: 1 /span 6;
+  display: grid;
+  grid-template-columns: 16.7% 16.7% 17% 16.25% 16.66%;
+  row-gap: 32px;
+}
+
+
+
+
+
 
 #switch-circle {
   width: 4px;
@@ -235,6 +313,11 @@
 
 
 @media screen and (max-width: 815px) {
+#uni-works {
+  display: flex;
+  flex-direction: column;
+}
+
   .work-page-lines {
   opacity: 0;
 }

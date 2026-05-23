@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/generic.css">
     <link rel="stylesheet" href="./css/work.css">
     <script src="./js/generic.js" defer></script>
+    <script src="./js/work-overview.js" defer></script>
 </head>
 
 <body>
@@ -110,23 +111,22 @@
 
         <section id="work-page-overall">
 
-            <article id="work-section">
-
-
-                <div id="top-swtich-container">
+                    <div id="top-swtich-container">
                     <h3>Selected Work</h3>
                     <span id="work-switch">
-                        <h4 id="active">University Work</h4>
+<button class="switch-btn active" id="uni-btn">
+    University Work
+  </button>
                         <span id="switch-circle"></span>
-                        <h4>Industry Work</h4>
+  <button class="switch-btn" id="industry-btn">
+    Industry Work
+  </button>
+</div>
                     </span>
                 </div>
-            </article>
 
 
-
-
-
+  <div class="content-panel active" id="uni-works">
             <a href="kupu-rangi.html" id="works-container">
                 <img class="hero-image-work-page-head" src="./images/kupu-rangi-images/kupu-header.png" alt="work">
                 <span class="grouping-awards-and-title-works">
@@ -297,10 +297,20 @@
                     </div>
                 </a>
 
-            </article>
+</article>
+</div>
+
+
+
+
+  <div class="content-panel" id="work-section-industry">
+    <h1>Section in Progress</h1>
+  </div>
 
 
         </section>
+
+        
 
 </body>
 
