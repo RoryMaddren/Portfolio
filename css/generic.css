@@ -245,6 +245,7 @@ a {
   pointer-events: none;
   position: absolute;
   opacity: 0;
+  height: 100vh;
 }
 
 
