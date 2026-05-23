@@ -653,10 +653,6 @@ background-image: url("/images/landing-page/photo-of-me.jpg"); /* photo shown on
   color: #888;
 }
 
-.active-switch {
-  color: #111;
-}
-
 .awards-container-metals-flex {
   display: flex;
   gap: 6px;

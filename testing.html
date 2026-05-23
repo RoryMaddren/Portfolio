@@ -3,95 +3,111 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+<title>Hover Image Change</title>
 
 <style>
-  .work-switch {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 24px;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .switch-btn {
-    padding: 12px 20px;
-    border: 1px solid #333;
-    background: white;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
+body {
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 60px;
+}
 
-  .switch-btn.active {
-    background: #333;
-    color: white;
-  }
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
 
-  .content-wrapper {
-    position: relative;
-  }
+/* LEFT SECTION */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-  .content-panel {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
+.project {
+  padding: 20px 30px;
+  border: 1px solid #444;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 300px;
+}
 
-  .content-panel.active {
-    display: block;
-    opacity: 1;
-  }
+.project:hover {
+  background: white;
+  color: black;
+}
+
+/* RIGHT SECTION */
+.preview-section {
+  width: 500px;
+  height: 350px;
+}
+
+#preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: opacity 0.25s ease;
+}
 </style>
 </head>
 
 <body>
 
-<div class="work-switch">
-  <button class="switch-btn active" id="uni-btn">
-    Uni Work
-  </button>
+<div class="container">
 
-  <button class="switch-btn" id="industry-btn">
-    Ind Work
-  </button>
+  <!-- LEFT SIDE -->
+  <section class="projects">
+
+    <div class="project" data-image="https://picsum.photos/id/1015/800/600">
+      Project One
+    </div>
+
+    <div class="project" data-image="https://picsum.photos/id/1016/800/600">
+      Project Two
+    </div>
+
+    <div class="project" data-image="https://picsum.photos/id/1018/800/600">
+      Project Three
+    </div>
+
+  </section>
+
+  <!-- RIGHT SIDE -->
+  <section class="preview-section">
+    <img 
+      id="preview-image" 
+      src="https://picsum.photos/id/1015/800/600"
+      alt="Preview Image"
+    >
+  </section>
+
 </div>
 
-<section class="content-wrapper">
-
-  <div class="content-panel active" id="uni-works">
-    <h1>Uni Work</h1>
-    <p>This is the university section.</p>
-  </div>
-
-  <div class="content-panel" id="work-section-industry">
-    <h1>Industry Work</h1>
-    <p>This is the industry section.</p>
-  </div>
-
-</section>
-
 <script>
-  const uniBtn = document.querySelector('#uni-btn');
-  const industryBtn = document.querySelector('#industry-btn');
+const projects = document.querySelectorAll('.project');
+const previewImage = document.querySelector('#preview-image');
 
-  const uniWorks = document.querySelector('#uni-works');
-  const industryWorks = document.querySelector('#work-section-industry');
+projects.forEach(project => {
+  project.addEventListener('mouseenter', () => {
+    previewImage.style.opacity = '0';
 
-  // Show Uni Work
-  uniBtn.addEventListener('click', () => {
-    uniWorks.classList.add('active');
-    industryWorks.classList.remove('active');
-
-    uniBtn.classList.add('active');
-    industryBtn.classList.remove('active');
+    setTimeout(() => {
+      previewImage.src = project.dataset.image;
+      previewImage.style.opacity = '1';
+    }, 150);
   });
-
-  // Show Industry Work
-  industryBtn.addEventListener('click', () => {
-    industryWorks.classList.add('active');
-    uniWorks.classList.remove('active');
-
-    industryBtn.classList.add('active');
-    uniBtn.classList.remove('active');
-  });
+});
 </script>
 
 </body>
