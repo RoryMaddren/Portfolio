@@ -36,3 +36,76 @@ window.addEventListener('beforeunload', () => {
   document.body.classList.add('fade-out');
 });
 */
+
+
+
+/*
+const linkedInHover = document.querySelector('#linked-in-hover');
+const photoOfMe = document.querySelector('#photo-of-me');
+    console.log('logged')
+
+// hover in
+linkedInHover.addEventListener('mouseenter', () => {
+    photoOfMe.style.opacity = '0';
+
+    setTimeout(() => {
+    photoOfMe.src = '/images/landing-page/photo-of-me.jpg'; // your hover image
+        photoOfMe.style.opacity = '1';
+    }, 150);
+
+      console.log('hover')
+});
+
+// hover out
+linkedInHover.addEventListener('mouseleave', () => {
+    photoOfMe.style.opacity = '0';
+
+    setTimeout(() => {
+   // your hover image') = 'none';
+        photoOfMe.style.opacity = '0';
+    }, 150);
+        console.log('stop')
+});
+*/
+
+const debounce = (func,wait) => {
+  let timeout;
+  return function(...args){
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this,args),wait);
+  } 
+}
+
+const handleMouseEnter = () => {
+
+}
+
+const handleMouseLeave = () => {
+  
+}
+
+const hoverImageAppear = document.querySelectorAll('.hover-image-appear');
+const boxImageShowcase = document.querySelector('#box-image-showcase');
+
+
+hoverImageAppear.forEach(hoverImageAppear => {
+  hoverImageAppear.addEventListener('mouseenter', (e) => {
+    let imageUrl = e.target.getAttribute('data-image');
+    boxImageShowcase.style.opacity = '0';
+    boxImageShowcase.classList.add('active-display');
+    
+
+    setTimeout(() => {
+      boxImageShowcase.style.backgroundImage = `url("${imageUrl}")`
+      boxImageShowcase.style.opacity = '1';
+    }, 150);
+       
+
+  });
+
+  hoverImageAppear.addEventListener('mouseleave', (e) => {
+    boxImageShowcase.style.opacity = '0';
+  });
+
+
+});

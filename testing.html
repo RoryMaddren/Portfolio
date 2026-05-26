@@ -52,7 +52,7 @@ body {
   height: 350px;
 }
 
-#preview-image {
+#box-image-showcase {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -69,42 +69,42 @@ body {
   <!-- LEFT SIDE -->
   <section class="projects">
 
-    <div class="project" data-image="https://picsum.photos/id/1015/800/600">
+    <div href="https://www.linkedin.com/in/rory-maddren/" data-image="/images/landing-page/photo-of-me.jpg" class="hover-image-appear awards-splitter-container-minus-one">
       Project One
     </div>
 
-    <div class="project" data-image="https://picsum.photos/id/1016/800/600">
+    <div href="https://www.linkedin.com/in/rory-maddren/" data-image="/images/generic/Dearna-icon.png" class="hover-image-appear awards-splitter-container-minus-one">
       Project Two
     </div>
 
-    <div class="project" data-image="https://picsum.photos/id/1018/800/600">
+    <div href="https://www.linkedin.com/in/rory-maddren/" data-image="/images/landing-page/photo-of-me.jpg" class="hover-image-appear awards-splitter-container-minus-one">
       Project Three
     </div>
 
   </section>
 
   <!-- RIGHT SIDE -->
-  <section class="preview-section">
+  <div id="photo-section" class="preview-section">
     <img 
-      id="preview-image" 
+      id="box-image-showcase" 
       src="https://picsum.photos/id/1015/800/600"
       alt="Preview Image"
     >
-  </section>
+  </div>
 
 </div>
 
 <script>
-const projects = document.querySelectorAll('.project');
-const previewImage = document.querySelector('#preview-image');
+const hoverImageAppear = document.querySelectorAll('.hover-image-appear');
+const boxImageShowcase = document.querySelector('#box-image-showcase');
 
-projects.forEach(project => {
-  project.addEventListener('mouseenter', () => {
-    previewImage.style.opacity = '0';
+hoverImageAppear.forEach(hoverImageAppear => {
+  hoverImageAppear.addEventListener('mouseenter', () => {
+    boxImageShowcase.style.opacity = '0';
 
     setTimeout(() => {
-      previewImage.src = project.dataset.image;
-      previewImage.style.opacity = '1';
+      boxImageShowcase.src = hoverImageAppear.dataset.image;
+      boxImageShowcase.style.opacity = '1';
     }, 150);
   });
 });

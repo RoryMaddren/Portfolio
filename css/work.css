@@ -13,6 +13,17 @@
   row-gap: 32px;
 }
 
+ #work-section-industry {
+  display: grid;
+  grid-column: 1/span 3;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding-right: .6%;
+
+}
+
+
+
 .work-page-lines {
   opacity: 1;
   position: fixed;
@@ -78,7 +89,7 @@
   gap: 8px;
 }
 
-#works-container, #works-container-unheard, #works-container-optics, #works-container-all-the-rest {
+#works-container, #works-container-unheard, #works-container-optics, #works-container-all-the-rest, #works-container-wewrangle {
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -89,8 +100,15 @@
   grid-row: 2;
 }
 
-#works-container-unheard {
-  grid-column: 1 /span 3;
+#works-container-unheard, #works-container-wewrangle {
+  grid-column: 1 /span 2;
+  grid-row: 3;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+#works-container-wewrangle {
+    grid-column: 1 /span 3;
   grid-row: 3;
     border-bottom: 0;
     padding-bottom: 0;
@@ -114,13 +132,13 @@
   width: 100%;
 }
 
-#works-container-unheard *, #works-container-optics *, #works-container-vis *, #works-container-all-the-rest * {
+#works-container-unheard *, #works-container-optics *, #works-container-vis *, #works-container-all-the-rest *, #works-container-wewrangle * {
   filter: grayscale(1);
 }
 
 
 
-#works-container:hover *, #works-container-unheard:hover *, #works-container-optics:hover *, #works-container-all-the-rest:hover * {
+#works-container:hover *, #works-container-unheard:hover *, #works-container-optics:hover *, #works-container-all-the-rest:hover *, #works-container-wewrangle:hover * {
     filter: grayscale(0);
     transition: all .7s;
 }
@@ -200,31 +218,26 @@
   display: block;
 }
 
-#work-section-industry {
-  display: flex;
-  flex-direction: column;
+
+
+
+
+
+
+.hero-image-work-page-head {
+  border: 2px solid #111;
 }
-
-#work-section-industry h1{
-  font-family: "hass-roman-medium";
-  font-size: 1.5rem;
-}
-        
-
-
-
-
-
-
-
-
 
 #uni-works {
   grid-column: 1 /span 6;
   display: grid;
   grid-template-columns: 16.7% 16.7% 17% 16.25% 16.66%;
   row-gap: 32px;
+    grid-template-rows: auto auto;
+
 }
+
+
 
 
 
@@ -292,7 +305,20 @@
   gap: 8px;
 }
 
+#display-works-piece-one-minus-border-bottom {
+  grid-column: 1 /span 6;
+  grid-row: 3;
+  display: flex;
+  flex-direction: row;
+  border-top: #333 solid 1px;
+  padding-bottom: 32px;
+  padding-top: 32px;
+  gap: 8px;
+}
 
+.mccann-piece {
+  padding-bottom: 32px;
+}
 
 
 
@@ -322,7 +348,7 @@
   opacity: 0;
 }
 
-  #works-container-unheard *, #works-container-optics *, #works-container-vis *, #works-container-all-the-rest * {
+  #works-container-unheard *, #works-container-optics *, #works-container-vis *, #works-container-all-the-rest *, #works-container-wewrangle * {
   filter: grayscale(0);
 }
 
@@ -341,7 +367,7 @@
     row-gap: 18px;
   }
 
-  #works-container-unheard {
+  #works-container-unheard, #works-container-wewrangle {
     border-bottom: #555 solid 1px;
     padding-bottom: 32px;
   }

@@ -180,6 +180,12 @@ font-family: "edit-old-italic";
  
 }
 
+#about-me-text:hover {
+        color: #333;
+             -webkit-text-stroke: #333 1px;
+             transition: 0.7s cubic-bezier(.65,.05,.36,1);
+}
+
 #first-line-under-photo {
     display: flex;
     justify-content: space-between;

@@ -1,0 +1,122 @@
+#vis-image-header {
+    background-image: url('../images/mccann-images/hero.png');
+}
+
+
+#vis-1 {
+    background-image: url('../images/mccann-images/phase-one.png');
+}
+
+#vis-2 {
+    background-image: url('../images/mccann-images/image-2.png');
+}
+
+#vis-3 {
+    background-image: url('../images/mccann-images/image-3.png');
+}
+
+#vis-4 {
+    background-image: url('../images/mccann-images/image-4.png');
+}
+
+#vis-5 {
+    background-image: url('../images/mccann-images/image_5.png');
+}
+
+#vis-6 {
+    background-image: url('../images/mccann-images/image_6.png');
+}
+
+.video-ex-vis {
+    height: 100%;
+    width: 100%;
+}
+
+.piece-image:not(#vis-7, #vis-8, #vis-9, #vis-1, #vis-3, #vis-4) {
+     background-size:contain;
+     background-color: #000000;
+}
+
+
+#research-question-explaining-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#research-question-container {
+    display: grid;
+    grid-template-columns: .7fr .3fr 1fr;
+    grid-template-rows: auto;
+    padding: 0 3vw 144px 3vw;
+    gap: 48px;
+}
+
+#display-rq-flex {
+    display: flex;
+    flex-direction: column;
+    grid-row: 2;
+    grid-column: 1 /span 2;
+    gap: 12px;
+}
+
+#display-rq-flex h4 {
+    font-size: 3rem;
+    font-family: 'edit-old-light';
+    font-weight: 100;
+}
+
+#display-rq-flex h5 {
+    font-size: 2rem;
+    font-family: 'hass-roman';
+    font-weight: 100;
+}
+
+
+
+
+
+
+
+
+/* Ipad Sizing */
+@media screen and (max-width: 810px) { 
+
+    .project-page-lines {
+        opacity: 0;
+    }
+
+
+
+
+#research-question-explaining-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#research-question-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 0 3vw 0 3vw;
+    gap: 24px;
+}
+
+#display-rq-flex {
+    display: flex;
+    flex-direction: column;
+    grid-row: 2;
+    grid-column: 1;
+    gap: 12px;
+}
+
+#display-rq-flex h4 {
+    font-size: 2rem;
+}
+
+#display-rq-flex h5 {
+    font-size: 1.2rem;
+}
+}
+
