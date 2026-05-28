@@ -14,11 +14,62 @@
     <link rel="prefetch" href="./voices-in-stills.html" />
     <script src="./js/landing.js" defer></script>
     <script src="./js/generic.js" defer></script>
+      <link rel="icon" type="image/x-icon" href="./images/generic/favicon.ico">
 </head>
 
 <body>
-    <div class="grain-overlay"></div>
+     <div class="grain-overlay"></div> 
+   <!--  <canvas id="static-overlay"></canvas>-->
+    <div id="page-transition"></div>
 
+
+    <style>#static-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  pointer-events: none;
+  opacity: 0.09; /* adjust strength */
+  mix-blend-mode: screen; /* optional, looks nicer */
+}</style>
+
+
+<script>
+const canvas = document.getElementById('static-overlay');
+const ctx = canvas.getContext('2d');
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+function drawStatic() {
+  const imageData = ctx.createImageData(canvas.width, canvas.height);
+  const buffer = new Uint32Array(imageData.data.buffer);
+
+  for (let i = 0; i < buffer.length; i++) {
+    const shade = Math.random() * 255;
+
+    buffer[i] =
+      (255 << 24) |
+      (shade << 16) |
+      (shade << 8) |
+      shade;
+  }
+
+  ctx.putImageData(imageData, 0, 0);
+}
+
+/* adjust speed here */
+const fps = 8; // lower = slower
+
+setInterval(drawStatic, 1000 / fps);
+</script>
 
     <div class="ham-menu">
 
@@ -239,7 +290,7 @@
 -->
 
 
-                        <a href="https://www.linkedin.com/in/rory-maddren/" data-image="/images/landing-page/hover-images-square/insta-2.png" class="hover-image-appear awards-splitter-container">
+                        <a href="https://www.linkedin.com/in/rory-maddren/" data-id="instagram-showcase" class="hover-image-appear awards-splitter-container">
                             <span class="grouping-images-and-title">
 
                                 <svg class="selection-arrow" width="16" viewBox="0 0 30 32" fill="none"
@@ -258,7 +309,7 @@
 
                         </a>
 
-                        <a href="https://www.linkedin.com/in/rory-maddren/" data-image="/images/landing-page/hover-images-square/linkedin.png" class="hover-image-appear awards-splitter-container-minus-one">
+                        <a href="https://www.linkedin.com/in/rory-maddren/" data-id="linkedin-showcase" class="hover-image-appear awards-splitter-container-minus-one">
                             <span class="grouping-images-and-title">
 
                                 <svg class="selection-arrow" width="16" viewBox="0 0 30 32" fill="none"
@@ -321,7 +372,7 @@
 
                     <article class="container-hover-effect-applied control-panel active"
                         id="awards-container-design-strict">
-                        <a href="https://bestawards.co.nz/digital/student-digital/dearna-smith-1/kupu-rangi/" data-image="/images/landing-page/hover-images-square/kupu-bronze.png" class="hover-image-appear awards-splitter-container-minus-one">
+                        <a href="https://bestawards.co.nz/digital/student-digital/dearna-smith-1/kupu-rangi/" data-id="digital-showcase" class="hover-image-appear awards-splitter-container-minus-one">
                             <span class="grouping-images-and-title">
 
                                 <svg class="selection-arrow" width="16" viewBox="0 0 30 32" fill="none"
@@ -344,7 +395,7 @@
 
         
                             <a href="https://bestawards.co.nz/toitanga/student-academic-toitanga/dearna-smith-1/kupu-rangi-1/" 
-                            data-image="/images/landing-page/hover-images-square/kupu-final.png" class="hover-image-appear awards-splitter-container-minus-one">
+                            data-id="toitanga-showcase" class="hover-image-appear awards-splitter-container-minus-one">
 
 
                             <span class="grouping-images-and-title">
@@ -363,7 +414,7 @@
 
                       
   <a href="https://bestawards.co.nz/social-good-award/student-social-good/dearna-smith-1/unheard/" 
-                            data-image="/images/landing-page/hover-images-square/unheard-final.png" class="hover-image-appear awards-splitter-container-minus-one">
+                            data-id="socialgood-showcase" class="hover-image-appear awards-splitter-container-minus-one">
 
                             <span class="grouping-images-and-title">
                                 <svg class="selection-arrow" width="16" viewBox="0 0 30 32" fill="none"
@@ -388,7 +439,7 @@
 
 
   <a href="https://cgscholar.com/cg_event/events/T26en/proposal/82339" 
-                            data-image="/images/landing-page/hover-images-square/kupu-greece.png" class="hover-image-appear awards-splitter-container-minus-one">
+                            data-id="conference-showcase" class="hover-image-appear awards-splitter-container-minus-one">
 
 
                             <span class="grouping-images-and-title">
@@ -578,7 +629,7 @@
 
 
             <article id="services-landing">
-                <p class="small-header" id="services-text">Services</p>
+                <h3 class="small-header" id="services-text">Services</h3>
                 <p>Web Design</p>
                 <p>Product Design</p>
                 <p>Graphic Design</p>
@@ -589,7 +640,17 @@
 
 
             <article id="photo-section">
-                <div id="box-image-showcase"></div>
+                <div id="box-image-showcase">
+                    <img class="showcased-image" id="instagram-showcase" src="/images/landing-page/hover-images-square/insta-2.png"/>
+                    <img class="showcased-image" id="linkedin-showcase" src="/images/landing-page/hover-images-square/linkedin.png"/>
+
+                    <img class="showcased-image" id="digital-showcase" src="/images/landing-page/hover-images-square/kupu-bronze.png"/>
+                    <img class="showcased-image" id="toitanga-showcase" src="/images/landing-page/hover-images-square/kupu-final.png"/>
+                    <img class="showcased-image" id="socialgood-showcase" src="/images/landing-page/hover-images-square/unheard-final.png"/>
+                    <img class="showcased-image" id="conference-showcase" src="/images/landing-page/hover-images-square/cgs.png"/>
+
+                    
+                </div>
             </article>
             </section>
 

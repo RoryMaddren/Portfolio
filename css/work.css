@@ -112,6 +112,8 @@
   grid-row: 3;
     border-bottom: 0;
     padding-bottom: 0;
+    border-top: #555 solid 1px;
+        padding-top: 32px;
 }
 
 #works-container-optics {
@@ -370,6 +372,12 @@
   #works-container-unheard, #works-container-wewrangle {
     border-bottom: #555 solid 1px;
     padding-bottom: 32px;
+  }
+
+  #works-container-wewrangle {
+    padding-top: 32px;
+    padding-bottom: 0px;
+    border-bottom: 0px;
   }
 
     #works-container-optics {

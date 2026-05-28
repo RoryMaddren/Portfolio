@@ -1,0 +1,131 @@
+#sos-image-header {
+    background-image: url('../images/sos-images/image-1.png');
+}
+
+
+#sos-1 {
+    background-image: url('../images/sos-images/sos-1.jpg');
+}
+
+#sos-2 {
+    background-image: url('../images/sos-images/sos-2.jpg');
+}
+
+#sos-3 {
+    background-image: url('../images/sos-images/sos-3.jpg');
+}
+
+#sos-4 {
+    background-image: url('../images/sos-images/sos-4.jpg');
+}
+
+#sos-5 {
+    background-image: url('../images/sos-images/image-1.png');
+}
+
+#sos-6 {
+    background-image: url('../images/sos-images/image-2.png');
+}
+
+#sos-7 {
+    background-image: url('../images/sos-images/image-3.png');
+}
+
+#sos-8 {
+    background-image: url('../images/sos-images/sos-8.jpg');
+}
+
+#sos-9 {
+    background-image: url('../images/sos-images/sos-9.jpg');
+}
+
+
+.video-ex-sos {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+#research-question-explaining-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#research-question-container {
+    display: grid;
+    grid-template-columns: .7fr .3fr 1fr;
+    grid-template-rows: auto;
+    padding: 0 3vw 144px 3vw;
+    gap: 48px;
+}
+
+#display-rq-flex {
+    display: flex;
+    flex-direction: column;
+    grid-row: 2;
+    grid-column: 1 /span 2;
+    gap: 12px;
+}
+
+#display-rq-flex h4 {
+    font-size: 3rem;
+    font-family: 'edit-old-light';
+    font-weight: 100;
+}
+
+#display-rq-flex h5 {
+    font-size: 2rem;
+    font-family: 'hass-roman';
+    font-weight: 100;
+}
+
+
+
+
+
+
+
+
+/* Ipad Sizing */
+@media screen and (max-width: 810px) { 
+
+    .project-page-lines {
+        opacity: 0;
+    }
+
+
+
+
+#research-question-explaining-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#research-question-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 0 3vw 0 3vw;
+    gap: 24px;
+}
+
+#display-rq-flex {
+    display: flex;
+    flex-direction: column;
+    grid-row: 2;
+    grid-column: 1;
+    gap: 12px;
+}
+
+#display-rq-flex h4 {
+    font-size: 2rem;
+}
+
+#display-rq-flex h5 {
+    font-size: 1.2rem;
+}
+}
+

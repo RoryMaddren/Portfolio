@@ -139,6 +139,34 @@ a {
 
 
 
+    #page-transition {
+  position: fixed;
+  inset: 0;
+  background: #fff; /* change to your brand colour */
+  z-index: 9970;
+
+  opacity: 1;
+  pointer-events: none;
+
+  transition: opacity 0.8s ease;
+}
+
+/* Page loaded = fade overlay away */
+#page-transition.loaded {
+  opacity: 0;
+}
+
+/* Leaving page = fade overlay back in */
+#page-transition.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+
+
+
 
 .primary-nav {
   padding: 17px 3vw 25px 3vw;

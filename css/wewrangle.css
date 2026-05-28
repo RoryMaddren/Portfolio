@@ -1,0 +1,114 @@
+#wewrangle-image-header {
+    background-image: url('../images/work-page/wewrangle.png');
+}
+
+
+#discalimer-image {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #111;
+}
+
+#wewrangle-displaimer-size {
+    grid-column: 1 /span 2;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-bottom: 84px;
+}
+
+#wewrangle-1 {
+    background-image: url('../images/wewrangle/image-1.png');
+}
+
+#wewrangle-2 {
+    background-image: url('../images/wewrangle/image-2.png');
+}
+
+#wewrangle-3 {
+    background-image: url('../images/wewrangle/image-3.png');
+}
+
+#wewrangle-4 {
+    background-image: url('../images/wewrangle/image-4.png');
+}
+
+#wewrangle-5 {
+    background-image: url('../images/wewrangle/image_5.png');
+}
+
+#wewrangle-6 {
+    background-image: url('../images/wewrangle/image_6.png');
+}
+
+.video-ex-wewrangle- {
+    height: 100%;
+    width: 100%;
+}
+
+#research-question-explaining-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+
+
+
+
+
+/* Ipad Sizing */
+@media screen and (max-width: 810px) { 
+
+    .project-page-lines {
+        opacity: 0;
+    }
+
+
+#wewrangle-displaimer-size {
+    grid-column: 1 /span 2;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-bottom: 72px;
+}
+
+
+
+#discalimer-image {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #111;
+}
+
+
+#research-question-explaining-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#research-question-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 0 3vw 0 3vw;
+    gap: 24px;
+}
+
+#display-rq-flex {
+    display: flex;
+    flex-direction: column;
+    grid-row: 2;
+    grid-column: 1;
+    gap: 12px;
+}
+
+#display-rq-flex h4 {
+    font-size: 2rem;
+}
+
+#display-rq-flex h5 {
+    font-size: 1.2rem;
+}
+}
+

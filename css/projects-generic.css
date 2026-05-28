@@ -1,3 +1,28 @@
+    #page-transition {
+  position: fixed;
+  inset: 0;
+  background: #fff; /* change to your brand colour */
+  z-index: 9970;
+
+  opacity: 1;
+  pointer-events: none;
+
+  transition: opacity 0.8s ease;
+}
+
+/* Page loaded = fade overlay away */
+#page-transition.loaded {
+  opacity: 0;
+}
+
+/* Leaving page = fade overlay back in */
+#page-transition.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
 /* First Section */
 
 .overview-header {
@@ -6,6 +31,7 @@
     grid-template-rows: 1fr;
     padding: 0 3vw 0 3vw;
 }
+
 
 .header-image {
     grid-column: 1 /span 3;
@@ -81,6 +107,27 @@
   grid-template-rows: 1fr 1fr 0.5fr;
   grid-template-columns: 1fr 1fr;
       row-gap: 12px;
+}
+
+.piece-image-ww {
+  height: 100%;
+  border: 2px solid #111;
+  grid-column: 1 /span 2;
+  background-image: url("./images/photo-of-me.jpg"); /* default photo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image-expaliner-two-images-wewrangle-size {
+ padding: 0 3vw 0 3vw;
+  display: grid;
+  grid-template-rows: 90vh 90vh 1.5fr;
+  grid-template-columns: 1fr 1fr;
+      row-gap: 12px;
+      padding-bottom: 128px;
 }
 
 .my-roles-flex {
@@ -676,6 +723,18 @@ grid-column: 5 /span 6;
   grid-column: 1;
   grid-column-end: 1 ;
 }
+
+.project-image-expaliner-two-images-wewrangle-size {
+  padding: 0 3vw 0 3vw;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 96px;
+}
+
+.piece-image-ww {
+  height: 40vw;
+}
+
 
 .piece-image-short {
   grid-column: 1;
