@@ -171,6 +171,7 @@ main {
   letter-spacing: 0.02rem;
   color: #111111;
   padding-bottom: 6px;
+      align-items: flex-end;
 }
 
 #location-text {
@@ -601,7 +602,7 @@ background-image: url("/images/landing-page/photo-of-me.jpg"); /* photo shown on
 .inner-circle {
   width: 9px;
   height: 9px;
-  margin-top: 6.8px;
+  margin-top: 8px;
   margin-left: 8px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
@@ -611,8 +612,8 @@ background-image: url("/images/landing-page/photo-of-me.jpg"); /* photo shown on
 
 .inner-circle {
   margin-right: 1px;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background-color: #000000;
