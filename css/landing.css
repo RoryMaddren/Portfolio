@@ -16,7 +16,25 @@ main {
   height: 95vh;
   display: grid;
   grid-template-columns: 16.7% 16.7% 16.66% 16.7% 16.66%;
+  grid-template-rows: 92px 1fr 2fr;
+}
+
+
+#rory-block {
+  font-family: "edit-old-light";
+  font-weight: 100;
+  color: #111111;
+  line-height: 100%;
+}
+
+@supports (-moz-appearance: none) {
+
+  #rory-block {
+      line-height: 120%;
+  }
+  #introduction-section {
   grid-template-rows: 78px 1fr 2fr;
+  }
 }
 
 .landing-page-lines {
@@ -112,11 +130,6 @@ main {
 
 /* Defining all of the text style changes in "Kia Ora I'm Rory Maddren" */
 
-#rory-block {
-  font-family: "edit-old-light";
-  font-weight: 100;
-  color: #111111;
-}
 
 #blinking-clock {
   width: 10px;
