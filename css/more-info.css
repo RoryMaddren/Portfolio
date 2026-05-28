@@ -170,14 +170,23 @@ font-family: "edit-old-italic";
     font-family: "edit-old-italic";
     color: #fff;
      -webkit-text-stroke: #cccccc 1px;
-       writing-mode: vertical-rl;
-           transform: rotate(180deg);
-           align-self: baseline;
-           line-height: 89%;
-           opacity: 1;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    align-self: baseline;
+    line-height: 82%;
+    opacity: 1;
+    margin-right: 1%;
 
      
  
+}
+
+@supports (-moz-appearance: none) {
+  /* Your Firefox-specific styles go here */
+  #about-me-text {
+    line-height: 89%;
+        margin-right: 0%;
+  }
 }
 
 #about-me-text:hover {
