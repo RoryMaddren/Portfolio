@@ -10,6 +10,12 @@
   grid-template-rows: 78px 1fr 2fr;
 }
 
+#photography-awards-conatainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .play-page-lines {
   opacity: 1;
   position: fixed;
