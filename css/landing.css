@@ -707,14 +707,14 @@ background-image: url("/images/landing-page/photo-of-me.jpg"); /* photo shown on
   color: #111;
   align-self: end;
   line-height: 100%;
-  gap: 4px;
+  gap: 2px;
 }
 
 #services-landing p {
   font-family: "hass-roman";
   font-weight: 500;
   color: #333;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 #services-text {
