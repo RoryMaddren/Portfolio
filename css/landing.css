@@ -16,7 +16,7 @@ main {
   height: 95vh;
   display: grid;
   grid-template-columns: 16.7% 16.7% 16.66% 16.7% 16.66%;
-  grid-template-rows: 92px 1fr 2fr;
+  grid-template-rows: 98px 1fr 2fr;
 }
 
 
@@ -33,7 +33,7 @@ main {
       line-height: 120%;
   }
   #introduction-section {
-  grid-template-rows: 78px 1fr 2fr;
+  grid-template-rows: 84px 1fr 2fr;
   }
 }
 
@@ -707,7 +707,7 @@ background-image: url("/images/landing-page/photo-of-me.jpg"); /* photo shown on
   color: #111;
   align-self: end;
   line-height: 100%;
-  gap: 2px;
+  gap: 4px;
 }
 
 #services-landing p {
@@ -718,7 +718,7 @@ background-image: url("/images/landing-page/photo-of-me.jpg"); /* photo shown on
 }
 
 #services-text {
-  padding-bottom: 4px;
+  padding-bottom: 7px;
 }
 
 #education-and-skills {
