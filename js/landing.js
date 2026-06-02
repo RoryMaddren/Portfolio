@@ -18,7 +18,7 @@
   setInterval(updateClock, 1000);
 
 
-
+/*
     const selectDesginWorkBtn = document.querySelector('#select-design-work');
     const selectPhotoWorkBtn = document.querySelector('#select-photography-work');
 
@@ -54,3 +54,5 @@
         designAwards.classList.remove('active');
         console.log("working-2");
     });
+
+    */
