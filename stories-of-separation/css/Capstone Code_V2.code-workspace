@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../audios"
+		}
+	],
+	"settings": {
+		"notebook.defaultFormatter": "esbenp.prettier-vscode"
+	}
+}

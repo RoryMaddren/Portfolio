@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Stories of Separation</title>
+    <link rel="stylesheet" href="css/generic.css" />
+    <link rel="stylesheet" href="css/about.css" />
+      <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <script src="./js/about-page.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+        fav
+  </head>
+  <body>
+
+
+
+
+
+
+
+
+  <!-- Black fade overlay -->
+  <div id="page-fade"></div>
+
+  <script>
+    // Fade out black overlay when page loads
+    window.addEventListener('load', () => {
+      const fade = document.getElementById('page-fade');
+      fade.classList.add('fade-out');
+      // Optional: remove overlay from DOM after fade
+      setTimeout(() => fade.remove(), 2000);
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="noise"></div>
+    <div class="about-page-lines">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="cursor-outer"></div>
+    <div class="cursor-inner"></div>
+
+    <!--Navigation Bar-->
+    <nav class="primary-nav">
+      <div class="nav-main-items">
+        <ul>
+          <a href="./index.html"><li>INTRODUCTION</li></a>
+          <a href="./list-view.html"><li>SEPARATIONS</li></a>
+          <!--<li><div id="cycle-carrasel">Next</div></li>-->
+        </ul>
+      </div>
+      <a href="./list-view.html"><p class="logo-image">Stories of Separation</p></a>
+      <div class="nav-secondary-items">
+        <ul>
+          <a class="active-page" href="./about.html"><li>ABOUT</li></a>
+
+
+        <a href="#" id="soundButton">SOUND ON</a>
+        <audio id="audio-page-sound" src="./audios/music/soundscape-loop.mp3" loop>
+        </audio>
+      </ul>
+    </div>
+  </nav>
+
+
+    <div id="page-contents">
+      <div class="page-grid">
+        <h2 class="heading-title-1">Background</h2>
+        <p id="first-blurb">
+          Throughout my life I have lived away from both of my parents at
+          different times. Now as an adult I carry on that separation for
+          different reasons.
+          <br /><br />
+          I always felt this otherised me, especially in my younger years, and
+          only really found that a lot of people experience the same or similar
+          things throughout their lives. This become the persist of what i
+          wanted to explore with in this project.
+        </p>
+        <img
+          id="mum-photo"
+          src="./images/about-page/dad-photo1.png"
+          alt="Mum Image"
+        />
+
+        <h2 class="heading-title-2">Support</h2>
+        <p id="second-blurb">
+          As an adult the impact I primarily felt was toward my mum, who I spent
+          the most time away from and contacted the most while apart in those
+          times. Even now this remains the same, and while exploring old photos
+          of when me and my siblings were young I decided I to form a project
+          around this sense of separation.
+
+          <br /><br />
+          Through iteration and concepting my mind went to creating a space for
+          others to come together over their connection and document their
+          personal experiences in separation.
+          <br /><br />
+          Separation comes with a ornate sense of loneliness and isolation when
+          I personally feel it doesn’t need to. Throughout my experience
+          speaking with and documenting others’ stories I found that this is not
+          where the effects of separation stop.
+          <br><br>
+          I heard individualistic, and
+          unique feelings I never considered during times important
+          developmental times in personal lives. Some positive and some not.
+          Some cultural and some less so. Its through these human conversations
+          that I began to reconsider my own situation and reflect differently. I
+          believe this is the ultimate benefit of a resource such as Stories of
+          Separation.
+        </p>
+
+        <div id="third-blub">
+          <p>
+            Through this experimental site my hope its that others can find
+            connection and feel less separation in the same way that I did while
+            working on this project. <br /><br />
+            I’ve allowed further a place links for extended support and more on
+            the privacy around sharing this information in the through the
+            following links.
+          </p>
+          <div id="links-support">
+            <a href="#"><p>Support Links</p></a>
+          </div>
+          <p>
+            Feel free to reach out as well for anything else through the email:
+          </p>
+    
+
+          <a id="links-support" href="#"><p>storiesofseparation@gmail.com</p></a>
+
+
+
+
+        </div>
+        <img
+          id="dad-photo"
+          src="./images/about-page/mum-photo1.png"
+          alt="Dad Image"
+        />
+      </div>
+    </div>
+  </body>
+</html>

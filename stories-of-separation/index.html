@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction — Stories of Separation</title>
+          <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="css/generic.css">
+        <link rel="stylesheet" href="css/landing.css">
+        <link rel="stylesheet" href="css/share.css">
+        <script defer src="./js/landing.js"></script>
+
+</head>
+<body id="background-landing">
+
+
+
+
+
+
+
+
+<!-- SHARE ENTRY OVERLAY -->
+<div id="share-overlay">
+  <div id="share-box-container-all">
+    <div class="share-page-lines">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div id="page-contents">
+      <div class="share-box">
+        <div class="top-title-section">
+          <h1 id="top-text-share-p">Write Your Entry</h1>
+          <p class="description-p">
+            We recommend if stuck on recounting your story to follow this structure. For the prototype version feel free to type anything. 
+          </p>
+        </div>
+
+        <div class="runthrough-section-p">
+          <h3 class="counter">1.</h3>
+          <p class="istructional merge-line">
+            <span class="slanted">CONTEXT —</span>
+            Who is the person that you are separated from, and what do
+            they mean to you and how did you separate?
+          </p>
+
+          <h3 class="counter">2.</h3>
+          <p class="istructional merge-line">
+            <span class="slanted">FEELING —</span>
+            How did you feel about the separation when it happened? What emotions were there at the time and did it feel justified?
+          </p>
+
+          <h3 class="counter">3.</h3>
+          <p class="istructional merge-line">
+            <span class="slanted">EFFECT —</span>
+            How do you feel about it now? Has there been strain, or if you are united again is it the same as it was?
+          </p>
+
+          <h3 class="counter">4.</h3>
+          <p class="istructional merge-line">
+            <span class="slanted">LEAVING THOUGHTS —</span>
+            How do you feel reflecting on it now? Has this strengthened your relationship? Where are you in the relationship presently?
+          </p>
+
+          <a id="grey-link" href="#"><p>I WANT TO SUBMIT AN AUDIO CONFESSION INSTEAD</p></a>
+        </div>
+
+        <span id="text-box-section">
+          <h4 class="write-your-p">Write your story below.</h4>
+          <textarea id="text-space" placeholder="I am currently separated from..."></textarea>
+          <a id="add-photo-container" href="#"><p id="add-photo">+ ATTACH MY PHOTO</p></a>
+        </span>
+
+          <a class="cross-img" id="close-overlay-btn" aria-label="Close overlay" href="#"><img src="./images/entry-page/x.png" alt="X-image" /></a>
+
+        <div class="submit-back-buttons">
+          <a id="back-btn" href="#"><div>BACK</div></a>
+          <a id="submit-btn" href="#"><div>SUBMIT ENTRY</div></a>
+        </div>
+
+        <span id="count-bottom">
+          <p id="active">[1] - DEMO LEGNTH</p>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Black fade overlay -->
+  <div id="page-fade"></div>
+
+  <!-- Your page content here -->
+  <div class="noise"></div>
+  <div class="dust"></div>
+  <div class="cursor-outer"></div>
+  <div class="cursor-inner"></div>
+  <!-- etc... -->
+
+  <script>
+    // Fade out black overlay when page loads
+    window.addEventListener('load', () => {
+      const fade = document.getElementById('page-fade');
+      fade.classList.add('fade-out');
+      // Optional: remove overlay from DOM after fade
+      setTimeout(() => fade.remove(), 2000);
+    });
+
+
+  window.addEventListener("load", () => {
+    document.body.classList.add("image-fade-in");
+  });
+
+  </script>
+
+
+
+    <div class="landing-page-lines">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    </div>
+
+
+
+  <!--Navigation Bar-->
+  <nav class="primary-nav">
+    <div class="nav-main-items">
+      <ul>
+        <a class="active-page" href="./index.html">
+          <li>INTRODUCTION</li>
+        </a>
+        <a href="./list-view.html">
+          <li>SEPARATIONS</li>
+        </a>
+             <li><a href="#" id="add-entry-btn">ADD ENTRY +</a></li>
+
+      </ul>
+    </div>
+    <a href="./list-view.html">
+      <p class="logo-image">Stories of Separation</p>
+    </a>
+    <div class="nav-secondary-items">
+      <ul>
+        <a href="./about.html">
+          <li>ABOUT</li>
+        </a>
+        <a href="#" id="walkthroughButton">
+          <li>[O] WALKTHROUGH</li>
+        </a>
+
+
+
+        <a href="#" id="soundButton">SOUND ON</a>
+        <audio id="audio-page-sound" src="./audios/music/soundscape-loop.mp3" loop>
+        </audio>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="tut-shroud">
+    <div id="walkthrough-explainer">
+      <p id="layout-of-sep-text">How the entry information is displayed</p>
+      <span id="scroll-me-container"><img id="arrow-img" src="../images/list-view/arrow-down.png" alt="arrow">
+        <p id="scoll-through-this-text">Scroll Through Panels</p>
+      </span>
+      <img id="walkthrough-img" src="/images/list-view/tut-img-3.png" alt="walkthrough-explainer">
+      <div class="button-bottom">
+        <button class="close-walk">CLOSE OVERLAY</button>
+        <button class="next-btn">NEXT</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+     <!--
+<img id="intro-line" src="./images/line-intro.png" alt="line ring">
+-->
+    <div id="top-sitting-text">
+       <!--
+    <span id="entering-site-text">
+    <h3 id="open-text-entery">OPEN</h3><h3 id="collection-text-entery">TO</h3><h3 id="of-text-entery">OUR</h3>
+    </span>
+-->
+
+
+    <span id="entering-site-text"> 
+    <h3 id="stories-text-entery">WELCOME TO OUR</h3>
+  </span>
+    <span id="entering-site-text-2"><h3 id="of-2-text-entery">STORIES of</h3>
+ 
+    <h3 id="separation-text-entery">SEPARATION</h3></span>
+   
+    </div>
+
+     
+            <div id="underneath-divider"><h5 id="underneath-title">Explore through the stories of <br> individuals and find connection in <br> our separations.</h5></div>
+
+                  <a href="./list-view.html"><div class="entering-site-buttons">
+   
+                 <div class="scroll-hint" id="scrollHint" tabindex="0" role="button" aria-label="Go to list">
+                  <h5 class="explore-button">Take me to the separations</h5>
+
+                 <div class="arrow-2" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle class="ring ring-anim" cx="24" cy="24" r="20"></circle>
+                <g class="chev" transform="translate(0,0)">
+                  <path d="M16 18 L24 26 L32 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div></a>
+     <!--  <a href="#"><button class="share-button">SHARE EXPERIENCE +</button></a> -->
+</div>
+
+
+
+<style>
+    #top-sitting-text {
+  transform: translateY(20%);
+  opacity: 0;
+  animation: slideInIntroTop 2.2s cubic-bezier(0.16, 1, 0.3, 1) 1s forwards;
+}
+
+@keyframes slideInIntroTop {
+  0% {
+    transform: translateY(20%);
+
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+.scroll-hint {
+  transform: translateY(30%);
+  opacity: 0;
+  animation: lastPieceSlide 3.5s cubic-bezier(0.16, 1, 0.3, 1) 1.7s forwards;
+}
+
+
+
+@keyframes lastPieceSlide {
+  0% {
+    transform: translateY(30%);
+
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+#underneath-divider {
+  transform: translateY(30%);
+  opacity: 0;
+  animation: slideNextSection 2.2s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards;
+}
+
+
+
+@keyframes slideNextSection {
+  0% {
+    transform: translateY(30%);
+
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+
+   #entering-site-text > span, #entering-site-text-2 > span {
+  overflow: hidden;
+}
+
+#entering-site-text > span > span > h3 {
+  transform: translateY(100%);
+  opacity: 0;
+  animation: slideIn 1.5s cubic-bezier(0.16, 1, 0.3, 1) 1s forwards;
+
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+
+    opacity: 1;
+  }
+    }
+</style>
+</body>
+</html>

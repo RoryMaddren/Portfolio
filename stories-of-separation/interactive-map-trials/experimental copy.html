@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/css/generic.css">
+      <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+<title>Separations Dynamic View — Stories of Separation</title>
+
+<div class="noise"></div>
+
+<div class="cursor-outer"></div>
+<div class="cursor-inner"></div>
+
+<!--Navigation Bar-->
+<nav class="primary-nav">
+  <div class="nav-main-items">
+    <ul>
+      <a href="/index.html">
+        <li>INTRODUCTION</li>
+      </a>
+      <a class="active-page" href="/list-view.html">
+        <li>SEPARATIONS</li>
+      </a>
+      <a href="/share-page.html">
+        <li>ADD ENTRY +</li>
+      </a>
+    </ul>
+  </div>
+  <a href="./list-view.html">
+    <p class="logo-image">Stories of Separation</p>
+  </a>
+  <div class="nav-secondary-items">
+    <ul>
+      <a href="/about.html">
+        <li>ABOUT</li>
+      </a>
+      <a href="#" id="walkthroughButton">
+        <li>[O] WALKTHROUGH</li>
+      </a>
+      <a href="#" id="soundButton">SOUND ON</a>
+      <audio id="audio-page-sound" src="./audios/temp2.mp3" loop></audio>
+    </ul>
+  </div>
+
+</nav>
+
+
+<div class="expanded-view-overlay">
+<div class="trigger-overview-clip">
+<p>ABUSE</p>
+<p>GRIEF</p>
+</div>
+
+<div class="entry-details-clip">
+<p>
+  I live away from family friend of me and my mums, his name was Gary. He moved to Australia when I was younger, probably about 8-9 years ago - and we ended up staying here in NZ. I think when we he left it was quite hard, even though at the time Id liked to have thought I took in stride, but I think...
+</p>
+</div>
+
+<div class="further-entry-details-clip">
+  <p class="entry-text-clip">Entry — 04</p>
+   <p class="date-clip">15.09.2025</p>
+</div>
+
+
+<div class="finer-deatils-clip">
+  <p>FRIEND SEPARATION</p>
+  <p>AUDIO ENTRY</p>
+  <p>03:04</p>
+</div>
+
+
+  <img class="cross" src="../images/experimental/cross.png" alt="X">
+
+
+  <div class="button-section-clip">
+    <button class="button-stylings">PLAY AUDIO</button>
+    <button>DIM PHOTO</button>
+    <button>OPEN ENTRY</button>
+  </div>
+
+
+
+  <div class="finer-details-2-clip">
+    <p>MODERATE CONNECTION</p>
+    <p>SEPARATION — 4 YEARS</p>
+  </div>
+
+
+  <div class="directional-buttons">
+    <img src="../images/experimental/up.png" alt="up">
+    <img src="../images/experimental/down.png" alt="down">
+  </div>
+
+
+</div>
+
+<style>
+
+  .expanded-view-overlay {
+    background-image: url('.../images/experimental/exp-t-1.png');
+background-repeat: no-repeat;
+    background-attachment: cover;
+        padding: 3rem;
+  }
+
+  .entry-text-clip {
+    font-size: 3.5rem;
+  }
+
+  .date-clip {
+    font-size: 1.3rem;
+  }
+
+  .directional-buttons {
+    grid-column: 3;
+    grid-row: 6;
+    justify-self: end;
+
+  }
+
+  .trigger-overview-clip {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .trigger-overview-clip p {
+        color: #2b2b2b;
+        font-size: 1.3rem;
+  }
+  
+  .directional-buttons img {
+    width: 4.5rem;
+  }
+
+  .further-entry-details-clip {
+    grid-column: 1;
+    grid-row: 4;
+    font-family: 'editorial-ultra-light-italic';
+  border-bottom: #656565 solid 1px;
+  }
+
+  .finer-details-2-clip {
+    grid-row: 5;
+    grid-column: 2;
+  border-bottom: #656565 solid 1px;
+  }
+
+    .button-section-clip {
+      grid-row: 3;
+      grid-column: 2 /span 3;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .cross {
+      justify-self: end;
+      width: 4.5rem;
+      grid-column: 3;
+      align-items: end;
+    }
+
+  .button-section-clip button {
+    background-color: #00000000;
+    font-family: 'editorial-ultra-light';
+    border: 1px white solid;
+    color: white;
+    padding: 1.3rem 1rem 1rem 1rem;
+    width: 100%;
+  }
+.expanded-view-overlay {
+  display: grid;
+  position: absolute;
+  z-index: 10;
+  top: 10rem;
+  left: 20%;
+  grid-template-columns: 1.15fr .5fr .5fr;
+  grid-template-rows: 3rem .5fr 17rem .5fr 5rem 1fr;
+  width: 50%;
+  gap: 1rem;
+}
+
+.entry-details-clip {
+  grid-column: 1;
+  grid-row: 3;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #b9b9b9;
+}
+
+.finer-deatils-clip {
+  grid-column: 1;
+  grid-row: 5;
+  border-bottom: #656565 solid 1px;
+}
+
+  body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: radial-gradient(circle at center, #020202, #000);
+    font-family: "Inter", sans-serif;
+    user-select: none;
+    color: white;
+
+  }
+
+  .viewport {
+    width: 100vw;
+    height: 100vh;
+    perspective: 1200px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .scene {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    will-change: transform;
+  }
+
+  .grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3000px;
+    height: 2000px;
+    transform: translate(-50%, -50%);
+    background-image:
+      linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 200px 200px;
+    pointer-events: none;
+    transition: transform 0.1s linear;
+  }
+
+  .label {
+    position: absolute;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    pointer-events: none;
+    mix-blend-mode: difference;
+  }
+
+  .label.top    { top: 40px; left: 50%; transform: translateX(-50%); }
+  .label.bottom { bottom: 40px; left: 50%; transform: translateX(-50%); }
+  .label.left   { left: 60px; top: 50%; transform: translateY(-50%) rotate(-90deg); transform-origin: left top; }
+  .label.right  { right: 60px; top: 50%; transform: translateY(-50%) rotate(90deg); transform-origin: right top; }
+
+  .photo {
+    position: absolute;
+    width: 200px;
+    height: 130px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    will-change: transform, opacity;
+    transition: transform 0.2s ease-out;
+    cursor: pointer;
+  }
+
+  /* Zoom Bar Styling */
+  #zoomBarContainer {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 9999;
+    font-family: "Inter", sans-serif;
+  }
+
+  #zoomBar {
+    width: 100%;
+    -webkit-appearance: none;
+    background: rgba(255, 255, 255, 0.2);
+    height: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  #zoomBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  #zoomBar::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  /* Overlay Styles */
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10000;
+    flex-direction: column;
+  }
+
+  #overlay img {
+    max-width: 80%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+  }
+
+  #overlay p {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+  }
+
+  #overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+</style>
+</head>
+<body>
+<div class="viewport">
+  <div class="scene" id="scene">
+    <div class="grid" id="grid"></div>
+  </div>
+</div>
+
+<!-- Zoom Bar -->
+<div id="zoomBarContainer">
+  <span style="font-size:14px;">Zoom</span>
+  <input type="range" id="zoomBar" min="-5000" max="1000" value="-1000">
+</div>
+
+<!-- Overlay -->
+<div id="overlay">
+  <img id="overlay-img" src="">
+  <p id="overlay-text">Example Caption</p>
+</div>
+
+<script>
+  const scene = document.getElementById("scene");
+  const grid = document.getElementById("grid");
+  const photoCount = 40;
+  let camX = 0, camY = 0, camZ = -1000;
+  let targetCamZ = camZ;
+  let velX = 0, velY = 0;
+  let isDragging = false;
+  let startX, startY;
+
+  let viewportWidth = window.innerWidth;
+  let viewportHeight = window.innerHeight;
+
+  function placePhoto(i, total) {
+    const rowCount = 5;
+    const colCount = 8;
+    const col = i % colCount;
+    const row = Math.floor(i / colCount);
+    const gridW = 2500;
+    const gridH = 1600;
+    const xStep = gridW / (colCount - 1);
+    const yStep = gridH / (rowCount - 1);
+
+    const x = -gridW / 2 + col * xStep + (Math.random() - 0.5) * 80;
+    const y = -gridH / 2 + row * yStep + (Math.random() - 0.5) * 80;
+    const z = (Math.random() - 0.5) * 1000;
+    return { x, y, z };
+  }
+
+  // --- Create photos ---
+  for (let i = 0; i < photoCount; i++) {
+    const photo = document.createElement("div");
+    photo.className = "photo";
+    photo.dataset.caption = "Eiffel Tower Photo " + (i + 1); // Unique caption
+
+    const { x, y, z } = placePhoto(i, photoCount);
+    photo.dataset.x = x.toFixed(2);
+    photo.dataset.y = y.toFixed(2);
+    photo.dataset.z = z.toFixed(2);
+    scene.appendChild(photo);
+  }
+
+  const photos = document.querySelectorAll(".photo");
+
+  const photoZs = Array.from(photos).map(p => parseFloat(p.dataset.z));
+  const closestPhotoZ = Math.min(...photoZs);
+  const farthestPhotoZ = Math.max(...photoZs);
+  const maxZoomIn = closestPhotoZ - -800;
+  const maxZoomOut = farthestPhotoZ + 100;
+
+  // --- Animate function ---
+  function animate() {
+    camZ += (targetCamZ - camZ) * 0.08;
+    camX += velX;
+    camY += velY;
+    velX *= 0.9;
+    velY *= 0.9;
+
+    const zoomScale = (1000 + camZ) / 1000;
+
+    grid.style.transform = `
+      translate(calc(-50% + ${-camX * 0.1}px), calc(-50% + ${-camY * 0.1}px))
+      scale(${zoomScale * 1.1})
+    `;
+
+    photos.forEach(photo => {
+      const x = parseFloat(photo.dataset.x);
+      const y = parseFloat(photo.dataset.y);
+      const z = parseFloat(photo.dataset.z);
+
+      const relZ = z - camZ;
+      const scale = 1000 / (1000 + relZ);
+
+      const screenX = (x - camX) * scale + viewportWidth / 2 - 100;
+      const screenY = (y - camY) * scale + viewportHeight / 2 - 65;
+
+      photo.style.transform = `translate3d(${screenX}px, ${screenY}px, ${relZ}px) scale(${scale})`;
+      photo.style.opacity = Math.max(0.1, 1 - Math.abs(relZ) / 2500);
+    });
+
+    requestAnimationFrame(animate);
+  }
+  animate();
+
+  // --- Mouse Drag ---
+  window.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startX = e.clientX;
+    startY = e.clientY;
+  });
+
+  window.addEventListener("mouseup", () => isDragging = false);
+
+  window.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+    startX = e.clientX;
+    startY = e.clientY;
+    velX -= dx * 0.05;
+    velY -= dy * 0.05;
+  });
+
+  // --- Scroll Zoom ---
+  window.addEventListener("wheel", (e) => {
+    targetCamZ += e.deltaY * 2;
+    if (targetCamZ > maxZoomIn) targetCamZ = maxZoomIn;
+    if (targetCamZ < -maxZoomOut) targetCamZ = -maxZoomOut;
+  });
+
+  // --- Zoom Bar ---
+  const zoomBar = document.getElementById("zoomBar");
+  function updateZoomBar() {
+    zoomBar.value = targetCamZ;
+    requestAnimationFrame(updateZoomBar);
+  }
+  updateZoomBar();
+
+  zoomBar.addEventListener("input", (e) => {
+    targetCamZ = parseFloat(e.target.value);
+  });
+
+  // --- Handle window resize ---
+  window.addEventListener("resize", () => {
+    viewportWidth = window.innerWidth;
+    viewportHeight = window.innerHeight;
+  });
+
+  // --- Custom mouse cursors ---
+  const outer = document.querySelector('.cursor-outer');
+  const inner = document.querySelector('.cursor-inner');
+  let mouseX = 0, mouseY = 0;
+
+  window.addEventListener('mousemove', e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    inner.style.left = mouseX + 'px';
+    inner.style.top = mouseY + 'px';
+  });
+
+  const interactives = document.querySelectorAll('a, button');
+  interactives.forEach(el => {
+    el.addEventListener('mouseenter', () => outer.classList.add('hovered'));
+    el.addEventListener('mouseleave', () => outer.classList.remove('hovered'));
+  });
+
+  // --- Overlay functionality for all photos ---
+  const overlay = document.getElementById('overlay');
+  const overlayImg = document.getElementById('overlay-img');
+  const overlayText = document.getElementById('overlay-text');
+
+  photos.forEach(photo => {
+    photo.addEventListener('click', () => {
+      overlayImg.src = photo.style.backgroundImage.slice(5, -2);
+      overlayText.textContent = photo.dataset.caption || "Photo";
+      overlay.classList.add('show');
+    });
+  });
+
+  // Close overlay only when clicking outside the image
+  overlay.addEventListener('click', e => {
+    if (e.target === overlay) {
+      overlay.classList.remove('show');
+    }
+  });
+</script>
+</body>
+</html>

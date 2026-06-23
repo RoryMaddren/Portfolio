@@ -1,0 +1,466 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    cursor: none;
+        scrollbar-width: none;
+   /* overscroll-behavior: none */
+}
+
+   /* smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+    cursor: none;
+}
+
+
+
+
+
+@font-face {
+    font-family: "editorial-italic";
+    src: url('./fonts/EO/eo-italic.otf');
+}
+
+@font-face {
+    font-family: "editorial-reg";
+    src: url('./fonts/EO/eo-reg.otf');
+}
+
+@font-face {
+    font-family: "editorial-ultrabold";
+    src: url('./fonts/EO/eo-ultrabold.otf');
+}
+
+
+@font-face {
+    font-family: "editorial-ultra-light";
+    src: url('./fonts/EO/eo-ultralight.otf');
+}
+
+
+@font-face {
+    font-family: "editorial-ultra-light-italic";
+    src: url('./fonts/EO/eo-ultralight-italic.otf');
+}
+  @import url("https://use.typekit.net/ejx0evq.css");
+
+h1, h2, h3, h4, h5, p {
+    color: #fff;
+}
+
+.primary-nav a {
+    color: #e2e2e2;
+}
+
+.praimary-nav a, .nav-secondary-items{
+  font-size: .8rem;
+        transition: all 0.7s ease-in-out;
+}
+
+
+.primary-nav a:hover, .nav-secondary-items:hover {
+    color: #7c7c7c;
+    transition: all 0.7s ease-in-out;
+}
+.primary-nav a:active {
+    color: #ffffff;
+}
+
+#soundButton {
+  display: inline-block;
+  transition: all 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+#soundButton.blur {
+  filter: blur(2px);
+  opacity: 0.3;
+}
+
+
+.primary-nav {
+    position: fixed;   
+    z-index: 50;   
+    top: 0;
+    left: 0;
+    width: 100%;                
+    display: grid;
+    padding: 1.2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-family: "acumin-pro", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    border-bottom: 1px solid #414141;
+    background-color: #0000003a;
+    backdrop-filter: blur(5px);
+}
+
+
+
+
+.nav-main-items, .nav-secondary-items {
+  display: flex; 
+  align-items: center;   /* vertical */
+
+}
+
+.primary-nav ul {
+      list-style-type: none;
+}
+
+.nav-main-items ul{
+    display: flex; 
+    gap: 1rem;
+    align-items: center;
+    padding: .5rem;
+    font-size: .8rem;
+}
+
+.nav-secondary-items ul{
+    padding: .5rem;
+    display: flex; 
+    gap: 1rem;
+    flex-direction: row-reverse;
+}
+
+.nav-secondary-items {
+    flex-direction: row-reverse;
+}
+
+.logo-image {
+    text-align: center;
+    font-family: "editorial-ultra-light";
+    font-weight: 100;
+    display: flex; 
+    justify-content: center;
+    font-size: 2.2rem;
+}
+
+
+h1 {
+    font-family: "editorial-ultra-light";
+    font-weight: 100;
+}
+
+h3 {
+
+    font-weight: 100; 
+}
+
+body {
+    background-color: #000;
+}
+  
+        .noise::before{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            content: "";
+            opacity: .05;  
+            z-index: 9999;
+            pointer-events: none;
+            background: url("../images/noise.gif")
+        } 
+
+tr
+        .dust::before{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            content: "";
+            opacity: .9;  
+            z-index: 9000;
+            pointer-events: none;
+            mix-blend-mode: soft-light ;
+            filter: grayscale(100%);
+            background: url("../images/list-view/dust.gif");
+            background-size: cover;
+        }
+
+
+        .fabric::before{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            content: "";
+            opacity: .5;  
+            z-index: 9000;
+            pointer-events: none;
+            mix-blend-mode: overlay ;
+            filter: grayscale(100%);
+            background: url("../images/fabric-temp.png");
+            background-size: cover;
+        }
+
+*/
+
+.active-page {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: #fff;
+}
+
+
+
+
+/* Mouse Chnage */
+
+   body {
+      cursor: none; 
+   }/* hide default cursor 
+
+    /* Outer ball */
+    .cursor-outer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #ffffff;
+      border-radius: 0%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: all 0.15s ease-out;
+      z-index: 9951;
+        /* Start hidden */
+  opacity: 0;
+  animation: fadeInCursor 1s ease forwards;
+  animation-delay: 1s; /* adjust delay if needed */
+    }
+
+/* Cursor inner */
+.cursor-inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  background: #ffffff;
+  border-radius: 0%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9951;
+  /* Start hidden */
+  opacity: 0;
+  animation: fadeInCursor 1s ease forwards;
+  animation-delay: 1s; /* adjust delay if needed */
+}
+
+/* Hover state for interactive elements */
+.cursor-outer.hovered {
+  width: 60px;
+  height: 60px;
+  background-color: #2727276f;
+  border-color: rgb(224, 224, 224);
+}
+
+/* Fade-in keyframes */
+@keyframes fadeInCursor {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+
+
+
+
+
+
+
+  .tut-shroud {
+  opacity: 0;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 9997;
+  background: rgba(11, 11, 11, 0.807);
+  backdrop-filter: blur(5px);
+}
+
+
+
+#arrow-img {
+  width: 2rem;
+}
+
+#scroll-me-container {
+  display: flex;
+  gap: 2rem;
+  flex-direction: row-reverse;
+}
+
+#scoll-through-this-text {
+  font-size: 1rem;
+  font-family: 'editorial-ultra-light';
+}
+
+#layout-of-sep-text {
+    grid-column: 1;
+    font-family: 'editorial-ultra-light-italic';
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-size: 1.8rem;
+    padding-top: 4rem;
+}
+
+ #walkthrough-img {
+  width: 100%;
+  grid-row: 2;
+  grid-column: 1 /span 2;
+ }
+
+
+.first-overlay {
+  padding-top: 8rem;
+}
+
+.second-overlay {
+  padding-top: 10rem;
+}
+
+ #swap-out {
+  padding-top: 1600rem;
+}
+
+ .button-bottom {
+  grid-column: 1 /span 2;
+  justify-self: right;
+  display: flex;
+  gap: 2rem;
+ }
+
+ .close-walk, .next-btn {
+
+  font-family: 'editorial-ultra-light';
+  font-size: .8rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 1rem 3.15rem .7rem 3.15rem;
+  color: rgb(216, 216, 216);
+border: 1px solid rgb(125, 125, 125);
+  transition: all 0.7s ease-in-out;
+ }
+
+ .next-btn {
+  padding: 1.3rem 5rem 1rem 5rem;
+ }
+
+  .close-walk:hover, .next-btn:hover {
+      background: #274864;
+  border-color:  #213b52;
+  }
+
+ 
+
+  #walkthrough-explainer {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  padding: 6rem 5rem 6rem 5rem;
+    width: 105rem;
+    height: 90%;
+
+    background-color: rgb(5, 5, 5);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2rem 1fr 3.5rem;
+    border: none;
+  }
+
+
+.tut-shroud {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.443);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.tut-shroud.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* fade animation for content */
+#walkthrough-explainer {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+#walkthrough-explainer.fade-out {
+  opacity: 0;
+}
+
+#walkthrough-explainer.fade-in {
+  opacity: 1;
+}
+
+
+
+
+
+
+/* Animations
+
+
+        /* Fade + slide-in for nav */
+.primary-nav {
+  opacity: 0;                 /* start hidden */
+  transform: translateY(-20px); /* start slightly above */
+  animation: fadeSlideNav 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 1s;        /* delay to sync with page load */
+}
+
+/* Keyframes for sliding down + fading in */
+@keyframes fadeSlideNav {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+  /* Page Fading */
+  #page-fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(18, 19, 20);
+    z-index: 9999;
+    opacity: 1;
+    pointer-events: none; /* Allows clicking through once faded */
+    transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    animation-delay: 5s;
+  }
+
+  /* FADE OUT CLASS */
+  #page-fade.fade-out {
+    opacity: 0;
+  }

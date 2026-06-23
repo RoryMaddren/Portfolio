@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Separations — Stories of Separation</title>
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+  <link rel="stylesheet" href="css/generic.css" />
+  <link rel="stylesheet" href="css/list-view-push-back-with-errors.css" />
+  <link rel="stylesheet" href="css/share.css">
+
+  <link rel="stylesheet" href="css/entry-overview.css">
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+  <script defer src="./js/list-view-page-before-aside.js"></script>
+    <script defer src="./js/entry-opened.js"></script>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+<!-- SHARE ENTRY OVERLAY -->
+<div id="share-overlay">
+  <div id="share-box-container-all">
+    <div class="share-page-lines">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div id="page-contents">
+      <div class="share-box">
+        <div class="top-title-section">
+          <h1 id="top-text-share-p">Write Your Entry</h1>
+          <p class="description-p">
+            We recommend if stuck on recounting your story to follow this structure. For the prototype version feel free to type anything. 
+          </p>
+        </div>
+
+        <div class="runthrough-section-p">
+          <h3 class="counter">1.</h3>
+          <p class="istructional merge-line">
+            <span class="slanted">CONTEXT —</span>
+            Who is the person that you are separated from, and what do
+            they mean to you and how did you separate?
+          </p>
+
+          <h3 class="counter">2.</h3>
+          <p class="istructional merge-line">
+            <span class="slanted">FEELING —</span>
+            How did you feel about the separation when it happened? What emotions were there at the time and did it feel justified?
+          </p>
+
+          <h3 class="counter">3.</h3>
+          <p class="istructional merge-line">
+            <span class="slanted">EFFECT —</span>
+            How do you feel about it now? Has there been strain, or if you are united again is it the same as it was?
+          </p>
+
+          <h3 class="counter">4.</h3>
+          <p class="istructional merge-line">
+            <span class="slanted">LEAVING THOUGHTS —</span>
+            How do you feel reflecting on it now? Has this strengthened your relationship? Where are you in the relationship presently?
+          </p>
+
+          <a id="grey-link" href="#"><p>I WANT TO SUBMIT AN AUDIO CONFESSION INSTEAD</p></a>
+        </div>
+
+        <span id="text-box-section">
+          <h4 class="write-your-p">Write your story below.</h4>
+          <textarea id="text-space" placeholder="I am currently separated from..."></textarea>
+          <a id="add-photo-container" href="#"><p id="add-photo">+ ATTACH MY PHOTO</p></a>
+        </span>
+
+          <a class="cross-img" id="close-overlay-btn" aria-label="Close overlay" href="#"><img src="./images/entry-page/x.png" alt="X-image" /></a>
+
+        <div class="submit-back-buttons">
+          <a id="back-btn" href="#"><div>BACK</div></a>
+          <a id="submit-btn" href="#"><div>SUBMIT ENTRY</div></a>
+        </div>
+
+        <span id="count-bottom">
+          <p id="active">[1] - DEMO LEGNTH</p>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Black fade overlay -->
+  <div id="page-fade"></div>
+
+  <!-- Your page content here -->
+  <div class="noise"></div>
+  <div class="dust"></div>
+  <div class="cursor-outer"></div>
+  <div class="cursor-inner"></div>
+  <!-- etc... -->
+
+  <script>
+    // Fade out black overlay when page loads
+    window.addEventListener('load', () => {
+      const fade = document.getElementById('page-fade');
+      fade.classList.add('fade-out');
+      // Optional: remove overlay from DOM after fade
+      setTimeout(() => fade.remove(), 2000);
+    });
+</script>
+
+  </script>
+
+<!-- Navigation Bar -->
+<nav class="primary-nav">
+  <div class="nav-main-items">
+    <ul>
+      <li><a href="./index.html">INTRODUCTION</a></li>
+      <li><a class="active-page" href="./list-view.html">SEPARATIONS</a></li>
+      <li><a href="#" id="add-entry-btn">ADD ENTRY +</a></li>
+    </ul>
+  </div>
+
+  <a href="./list-view.html"><p class="logo-image">Stories of Separation</p></a>
+
+  <div class="nav-secondary-items">
+    <ul>
+      <li><a href="./about.html">ABOUT</a></li>
+      <li><a href="#" id="walkthroughButton">[O] WALKTHROUGH</a></li>
+      <li><a href="#" id="soundButton">SOUND ON</a></li>
+    </ul>
+    <audio id="audio-page-sound" src="./audios/music/soundscape-loop.mp3" loop></audio>
+  </div>
+</nav>
+
+
+
+
+
+  <div class="tut-shroud">
+    <div id="walkthrough-explainer">
+      <p id="layout-of-sep-text">How the entry information is displayed</p>
+      <span id="scroll-me-container"><img id="arrow-img" src="./images/list-view/arrow-down.png" alt="arrow">
+        <p id="scoll-through-this-text">Scroll Through Panels</p>
+      </span>
+      <img id="walkthrough-img" src="./images/list-view/tut-img-3.png" alt="walkthrough-explainer">
+      <div class="button-bottom">
+        <button class="close-walk">CLOSE OVERLAY</button>
+        <button class="next-btn">NEXT</button>
+      </div>
+    </div>
+  </div>
+
+
+
+<main>
+  <!--Lines Appear - Vertical-->
+  <div class="list-view-lines">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+
+
+  <!--Filter Bar-->
+  <div class="fullbar-all-elements" id="filterBar">
+    <div class="filters-text-click-close" id="filteringButtonClicking">
+      <p>FILTERS</p>
+    </div>
+
+
+
+
+
+
+    <div class="hidden-filterbar">
+      <div class="filters-overlay-panel">
+        <p id="close-filters-slider">Close Filters</p>
+        <h1 id="filters-title">Filtering Sidebar</h1>
+        <p>
+          The filter panel allows you to define more accurately the type of
+          entries you want to find. This is helpful for possible triggers and
+          better immersion when reading/listening through the entries.
+        </p>
+
+
+        <div class="switch-panel-1-section">
+          <h3 id="entry-genreal-text">Entry General</h3>
+
+
+
+          <!-- ========================= -->
+          <!-- First Filter Box Section -->
+          <!-- ========================= -->
+          <article>
+            <div id="entry-general" class="tab-control">
+              <!-- Tab Menu -->
+              <nav class="tab-menu">
+                <ul>
+                  <li class="tab-link active-link" id="sep-length-tab" data-tab="1">SEPARATION LENGTH</li>
+                  <li class="tab-link" id="entry-length-tab" data-tab="2">ENTRY LENGTH</li>
+                  <li id="resetBtn">RESET</li>
+                </ul>
+              </nav>
+
+              <!-- Tab Content -->
+              <div class="tab-container">
+                <!-- Tab 1 -->
+                <div class="tab active-tab" data-index="1">
+                  <div class="filters-box-both">
+                    <!-- Separation Time -->
+                    <div class="filter-row">
+                      <div class="checkbox-row">
+                        <input type="checkbox" id="lengthOfSepCheck" />
+                        <label for="lengthOfSepCheck" class="custom-checkbox"></label>
+                        <p class="filter-label">SEPARATION TIME</p>
+                      </div>
+                      <div class="range-section">
+                        <input class="progress-bar" type="range" id="splitMin" min="0" max="20" value="3"
+                          placeholder="3" />
+                        <input class="progress-bar" type="range" id="splitMax" min="0" max="20" value="8"
+                          placeholder="8" />
+                        <div class="value-boxes">
+                          <div id="splitMinVal">3</div>
+                          <span>TO</span>
+                          <div id="splitMaxVal">8</div>
+                          <span>YEARS</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Separation Year -->
+                    <div class="filter-row">
+                      <div class="checkbox-row">
+                        <input type="checkbox" id="sepYearCheck" />
+                        <label for="sepYearCheck" class="custom-checkbox"></label>
+                        <p class="filter-label">SEPARATION YEAR</p>
+                      </div>
+                      <div class="range-section">
+                        <input class="progress-bar" type="range" id="sepYearMin" min="1900" max="2025" value="1945"
+                          placeholder="1945" />
+                        <input class="progress-bar" type="range" id="sepYearMax" min="1900" max="2025" value="1965"
+                          placeholder="1965" />
+                        <div class="value-boxes">
+                          <div id="sepYearMinVal">1945</div>
+                          <span>TO</span>
+                          <div id="sepYearMaxVal">1965</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tab 2 -->
+                <div class="tab" data-index="2">
+                  <div class="filters-box-both">
+                    <!-- Audio Length -->
+                    <div class="filter-row">
+                      <div class="checkbox-row">
+                        <input type="checkbox" id="audioAdjustCheck" />
+                        <label for="audioAdjustCheck" class="custom-checkbox"></label>
+                        <p class="filter-label">AUDIO LENGTH</p>
+                      </div>
+                      <div class="range-section">
+                        <input class="progress-bar" type="range" id="audioAdjustMin" min="0" max="900" value="10"
+                          placeholder="10" />
+                        <input class="progress-bar" type="range" id="audioAdjustMax" min="0" max="900" value="300"
+                          placeholder="300" />
+                        <div class="value-boxes">
+                          <div id="audioAdjustMinVal">00:10</div>
+                          <span>TO</span>
+                          <div id="audioAdjustMaxVal">05:00</div>
+                          <span>TIME</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Word Count -->
+                    <div class="filter-row">
+                      <div class="checkbox-row">
+                        <input type="checkbox" id="wordAdjustCheck" />
+                        <label for="wordAdjustCheck" class="custom-checkbox"></label>
+                        <p class="filter-label">WORD COUNT</p>
+                      </div>
+                      <div class="range-section">
+                        <input class="progress-bar" type="range" id="wordAdjustMin" min="10" max="1500" value="100"
+                          placeholder="100" />
+                        <input class="progress-bar" type="range" id="wordAdjustMax" min="10" max="1500" value="300"
+                          placeholder="300" />
+                        <div class="value-boxes">
+                          <div id="wordAdjustMinVal">100</div>
+                          <span>TO</span>
+                          <div id="wordAdjustMaxVal">300</div>
+                          <span>WORDS</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========================= -->
+          <!-- Second Switch Panel Section -->
+          <!-- ========================= -->
+          <section class="switch-panel-2-section">
+            <h3 id="separation-h1-text">Separation Info</h3>
+
+            <article>
+              <div id="separation-info" class="tab-control">
+                <!-- Second Tab Menu -->
+                <nav class="tab-menu">
+                  <ul>
+                    <li class="tab-link active-link" id="time-sep-length-tab" data-tab="3">SEPARATION TYPE</li>
+                    <li class="tab-link" id="triggers-length-tab" data-tab="4">TRIGGERS</li>
+                    <li id="resetBtn-2">RESET</li>
+                  </ul>
+                </nav>
+
+                <!-- Second Tab Content -->
+                <div class="tab-container">
+                  <!-- Tab 3 -->
+                  <div class="tab active-tab" data-index="3">
+                    <div class="filters-box-both-2">
+                      <div class="switch-panel-2" id="separation-tags">
+                        <div class="filter-tag active">All</div>
+                        <div class="filter-tag">Parent</div>
+                        <div class="filter-tag">Sibling</div>
+                        <div class="filter-tag">Child</div>
+                        <div class="filter-tag">Partner</div>
+                        <div class="filter-tag">Grandparent</div>
+                        <div class="filter-tag">Grandchild</div>
+                        <div class="filter-tag">Other</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tab 4 -->
+                  <div class="tab" data-index="4">
+                    <div class="filters-box-both-2">
+                      <div class="switch-panel-2" id="trigger-tags">
+                        <div class="filter-tag active">All</div>
+                        <div class="filter-tag">Abuse</div>
+                        <div class="filter-tag">Grief</div>
+                        <div class="filter-tag">Death</div>
+                        <div class="filter-tag">Suicide</div>
+                        <div class="filter-tag">Self-Harm</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Optional Reset -->
+                  <div id="resetBtn-3"></div>
+                </div>
+              </div>
+            </article>
+          </section>
+
+
+
+      </div>
+      
+    </div>
+  </div>
+  </div>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Audio Bar-->
+  <div class="audio-sidebar-all-contents" id="audioBar">
+    <p class="audio-text">AUDIO SIDEBAR</p>
+
+    <div class="audio-sidebar">
+      <div class="audio-overlay-panel">
+
+        <p id="close-audio-slider">Close Audio Sidebar</p>
+
+        <div id="top-info-sidebar">
+          <h3 id="sidebar-header">Audio Sidebar</h3>
+          <p>
+            Use the side bar to keep track of your current audio entry
+            playback. From here you can navigate between, and control your
+            listening experience.
+          </p>
+        </div>
+
+        <div class="player">
+          <div id="music-player"> <!--This is make the music player part-->
+            <div class="player-controls"> <!--player controls are here-->
+              <div class="progress-container"> <!--This is the progress bar after the play button-->
+                <span class="play-rest-buttons">
+                  <button class="play-pause-btn button-stylings" id="sidebar-play-btn" aria-label="Play/Pause">
+                  </button>
+                  <button id="restartBtn" class="button-stylings">RESTART PLAYBACK</button>
+                </span>
+
+                <input type="range" class="progress-bar-2" id="audio-sidebar-progress" min="0" max="100" value="0">
+                <div class="time-pocket">
+                  <div class="current-time">00:00</div>
+                  <p>·</p>
+                  <div class="duration">00:00</div>
+                  <p id="volume-text">VOLUME</p>
+                  <img src="./images/list-view/sound-icon-2.png" id="volume-img" alt="volume">
+                  <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <!--Page Structure-->
+    <!--Separation Top Text-->
+
+    <div class="separations-top-text-container">
+          <span><span>
+      <h1>Separations</h1>
+    </span></span>
+
+
+
+               
+        <p class="seaprations-text-explainer-p">   <span><span>
+        Countless people experience a form of separation from their loved ones. From living abroad, a divorce, to family members who have passed, grief comes in many forms.
+        Read or listen to their stories. Use the filters to curate your experience.  </span></span></p>
+
+
+     
+
+
+
+
+
+
+      <!-- Clickable scroll hint -->
+  
+      <div class="scroll-hint" id="scrollHint" tabindex="0" role="button" aria-label="Scroll to content">
+        <div>Scroll to see our entries.</div>
+
+        <div class="arrow" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle class="ring ring-anim" cx="24" cy="24" r="20"></circle>
+            <g class="chev" transform="translate(0,0)">
+              <path d="M16 18 L24 26 L32 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+                stroke-linejoin="round" fill="none" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="shroud"></div>
+
+
+
+
+
+
+  <!--Entry 1-->
+  <div class="entry-container" onmouseenter="document.body.classList.add('img1')"
+    onmouseleave="document.body.classList.remove('img1')">
+    <p class="transcript-text">Fax Machine Conversations</p>
+    <div class="triggers">
+      <h3>ABUSE</h3>
+    </div>
+
+    <p class="text-entry">
+      Growing up, I spent a lot of time away from both parents, but mainly though it was with my dad. It was pretty
+      complicated and I think it was in some ways really unique to me in how the separation was, and in a lot of ways
+      really similar to a lot of people. My parents divorced when I was younger, around 6 or 7 years old...
+    </p>
+    <div class="categories">
+            <p>WRITTEN ENTRY</p>
+      <p>PARENTAL SEPARATION</p>
+
+      <p>LENGTH — 412 WORDS</p>
+      <p>SEPARATED FOR 8 YEARS</p>
+    </div>
+
+    <div class="entry-info">
+      <p class="entry-number-text">Entry — 01</p>
+      <p class="date-of-entry">08.08.25</p>
+    </div>
+
+    <a href="#">
+      <div class="entry-buttons">
+        <div class="open-entry-button" id="rorys-entry-open-button">
+          <p>OPEN ENTRY</p>
+        </div>
+    </a>
+    <div class="audio-button-off">
+      <p>PLAY AUDIO</p>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--Entry 2-->
+  <div class="entry-container" onmouseenter="document.body.classList.add('img2')"
+    onmouseleave="document.body.classList.remove('img2')">
+    <!-- <div class="top-line"> -->
+    <p class="transcript-text">Extended Guilt</p>
+    <div class="triggers">
+      <h3>GRIEF</h3>
+    </div>
+
+    <!-- <div class="second-line">   -->
+    <p class="text-entry">
+      I am separated form my grandparents, they live in the UK. I originally lived in the UK as well, and I moved to New
+      Zealand, which is basically on the other side of the world — with a very big time difference. So the only time I
+      could speak the them is either really early in the morning or really late at night....
+    </p>
+    <div class="categories">
+      <p>AUDIO ENTRY</p>
+      <p>GRANDPARENT SEPARATION</p>
+
+      <p>LENGTH — 03:34:01</p>
+      <p>SEPARATED FOR 12 YEARS</p>
+    </div>
+
+    <div class="entry-info">
+      <p class="entry-number-text">Entry — 02</p>
+      <p class="date-of-entry">23.09.25</p>
+    </div>
+
+    <a href="#">
+      <div class="entry-buttons">
+        <div id="entry-02-open-button" class="open-entry-button">
+          <p>OPEN ENTRY</p>
+        </div>
+    </a>
+
+    <div class="audio-progress">
+      <button class="audio-button-on">
+         <!-- hover effect onmouseover="document.getElementById('myaudio').play()"  -->
+        <p></p>
+      </button>
+      <audio id="audio-2-cara" src="./audios/click-in-audios/caras.mp3"></audio> <!-- Link to the audio file -->
+      <!-- hover effect <audio id="myaudio" src="./audios/sfx/hover-sound-1.mp3"></audio>  -->
+    </div>
+  </div>
+  </div>
+
+
+  <!--Entry 3-->
+  <div id="entry-carrasel">
+    <div class="entry-container active-slide" id="first-slide" onmouseenter="document.body.classList.add('img3')"
+      onmouseleave="document.body.classList.remove('img3')">
+
+
+
+      <p class="transcript-text">No Way of Knowing</p>
+      <div class="triggers">
+        <h3 class="triggers-off"></h3>
+        <h3 class="triggers-off"></h3>
+      </div>
+
+      <p class="text-entry">
+        I live away from family friend of me and my mums, his name was Garry. He moved to Australia when I was
+        younger... probably about 8-9 years ago — and we ended up staying here in New Zealand. I think when we he left
+        it was quite hard, even though at the time Id liked to have thought I took in stride, but I think...
+      </p>
+      <div class="categories">
+                <p>AUDIO ENTRY</p>
+        <p>FRIEND SEPARATION</p>
+
+        <p>LENGTH — 03:34:52</p>
+        <p>SEPARATED FOR 8.5 YEARS</p>
+      </div>
+
+      <div class="entry-info">
+        <p class="entry-number-text">Entry — 03</p>
+        <p class="date-of-entry">09.011.25</p>
+      </div>
+
+      <a href="#">
+        <div class="entry-buttons">
+          <div id="matts-entry-open-button" class="open-entry-button">
+            <p>OPEN ENTRY</p>
+          </div>
+      </a>
+    <div class="audio-progress">
+      <button class="audio-button-on">
+        <p></p>
+      </button>
+      <audio id="audio-3-matt" src="./audios/click-in-audios/matt.mp3"></audio> <!-- Link to the audio file -->
+    </div>
+  </div>
+  </div>
+
+
+  <!--Entry 4-->
+  <div class="entry-container" onmouseenter="document.body.classList.add('img4')"
+    onmouseleave="document.body.classList.remove('img4')">
+    <!-- <div class="top-line"> -->
+    <p class="transcript-text">Still Going Strong</p>
+
+
+    <!-- <div class="second-line">   -->
+    <p class="text-entry">
+      I am currently separated form one of my childhood best friends. I moved away from my home country and so did she
+      (to a different country) so we both left in a way. I left because my family wanted to find a better lifestyle. My
+      parents felt that Indonesia wasn’t a very good...
+    </p>
+    <div class="categories">
+
+      <p>AUDIO ENTRY</p>
+            <p>FRIEND SEPARATION</p>
+      <p>LENGTH — 03:34:52</p>
+      <p>SEPARATED FOR 10 YEARS</p>
+    </div>
+
+    <div class="entry-info">
+      <p class="entry-number-text">Entry — 04</p>
+      <p class="date-of-entry">07.15.25</p>
+    </div>
+
+    <a href="#">
+      <div class="entry-buttons">
+        <div id="eifel-open-button" class="open-entry-button">
+          <p>OPEN ENTRY</p>
+        </div>
+    </a>
+      <div class="audio-progress">
+        <button class="audio-button-on">
+          <p></p>
+          <!-- Link to the audio file -->
+        </button>
+        <audio id="audio-4-eiffel" src="./audios/click-in-audios/eiffel.mp3"></audio>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+  <!--Entry 5-->
+  <div class="entry-container" onmouseenter="document.body.classList.add('img5')"
+    onmouseleave="document.body.classList.remove('img5')">
+    <p class="transcript-text">A Feeling of Loneliness</p>
+
+
+    <p class="text-entry">
+      I am currently separated from my younger siblings because my mum decided to go to Australia for work and brought
+      them with her. I am studying here in New Zealand at the moment so because of that I wasn’t able to go as well. I
+      was really upset at the time because me and my siblings are like the three musketeers, so I had this...
+    </p>
+    <div class="categories">
+      <p>WRITTEN ENTRY</p>
+      <p>SIBLING SEPARATION</p>
+      <p>LENGTH — 386 WORDS</p>
+      <p>SEPARATED FOR 2 YEARS</p>
+    </div>
+
+    <div class="entry-info">
+      <p class="entry-number-text">Entry — 05</p>
+      <p class="date-of-entry">08.08.25</p>
+    </div>
+
+    <a href="#">
+      <div class="entry-buttons">
+        <div id="jef-entry-open-button" class="open-entry-button">
+          <p>OPEN ENTRY</p>
+        </div>
+    </a>
+    <div class="audio-button-off">
+      
+      <p>PLAY AUDIO</p>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+
+  <!--Entry 6-->
+  <div class="entry-container" onmouseenter="document.body.classList.add('img6')"
+    onmouseleave="document.body.classList.remove('img6')">
+    <p class="transcript-text">Distant Skype Calls</p>
+    <div class="triggers">
+      <h3>ABUSE</h3>
+    </div>
+
+    <p class="text-entry">
+      I currently live away from my dad.
+      When I was younger him and my mum divorced and my mum went back to live in New Zealand while my dad stayed in
+      Australia to work.
+      That happen when I was very young but he’s never really been around after that. He would come over for holiday...
+    </p>
+    <div class="categories">
+      <p>WRITTEN ENTRY</p>
+      <p>PARENTAL SEPARATION</p>
+
+      <p>LENGTH — 353 WORDS</p>
+      <p>SEPARATED FOR 4 YEARS</p>
+    </div>
+
+    <div class="entry-info">
+      <p class="entry-number-text">Entry — 06</p>
+      <p class="date-of-entry">08.03.25</p>
+    </div>
+
+    <a href="#">
+      <div class="entry-buttons">
+        <div id="prim-entry-open-button" class="open-entry-button">
+          <p>OPEN ENTRY</p>
+        </div>
+    </a>
+    <div class="audio-button-off">
+      <p>PLAY AUDIO</p>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <!--Entry 7-->
+  <div class="entry-container" onmouseenter="document.body.classList.add('img7')"
+    onmouseleave="document.body.classList.remove('img7')">
+    <p class="transcript-text">Immediate Messages</p>
+
+    <p class="text-entry">
+      So I was separated from is my partner, Lewis — and we were and are still to an extent very codependent on each
+      other, but he had to spent a lot of time back in England to visit his niece a while back and for financial reasons
+      I couldn’t go with him. When it was leading up to the leaving...
+    </p>
+    <div class="categories">
+      <p>WRITTEN ENTRY</p>
+      <p>PARTNER SEPARATION</p>
+      <p>LENGTH — 414 WORDS</p>
+      <p>SEPARATED FOR 6 MONTHS</p>
+    </div>
+
+    <div class="entry-info">
+      <p class="entry-number-text">Entry — 07</p>
+      <p class="date-of-entry">09.08.25</p>
+    </div>
+
+    <a href="#">
+      <div class="entry-buttons">
+        <div id="eilish-entry-open-button" class="open-entry-button">
+          <p>OPEN ENTRY</p>
+        </div>
+    </a>
+    <div class="audio-button-off">
+      <p>PLAY AUDIO</p>
+    </div>
+  </div>
+  </div>
+
+
+
+
+  <!--Entry 8-->
+  <div class="entry-container" onmouseenter="document.body.classList.add('img8')"
+    onmouseleave="document.body.classList.remove('img8')">
+    <p class="transcript-text">A Few Hours Away</p>
+
+
+    <p class="text-entry">
+      I live away from my dad, he lives a few hours away from me. After my parents split a few years ago, he realised
+      that he wasn’t in the right place for him, so he’s gone off in his own journey to find his place in the world I
+      suppose. At first I felt really upset and not sure what to do with my emotions.
+    </p>
+    <div class="categories">
+            <p>WRITTEN ENTRY</p>
+      <p>PARENTAL SEPARATION</p>
+
+      <p>LENGTH — 389 WORDS</p>
+      <p>SEPARATED FOR 2 YEARS</p>
+    </div>
+
+    <div class="entry-info">
+      <p class="entry-number-text">Entry — 08</p>
+      <p class="date-of-entry">08.08.25</p>
+    </div>
+
+    <a href="#">
+      <div class="entry-buttons">
+        <div id="sandy-entry-open-button" class="open-entry-button">
+          <p>OPEN ENTRY</p>
+        </div>
+    </a>
+    <div class="audio-button-off">
+      <p>PLAY AUDIO</p>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+
+
+  <!--Entry 09-->
+  <div class="entry-container" onmouseenter="document.body.classList.add('img9')"
+    onmouseleave="document.body.classList.remove('img9')">
+    <p class="transcript-text">A Pause in Life</p>
+    <div class="triggers">
+      <h3>ABUSE</h3>
+      <h3>GRIEF</h3>
+    </div>
+
+    <p class="text-entry">
+      I have moved away from my dad, because he’s unhealthy for me. Whenever I get close to him, every time I try, as
+      much as I want to, he damages me. Unfortunately I have just come to the conclusion that having any type
+      relationship with him at all is impossible, at least for me.
+      As much as I want to have a relationship with him, that...
+    </p>
+    <div class="categories">
+      <p>WRITTEN ENTRY</p>
+      <p>PARENTAL SEPARATION</p>
+      <p>LENGTH — 487 WORDS</p>
+      <p>SEPARATED FOR 5 YEARS</p>
+    </div>
+
+    <div class="entry-info">
+      <p class="entry-number-text">Entry — 09</p>
+      <p class="date-of-entry">11.09.25</p>
+    </div>
+
+    <a href="#">
+      <div class="entry-buttons">
+        <div id="josh-entry-open-button" class="open-entry-button">
+          <p>OPEN ENTRY</p>
+        </div>
+    </a>
+    <div class="audio-button-off">
+      <p>PLAY AUDIO</p>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+  <!--Entry 10-->
+  <div class="entry-container" onmouseenter="document.body.classList.add('img10')"
+    onmouseleave="document.body.classList.remove('img10')">
+    <p class="transcript-text">Eight Hours Away</p>
+
+
+    <p class="text-entry">
+     I'm currently seaprated from my dad, and what caused that spearation was a strong desire to chase a new career path, which took me up to Auckland, yeah so now I live what like eight hours away from them. At first I started to regret the amount of time I was staying away from them. I remember in the first year...
+    </p>
+    <div class="categories">
+      <p>AUDIO ENTRY</p>
+      <p>PARENTAL SEPARATION</p>
+      <p>LENGTH — 01:28:39</p>
+      <p>SEPARATED FOR 1 YEAR</p>
+    </div>
+
+    <div class="entry-info">
+      <p class="entry-number-text">Entry — 10</p>
+      <p class="date-of-entry">15.10.24</p>
+    </div>
+
+    <a href="#">
+      <div class="entry-buttons">
+        <div id="liam-entry-open-button" class="open-entry-button">
+          <p>OPEN ENTRY</p>
+        </div>
+    </a>
+    <div class="audio-progress">
+      <button class="audio-button-on">
+        <p></p>
+      </button>
+      <audio id="audio-1-liam" src="./audios/click-in-audios/liam.mp3"></audio>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+
+  <!--Entry 11-->
+  <div class="entry-container" onmouseenter="document.body.classList.add('img11')"
+    onmouseleave="document.body.classList.remove('img11')">
+    <p class="transcript-text">Waiting Until Then</p>
+
+
+    <p class="text-entry">
+      The person I am separated from is my grandmother in Turkey. The reason we're separated is because she my mum wanted to raise me and my borther in New Zealaland, because she felt there was more opportunities here. so i was born in nz but I was there from when I was about two to four, I think...
+    </p>
+    <div class="categories">
+      <p>AUDIO ENTRY</p>
+      <p>GRANDPARENT SEPARATION</p>
+      <p>LENGTH — 02:13:04</p>
+      <p>SEPARATED FOR 7 YEARs</p>
+    </div>
+
+    <div class="entry-info">
+      <p class="entry-number-text">Entry — 11</p>
+      <p class="date-of-entry">04.09.25</p>
+    </div>
+
+    <a href="#">
+      <div class="entry-buttons">
+        <div id="mehmet-entry-open-button" class="open-entry-button">
+          <p>OPEN ENTRY</p>
+        </div>
+    </a>
+    <div class="audio-progress">
+      <button class="audio-button-on">
+        <p></p>
+      </button>
+      <audio id="audio-1-mehmet" src="./audios/click-in-audios/mehmet.mp3"></audio>
+    </div>
+  </div>
+  </div>
+
+
+
+  
+
+
+
+  <!--Entry 12-->
+  <div class="entry-container" onmouseenter="document.body.classList.add('img12')"
+    onmouseleave="document.body.classList.remove('img12')">
+    <p class="transcript-text">Small Things</p>
+
+
+    <p class="text-entry">
+          I am separated from my both of my parents. Both me and my partner wanted to move up to Auckland to pursue
+      different career paths. The longer we’ve been apart the more ive appreciated the phone calls, and visits when I do
+      get to visit them. Initially when I moved up here I felt this sense of regret knowing I was stuck up here...</p>
+    <div class="categories">
+      <p>AUDIO ENTRY</p>
+      <p>PARENTAL SEPARATION</p>
+      <p>LENGTH — 02:35:52</p>
+      <p>SEPARATED FOR 3 YEARS</p>
+    </div>
+
+    <div class="entry-info">
+      <p class="entry-number-text">Entry — 12</p>
+      <p class="date-of-entry">12.11.25</p>
+    </div>
+
+    <a href="#">
+      <div class="entry-buttons">
+        <div id="zak-entry-open-button" class="open-entry-button">
+          <p>OPEN ENTRY</p>
+        </div>
+    </a>
+    <div class="audio-progress">
+      <button class="audio-button-on">
+        <p></p>
+      </button>
+      <audio id="audio-1-zak" src="./audios/click-in-audios/zak.mp3"></audio>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    cursor: none;
+        scrollbar-width: none;
+   /* overscroll-behavior: none */
+}
+
+   /* smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+    cursor: none;
+}
+
+
+@font-face {
+    font-family: "editorial-italic";
+    src: url('./fonts/EO/eo-italic.otf');
+}
+
+@font-face {
+    font-family: "editorial-reg";
+    src: url('./fonts/EO/eo-reg.otf');
+}
+
+@font-face {
+    font-family: "editorial-ultrabold";
+    src: url('./fonts/EO/eo-ultrabold.otf');
+}
+
+
+@font-face {
+    font-family: "editorial-ultra-light";
+    src: url('./fonts/EO/eo-ultralight.otf');
+}
+
+
+@font-face {
+    font-family: "editorial-ultra-light-italic";
+    src: url('./fonts/EO/eo-ultralight-italic.otf');
+}
+  @import url("https://use.typekit.net/ejx0evq.css");
+
+h1, h2, h3, h4, h5, p {
+    color: #fff;
+}
+
+.primary-nav a {
+    color: #e2e2e2;
+}
+
+.praimary-nav a, .nav-secondary-items{
+        transition: all 0.7s ease-in-out;
+}
+
+
+.primary-nav a:hover, .nav-secondary-items:hover {
+    color: #7c7c7c;
+    transition: all 0.7s ease-in-out;
+}
+.primary-nav a:active {
+    color: #ffffff;
+}
+
+#soundButton {
+  display: inline-block;
+  transition: all 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+#soundButton.blur {
+  filter: blur(2px);
+  opacity: 0.3;
+}
+
+
+.primary-nav {
+    position: fixed;   
+    z-index: 50;   
+    top: 0;
+    left: 0;
+    width: 100%;                
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-family: "acumin-pro", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    border-bottom: 1px solid #414141;
+    background-color: #0000003a;
+    backdrop-filter: blur(5px);
+}
+
+
+
+
+.nav-main-items, .nav-secondary-items {
+  display: flex; 
+  align-items: center;   /* vertical */
+
+}
+
+.primary-nav ul {
+      list-style-type: none;
+}
+
+.nav-main-items ul{
+    display: flex; 
+    gap: 1rem;
+    align-items: center;
+    padding: .5rem;
+    font-size: 1rem;
+}
+
+.nav-secondary-items ul{
+    padding: .5rem;
+    display: flex; 
+    gap: 1rem;
+    flex-direction: row-reverse;
+}
+
+.nav-secondary-items {
+    flex-direction: row-reverse;
+}
+
+.logo-image {
+    text-align: center;
+    font-family: "editorial-ultra-light";
+    font-weight: 100;
+    display: flex; 
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+
+h1 {
+    font-family: "editorial-ultra-light";
+    font-weight: 100;
+}
+
+h3 {
+
+    font-weight: 100; 
+}
+
+body {
+    background-color: #000;
+}
+  
+        .noise::before{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            content: "";
+            opacity: .05;  
+            z-index: 9999;
+            pointer-events: none;
+            background: url("/images/noise.gif");
+        } 
+
+/*
+        .dust::before{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            content: "";
+            opacity: 1;  
+            z-index: 9000;
+            pointer-events: none;
+            mix-blend-mode:soft-light ;
+            filter: grayscale(100%);
+            background: url("/images/list-view/dust.gif");
+            background-size: cover;
+        }
+
+
+        .fabric::before{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            content: "";
+            opacity: .5;  
+            z-index: 9000;
+            pointer-events: none;
+            mix-blend-mode: overlay ;
+            filter: grayscale(100%);
+            background: url("/images/fabric-temp.png");
+            background-size: cover;
+        }
+
+*/
+
+.active-page {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: #fff;
+}
+
+
+
+
+/* Mouse Chnage */
+
+   body {
+      cursor: none; 
+   }/* hide default cursor 
+
+    /* Outer ball */
+    .cursor-outer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #ffffff;
+      border-radius: 0%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: all 0.15s ease-out;
+      z-index: 9999;
+    }
+
+    /* Inner ball */
+    .cursor-inner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 7px;
+      height: 7px;
+      background: #ffffff;
+      border-radius: 0%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+    }
+
+    /* Hover state for interactive elements */
+    .cursor-outer.hovered {
+      width: 60px;
+      height: 60px;
+      background-color: #ffffff52;
+      border-color: rgb(224, 224, 224);
+    }
