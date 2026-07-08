@@ -287,7 +287,7 @@ body.img2::before {
 body.img1::before {
     opacity: 1;
 
-        background-image: url('../images/Entry-imgs-full/bg-imgs/rory-more-transparent-1.png');
+    background-image: url('../images/Entry-imgs-full/bg-imgs/rory-more-transparent-1.png');
     background-color: black;
 }
 

@@ -33,7 +33,7 @@ main {
       line-height: 120%;
   }
   #introduction-section {
-  grid-template-rows: 84px 1fr 2fr;
+  grid-template-rows: 95px 1fr 2fr;
   }
 }
 
@@ -704,18 +704,19 @@ background-image: url("/images/landing-page/photo-of-me.jpg"); /* photo shown on
   display: flex;
   flex-direction: column;
   grid-row: 3;
+  grid-column: 1 /span 2;
   font-size: 0.9rem;
   color: #111;
   align-self: end;
   line-height: 100%;
-  gap: 4px;
+  gap: 8px;
 }
 
 #services-landing p {
-  font-family: "hass-roman";
+  font-family: "hass-roman-medium", sans-serif;
   font-weight: 500;
   color: #333;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 
 #services-text {

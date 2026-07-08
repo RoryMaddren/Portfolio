@@ -1,4 +1,4 @@
-  const uniBtn = document.querySelector('#uni-btn');
+/*  const uniBtn = document.querySelector('#uni-btn');
   const industryBtn = document.querySelector('#industry-btn');
 
   const uniWorks = document.querySelector('#uni-works');
@@ -25,3 +25,5 @@
     uniBtn.classList.remove('active');
         console.log("working-2");
   });
+
+  */

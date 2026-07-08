@@ -8,6 +8,8 @@ hamMenu.addEventListener("click", () => {
   body.classList.toggle("lock-scroll");
 });
 
+
+
 /*
 
 hoverImageAppear.forEach((hoverImageAppear) => {
