@@ -27,6 +27,10 @@ main {
   line-height: 100%;
 }
 
+#general-info-text {
+  padding-bottom:12px;
+}
+
 @supports (-moz-appearance: none) {
 
   #rory-block {

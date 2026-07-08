@@ -353,6 +353,12 @@
   display: flex;
   flex-direction: column;
 }
+  #top-swtich-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 12px;
+}
 
   .work-page-lines {
   opacity: 0;
@@ -377,7 +383,7 @@
     row-gap: 18px;
   }
 
-  #works-container-unheard, #works-container-wewrangle {
+  #works-container-unheard, #works-container-wewrangle, #works-container-mccann {
     border-bottom: #555 solid 1px;
     padding-bottom: 32px;
   }
