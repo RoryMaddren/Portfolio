@@ -28,7 +28,7 @@ main {
 }
 
 #general-info-text {
-  padding-bottom:12px;
+  padding-bottom:10px;
 }
 
 @supports (-moz-appearance: none) {
@@ -724,7 +724,7 @@ background-image: url("/images/landing-page/photo-of-me.jpg"); /* photo shown on
 }
 
 #services-text {
-  padding-bottom: 7px;
+  padding-bottom: 5px;
 }
 
 #education-and-skills {
