@@ -908,8 +908,11 @@ background-image: url("/images/landing-page/photo-of-me.jpg"); /* photo shown on
   }
 }
 
+
+/* Mobile Sizing */
+/* intro section */
 @media screen and (max-width: 815px) {
-  .grouping-images-and-title {
+.grouping-images-and-title {
     gap: 8px;
   }
 
@@ -946,11 +949,8 @@ background-image: url("/images/landing-page/photo-of-me.jpg"); /* photo shown on
   .selection-arrow {
     width: 15px;
   }
-}
 
-/* Mobile Sizing */
-/* intro section */
-@media screen and (max-width: 815px) {
+
   #bottom-credits-what-i-do-piece {
     gap: 3px;
   }
@@ -1131,9 +1131,11 @@ background-image: url("/images/landing-page/photo-of-me.jpg"); /* photo shown on
   }
 
   #photo-section {
-    order: 3;
+    order: 4;
+    border: 0px solid black;
     height: 0px;
     opacity: 0;
+    transition: all 0s;
   }
 
   #box-image-showcase {
