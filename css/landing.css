@@ -1131,8 +1131,8 @@ background-image: url("/images/landing-page/photo-of-me.jpg"); /* photo shown on
 
   #photo-section {
     order: 3;
-    height: 400px;
-    overflow: visible;
+    height: 0px;
+    opacity: 0;
   }
 
   #box-image-showcase {

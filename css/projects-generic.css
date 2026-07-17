@@ -640,6 +640,9 @@ grid-column: 5 /span 6;
 /* Mobile Sizing */
 
 @media screen and (max-width: 900px) {
+
+
+
   
   .grouping-images-and-title {
   gap: 8px;
@@ -692,7 +695,7 @@ grid-column: 5 /span 6;
 }
 
 .change-project-buttons {
-  padding: 0px 3vw 0px 3vw;
+  padding: 0px 3vw 30px 3vw;
 }
 
 .project-image-expaliner {
@@ -1319,5 +1322,9 @@ flex-direction: column-reverse;
     font-size: 1rem;
 }
 
+  .break-after::after {
+  content: "\A";
+  white-space: pre;
+}
 
 }
