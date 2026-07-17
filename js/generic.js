@@ -61,8 +61,7 @@ hoverImageAppear.forEach((hoverImageAppear) => {
 
 
 
-//page Loading
-document.addEventListener('DOMContentLoaded', () => {
+const pageTransition = () => {
   const transition = document.querySelector('#page-transition');
 
   // Fade OUT when page loads
@@ -94,4 +93,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 800); // match CSS transition time
     });
   });
-});
+}
+
+
+
+//page Loading
+document.addEventListener('DOMContentLoaded', () => pageTransition());
+addEventListener("popstate",() => pageTransition());
