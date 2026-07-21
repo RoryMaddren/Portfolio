@@ -532,6 +532,7 @@ main {
 }
 
 #box-image-showcase {
+  background-image: url('../images/landing-page/photo-of-me.jpg');
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -541,29 +542,30 @@ main {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
-  /* background-image: url('../images/landing-page/image-of-me.jpg'); */
+   background-image: url('../images/landing-page/image-of-me.jpg');
   /* transition: opacity 10.4s cubic-bezier(0.075, 0.82, 0.165, 1); */
 }
-
+/*
 .showcased-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   grid-area: 1 / 1;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.5s cubic-bezier(.46,.03,.52,.96);
 
 
 
 }
 
+
 .showcased-image.active{
   display: block;
   opacity: 1;
 }
 
-
+*/
 
 
 
