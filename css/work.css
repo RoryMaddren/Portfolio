@@ -152,7 +152,7 @@
 
 
 
-.medals-work {
+.medals-work, .medals-work-long {
   height: 44px;
   align-self: start;
 }
@@ -261,7 +261,7 @@
 }
 
 /* Title */
-.grouping-awards-and-title-works h5 {
+.grouping-awards-and-title-works h5, .grouping-awards-and-title-works-long h5 {
   font-family: 'edit-old-light', serif;
   font-size: 3.5rem;
   font-weight: 100;
@@ -271,6 +271,13 @@
 .grouping-awards-and-title-works {
   display: flex;
   align-items: center;
+  gap: 8px;
+}
+
+.grouping-awards-and-title-works-long {
+  display: flex;
+  justify-content: start;
+  align-items: start;
   gap: 8px;
 }
 
@@ -376,6 +383,12 @@
   .medals-work {
   height: 52px;
   align-self: center;
+}
+
+.medals-work-long {
+  height: 44px;
+  align-self: start;
+  justify-self: start;
 }
   
   #display-works-piece-one, #display-works-piece-two, #display-works-piece-three {
