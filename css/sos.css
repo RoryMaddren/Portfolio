@@ -1,18 +1,18 @@
-#sos-image-header {
-    background-image: url('../images/sos-images/image-1.png');
+.header-image {
+    background-image: url('../images/sos-images/image-0.png');
 }
 
 
 #sos-1 {
-    background-image: url('../images/sos-images/sos-1.jpg');
+    background-image: url('../images/sos-images/image-1.png');
 }
 
 #sos-2 {
-    background-image: url('../images/sos-images/sos-2.jpg');
+    background-image: url('../images/sos-images/image-2.png');
 }
 
 #sos-3 {
-    background-image: url('../images/sos-images/sos-3.jpg');
+    background-image: url('../images/sos-images/image-3.png');
 }
 
 #sos-4 {
@@ -35,8 +35,8 @@
     background-image: url('../images/sos-images/sos-8.jpg');
 }
 
-#sos-9 {
-    background-image: url('../images/sos-images/sos-9.jpg');
+#sos-10 {
+    background-image: url('../images/sos-images/image-10.png');
 }
 
 
